@@ -267,7 +267,7 @@ namespace GroupTool
             txt = MyFunc.StringOut(txt, "Notes", tbNotes.Text);
             
 
-           
+
 
             File.WriteAllText(filePath, line + nl + txt);
 
@@ -462,7 +462,7 @@ namespace GroupTool
                     //Does heading match
                     if (splitline[0] == heading)
                     {
-                        string[] items = MyFunc.SplitIt(splitline[1], ',');
+                        string[] items = MyFunc.SplitIt(splitline[1], '@');
 
                         tbCheck1.Text = items[0];
                         tbCheck2.Text = items[1];
@@ -497,7 +497,7 @@ namespace GroupTool
                 string commaString = ",,,,,,,,";
 
                 //Prepare the appended checklist lastline
-                string lastline = str.Replace("\r\n", ",") + commaString;
+                string lastline = str.Replace("\r\n", "@") + commaString;
 
                 //Tack on the last line to the existing text file txt
                 txt = txt + "\r\n" + heading + ":" + lastline;
@@ -555,7 +555,7 @@ namespace GroupTool
                             }
                             else
                             {
-                                txt = txt + "," + elem;
+                                txt = txt + "@" + elem;
                             }
 
                         }

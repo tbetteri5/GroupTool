@@ -80,7 +80,7 @@ namespace GroupTool
         {
             //ListPage - Identifyer of the check list. Long Term or Todo.
 
-            string[] arr = MyFunc.SplitIt(str, ',');
+            string[] arr = MyFunc.SplitIt(str, '@');
             
             //Add checklist items and store state flags
             foreach (string elem in arr)

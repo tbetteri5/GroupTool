@@ -171,21 +171,12 @@ namespace GroupTool
 
             //ScratchPad.ActiveForm.Text = tbPolicy.Text + "  " + tbName.Text;
         }
+
+
         private void UpdateTitle()
         {
-            bool ShowDuration = true;
             string append = "";
 
-            if (ShowDuration)
-            {
-                //Policy to show
-                //append = " " + "5:02"; 
-            }
-            else
-            {
-                //Duration of time to show
-                //append; //currently not used
-            }
             string name;
             if (tbName.Text.Contains(" "))
             {
@@ -197,10 +188,13 @@ namespace GroupTool
                 name = tbName.Text + append;
             }
 
-            string request = cbRequestType.Text == "Request..." ? "" : cbRequestType.Text;
+            string request = cbRequestType.Text == "Request..." ? "" : "-" + cbRequestType.Text;
 
             ScratchPad.ActiveForm.Text = name + request; 
         }
+
+
+
         private void tbPhone_TextChanged(object sender, EventArgs e)
         {
             UpdateOutput();
@@ -336,12 +330,12 @@ private void tbName_TextChanged(object sender, EventArgs e)
 
         }
 
+       
         private void cbRequestType_SelectedIndexChanged(object sender, EventArgs e)
         {
             RequestItems("FillItems", cbRequestType.Text);
             UpdateTitle();
         }
-
 
         private void tbAccnt1_TextChanged(object sender, EventArgs e)
         {
@@ -886,8 +880,10 @@ private void tbName_TextChanged(object sender, EventArgs e)
 
         }
 
-        
-        
+        private void cbRequestType_TextChanged(object sender, EventArgs e)
+        {
+            UpdateTitle();
+        }
     }
 
 }

@@ -1116,6 +1116,7 @@
             this.cbRequestType.TabIndex = 17;
             this.cbRequestType.Text = "Request...";
             this.cbRequestType.SelectedIndexChanged += new System.EventHandler(this.cbRequestType_SelectedIndexChanged);
+            this.cbRequestType.TextChanged += new System.EventHandler(this.cbRequestType_TextChanged);
             // 
             // tbYOB
             // 

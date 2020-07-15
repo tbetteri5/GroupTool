@@ -197,7 +197,7 @@ namespace GroupTool
                 name = tbName.Text + append;
             }
 
-            string request = cbRequestType.Text == "Request..." ? "" : "-" + cbRequestType.Text;
+            string request = cbRequestType.Text == "Request..." ? "" : " - " + cbRequestType.Text;
 
             ScratchPad.ActiveForm.Text = name + request; 
         }

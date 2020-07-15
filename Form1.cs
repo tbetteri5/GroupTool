@@ -18,8 +18,8 @@ namespace GroupTool
     public partial class Form1 : Form
     {
         public System.Windows.Forms.CheckedListBox.ObjectCollection Items { get; }
-        string filePathTD = @"C:\Users\ll67305\Desktop\ScratchPad\Todo.txt";
-        string filePathLT = @"C:\Users\ll67305\Desktop\ScratchPad\LongTerm.txt";
+        string filePathTD = MyFunc.FilePath() + @"Todo.txt";
+        string filePathLT = MyFunc.FilePath() + @"LongTerm.txt";
 
         public Form1()
         {

@@ -252,7 +252,7 @@ namespace GroupTool
 
             //string filePath = @"C:\Users\" + Environment.UserName + @"\Desktop\ScratchPad Log.txt";
             // string filePath = @"C:\Users\ll67305\source\repos\GroupTool\InternalLog.txt";
-            string filePath = @"C:\Users\ll67305\Desktop\ScratchPad\Scratch Pad Log.txt";
+            string filePath = MyFunc.FilePath() + "Scratch Pad Log.txt";
             
 
             string line = File.ReadAllText(filePath);
@@ -265,7 +265,7 @@ namespace GroupTool
             txt = MyFunc.StringOut(txt, "Name", tbName.Text,"");
             txt = MyFunc.StringOut(txt, "Phone", tbPhone.Text,"");
             txt = MyFunc.StringOut(txt, "Addr", tbAddress.Text,"");
-            t
+            
 
             txt = MyFunc.StringOut(txt, "Checks", tbCheck1.Text,"");
             txt = MyFunc.StringOut(txt, ".", tbCheck2.Text,"");
@@ -438,7 +438,7 @@ private void tbName_TextChanged(object sender, EventArgs e)
             //Load; FillItems; Update;
 
             //Set output
-            string filePath = @"C:\Users\ll67305\Desktop\ScratchPad\CheckList.txt";
+            string filePath = MyFunc.FilePath() + "CheckList.txt";
         
             //Read Checklist Data
             string[] lines = File.ReadAllLines(filePath);
@@ -507,10 +507,10 @@ private void tbName_TextChanged(object sender, EventArgs e)
                 string str = tbCheckEdit.Text;
 
                 //Prepare a bunch of commas
-                string commaString = ",,,,,,,,";
+                string atString = "@@@@@@@@";
 
                 //Prepare the appended checklist lastline
-                string lastline = str.Replace("\r\n", "@") + commaString;
+                string lastline = str.Replace("\r\n", "@") + atString;
 
                 //Tack on the last line to the existing text file txt
                 txt = txt + "\r\n" + heading + ":" + lastline;

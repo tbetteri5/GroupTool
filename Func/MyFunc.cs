@@ -9,6 +9,11 @@ namespace GroupTool.Func
 {
     public class MyFunc
     {
+        public static string FilePath()
+        {
+            return @"M:\Desktop\GroupTool\ScratchPad\";
+        }
+
         public static string nl()
         {
             return System.Environment.NewLine;

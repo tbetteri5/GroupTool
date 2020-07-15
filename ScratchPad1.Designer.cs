@@ -257,7 +257,7 @@
             this.groupBox4.Size = new System.Drawing.Size(112, 181);
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Notes:";
+            this.groupBox4.Text = "Sticky Note:";
             // 
             // btOpenTodoList
             // 
@@ -664,7 +664,7 @@
             this.tabScratchPad.Padding = new System.Windows.Forms.Padding(3);
             this.tabScratchPad.Size = new System.Drawing.Size(334, 184);
             this.tabScratchPad.TabIndex = 1;
-            this.tabScratchPad.Text = "Notes";
+            this.tabScratchPad.Text = "Notepad";
             // 
             // tbNotes
             // 

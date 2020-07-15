@@ -252,40 +252,40 @@ namespace GroupTool
 
             //string filePath = @"C:\Users\" + Environment.UserName + @"\Desktop\ScratchPad Log.txt";
             // string filePath = @"C:\Users\ll67305\source\repos\GroupTool\InternalLog.txt";
-            string filePath = @"C:\Users\ll67305\Desktop\Scratch Pad Log.txt";
-            string nl = System.Environment.NewLine;
+            string filePath = @"C:\Users\ll67305\Desktop\ScratchPad\Scratch Pad Log.txt";
+            
 
             string line = File.ReadAllText(filePath);
 
             string txt = string.Empty;
 
             txt = DateTime.Now.ToString("MMM d.yy") + " " + DateTime.Now.ToLongTimeString() + "--->" + ",";
-            txt = MyFunc.StringOut(txt, "Type", cbRequestType.Text);
-            txt = MyFunc.StringOut(txt, "Pol", tbPolicy.Text);
-            txt = MyFunc.StringOut(txt, "Name", tbName.Text);
-            txt = MyFunc.StringOut(txt, "Phone", tbPhone.Text);
-            txt = MyFunc.StringOut(txt, "Addr", tbAddress.Text);
-            txt = MyFunc.StringOut(txt, "Notes", tbNotes.Text);
+            txt = MyFunc.StringOut(txt, "Request Type", cbRequestType.Text,"Request...");
+            txt = MyFunc.StringOut(txt, "Policy", tbPolicy.Text,"");
+            txt = MyFunc.StringOut(txt, "Name", tbName.Text,"");
+            txt = MyFunc.StringOut(txt, "Phone", tbPhone.Text,"");
+            txt = MyFunc.StringOut(txt, "Addr", tbAddress.Text,"");
+            t
 
-            txt = MyFunc.StringOut(txt, "Checks", tbCheck1.Text);
-            txt = MyFunc.StringOut(txt, ".", tbCheck2.Text);
-            txt = MyFunc.StringOut(txt, ".", tbCheck3.Text);
-            txt = MyFunc.StringOut(txt, ".", tbCheck4.Text);
-            txt = MyFunc.StringOut(txt, ".", tbCheck5.Text);
-            txt = MyFunc.StringOut(txt, ".", tbCheck6.Text);
-            txt = MyFunc.StringOut(txt, ".", tbCheck7.Text);
+            txt = MyFunc.StringOut(txt, "Checks", tbCheck1.Text,"");
+            txt = MyFunc.StringOut(txt, ".", tbCheck2.Text,"");
+            txt = MyFunc.StringOut(txt, ".", tbCheck3.Text,"");
+            txt = MyFunc.StringOut(txt, ".", tbCheck4.Text,"");
+            txt = MyFunc.StringOut(txt, ".", tbCheck5.Text,"");
+            txt = MyFunc.StringOut(txt, ".", tbCheck6.Text,"");
+            txt = MyFunc.StringOut(txt, ".", tbCheck7.Text,"");
 
-            txt = MyFunc.StringOut(txt, "Check Notes", tbCheckListNotes.Text);
-            txt = MyFunc.StringOut(txt, "Accnt Notes", tbAccountNotes.Text);
-            txt = MyFunc.StringOut(txt, "A1", cbMars1.Text + "." + tbAccnt1.Text);
-            txt = MyFunc.StringOut(txt, "A2", cbMars2.Text + "." + tbAccnt2.Text);
-            txt = MyFunc.StringOut(txt, "A3", cbMars3.Text + "." + tbAccnt3.Text);
-            txt = MyFunc.StringOut(txt, "A9", tbAccnt9.Text);
+            txt = MyFunc.StringOut(txt, "Sticky Note", tbCheckListNotes.Text,"");
+            txt = MyFunc.StringOut(txt, "Accnt Notes", tbAccountNotes.Text,"");
+            txt = MyFunc.StringOut(txt, "A1", cbMars1.Text + " " + tbAccnt1.Text," ");
+            txt = MyFunc.StringOut(txt, "A2", cbMars2.Text + " " + tbAccnt2.Text,"SUB ");
+            txt = MyFunc.StringOut(txt, "A3", cbMars3.Text + " " + tbAccnt3.Text,"SUB ");
+            txt = MyFunc.StringOut(txt, "A9", tbAccnt9.Text,"0.00");
 
-            txt = MyFunc.StringOut(txt, "TB's", textBox9.Text + "." + textBox10.Text + "." + textBox2.Text);
-            txt = MyFunc.StringOut(txt, "Notes", tbNotes.Text);
+            txt = MyFunc.StringOut(txt, "Accnt Text Boxes", textBox9.Text + "." + textBox10.Text + "." + textBox2.Text,"..");
+            txt = MyFunc.StringOut(txt, "Notepad", tbNotes.Text,"");
 
-            File.WriteAllText(filePath, line + nl + txt);
+            File.WriteAllText(filePath, txt.Replace("\r\n",";") + MyFunc.nl() + line);
         }
 
 private void tbName_TextChanged(object sender, EventArgs e)

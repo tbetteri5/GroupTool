@@ -184,20 +184,22 @@ namespace GroupTool
             else
             {
                 //Duration of time to show
-                append = tbPolicy.Text;
+                //append; //currently not used
             }
             string name;
             if (tbName.Text.Contains(" "))
             {
                 string[] words = tbName.Text.Split(' ');
-                name = words[0] + " " + words[1] + append;
+                name = words[0] + " " + words[1];
             }
             else
             {
                 name = tbName.Text + append;
             }
 
-            ScratchPad.ActiveForm.Text = name;
+            string request = cbRequestType.Text == "Request..." ? "" : cbRequestType.Text;
+
+            ScratchPad.ActiveForm.Text = name + request; 
         }
         private void tbPhone_TextChanged(object sender, EventArgs e)
         {
@@ -337,7 +339,7 @@ private void tbName_TextChanged(object sender, EventArgs e)
         private void cbRequestType_SelectedIndexChanged(object sender, EventArgs e)
         {
             RequestItems("FillItems", cbRequestType.Text);
-
+            UpdateTitle();
         }
 
 

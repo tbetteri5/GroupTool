@@ -4,7 +4,7 @@ using System.IO;
 using System.Management.Instrumentation;
 using System.Windows.Forms;
 using GroupTool.Func;
-
+using System.Collections.Generic;
 
 namespace GroupTool
 {
@@ -16,9 +16,10 @@ namespace GroupTool
 
         public bool Visible { get; set; }
 
-        
+       
+
         //Dim the ucTodo Form and assign it to todo1
-        
+
 
         public ScratchPad()
         {
@@ -265,17 +266,29 @@ namespace GroupTool
             txt = MyFunc.StringOut(txt, "Phone", tbPhone.Text);
             txt = MyFunc.StringOut(txt, "Addr", tbAddress.Text);
             txt = MyFunc.StringOut(txt, "Notes", tbNotes.Text);
-            
 
+            txt = MyFunc.StringOut(txt, "Checks", tbCheck1.Text);
+            txt = MyFunc.StringOut(txt, ".", tbCheck2.Text);
+            txt = MyFunc.StringOut(txt, ".", tbCheck3.Text);
+            txt = MyFunc.StringOut(txt, ".", tbCheck4.Text);
+            txt = MyFunc.StringOut(txt, ".", tbCheck5.Text);
+            txt = MyFunc.StringOut(txt, ".", tbCheck6.Text);
+            txt = MyFunc.StringOut(txt, ".", tbCheck7.Text);
 
+            txt = MyFunc.StringOut(txt, "Check Notes", tbCheckListNotes.Text);
+            txt = MyFunc.StringOut(txt, "Accnt Notes", tbAccountNotes.Text);
+            txt = MyFunc.StringOut(txt, "A1", cbMars1.Text + "." + tbAccnt1.Text);
+            txt = MyFunc.StringOut(txt, "A2", cbMars2.Text + "." + tbAccnt2.Text);
+            txt = MyFunc.StringOut(txt, "A3", cbMars3.Text + "." + tbAccnt3.Text);
+            txt = MyFunc.StringOut(txt, "A9", tbAccnt9.Text);
+
+            txt = MyFunc.StringOut(txt, "TB's", textBox9.Text + "." + textBox10.Text + "." + textBox2.Text);
+            txt = MyFunc.StringOut(txt, "Notes", tbNotes.Text);
 
             File.WriteAllText(filePath, line + nl + txt);
-
-
         }
 
-
-        private void tbName_TextChanged(object sender, EventArgs e)
+private void tbName_TextChanged(object sender, EventArgs e)
         {
             
             UpdateOutput();

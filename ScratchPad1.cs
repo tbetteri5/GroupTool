@@ -265,15 +265,16 @@ namespace GroupTool
             txt = MyFunc.StringOut(txt, "Name", tbName.Text,"");
             txt = MyFunc.StringOut(txt, "Phone", tbPhone.Text,"");
             txt = MyFunc.StringOut(txt, "Addr", tbAddress.Text,"");
-            
 
-            txt = MyFunc.StringOut(txt, "Checks", tbCheck1.Text,"");
-            txt = MyFunc.StringOut(txt, ".", tbCheck2.Text,"");
-            txt = MyFunc.StringOut(txt, ".", tbCheck3.Text,"");
-            txt = MyFunc.StringOut(txt, ".", tbCheck4.Text,"");
-            txt = MyFunc.StringOut(txt, ".", tbCheck5.Text,"");
-            txt = MyFunc.StringOut(txt, ".", tbCheck6.Text,"");
-            txt = MyFunc.StringOut(txt, ".", tbCheck7.Text,"");
+            txt = MyFunc.StringOut(txt, "", "Checks: ", "");
+            txt = MyFunc.StringOut(txt, checkBox1.Checked == true ? "[x]" : "[ ]", tbCheck2.Text,"");
+            txt = MyFunc.StringOut(txt, checkBox2.Checked == true ? "[x]" : "[ ]", tbCheck3.Text,"");
+            txt = MyFunc.StringOut(txt, checkBox3.Checked == true ? "[x]" : "[ ]", tbCheck4.Text,"");
+            txt = MyFunc.StringOut(txt, checkBox4.Checked == true ? "[x]" : "[ ]", tbCheck5.Text,"");
+            txt = MyFunc.StringOut(txt, checkBox5.Checked == true ? "[x]" : "[ ]", tbCheck6.Text,"");
+            txt = MyFunc.StringOut(txt, checkBox6.Checked == true ? "[x]" : "[ ]", tbCheck7.Text,"");
+            txt = MyFunc.StringOut(txt, checkBox7.Checked == true ? "[x]" : "[ ]", tbCheck7.Text, "");
+
 
             txt = MyFunc.StringOut(txt, "Sticky Note", tbCheckListNotes.Text,"");
             txt = MyFunc.StringOut(txt, "Accnt Notes", tbAccountNotes.Text,"");

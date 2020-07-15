@@ -34,7 +34,7 @@ namespace GroupTool.Func
             }
             else
             {
-                ou = StrToAppend + "[" + id + ":] " + data + ", ";
+                ou = StrToAppend + "  " + id + ":" + data;
             }
             return ou;
         }

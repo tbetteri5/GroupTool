@@ -9,6 +9,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>checklist256_24933.ico</ApplicationIcon>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -159,6 +162,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="checklist256_24933.ico" />
     <Content Include="GroupTooldb.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

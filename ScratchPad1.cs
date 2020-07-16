@@ -342,6 +342,10 @@ private void tbName_TextChanged(object sender, EventArgs e)
             UpdateTitle();
         }
 
+        private void cbRequestType_TextChanged(object sender, EventArgs e)
+        {
+            UpdateTitle();
+        }
 
         private void tbAccnt1_TextChanged(object sender, EventArgs e)
         {
@@ -890,6 +894,8 @@ private void tbName_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 
 }

@@ -130,6 +130,8 @@
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new GroupTool.GroupTooldbDataSetTableAdapters.ClientsTableAdapter();
             this.tableAdapterManager = new GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager();
+            this.tbDocHandle = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -252,6 +254,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.tbDocHandle);
             this.groupBox4.Controls.Add(this.btOpenTodoList);
             this.groupBox4.Controls.Add(this.tbCheckListNotes);
             this.groupBox4.Location = new System.Drawing.Point(219, 0);
@@ -280,7 +284,7 @@
             this.tbCheckListNotes.Location = new System.Drawing.Point(0, 16);
             this.tbCheckListNotes.Multiline = true;
             this.tbCheckListNotes.Name = "tbCheckListNotes";
-            this.tbCheckListNotes.Size = new System.Drawing.Size(112, 136);
+            this.tbCheckListNotes.Size = new System.Drawing.Size(112, 114);
             this.tbCheckListNotes.TabIndex = 18;
             // 
             // groupBox2
@@ -518,7 +522,6 @@
             // 
             this.tbAccnt9.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbAccnt9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbAccnt9.Enabled = false;
             this.tbAccnt9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAccnt9.Location = new System.Drawing.Point(242, 80);
             this.tbAccnt9.Name = "tbAccnt9";
@@ -571,6 +574,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(147, 17);
             this.textBox9.TabIndex = 33;
+            this.textBox9.Text = "FormCode:  ";
             // 
             // cbMars3
             // 
@@ -1060,9 +1064,9 @@
             // 
             this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTime.Location = new System.Drawing.Point(36, 450);
+            this.lbTime.Location = new System.Drawing.Point(56, 450);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(115, 20);
+            this.lbTime.Size = new System.Drawing.Size(95, 20);
             this.lbTime.TabIndex = 22;
             this.lbTime.Text = "Date / Time";
             this.lbTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1109,7 +1113,7 @@
             // btAllCaps
             // 
             this.btAllCaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAllCaps.Location = new System.Drawing.Point(317, 23);
+            this.btAllCaps.Location = new System.Drawing.Point(276, 23);
             this.btAllCaps.Name = "btAllCaps";
             this.btAllCaps.Size = new System.Drawing.Size(39, 22);
             this.btAllCaps.TabIndex = 26;
@@ -1195,7 +1199,7 @@
             // tbSwapName
             // 
             this.tbSwapName.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSwapName.Location = new System.Drawing.Point(276, 23);
+            this.tbSwapName.Location = new System.Drawing.Point(317, 23);
             this.tbSwapName.Name = "tbSwapName";
             this.tbSwapName.Size = new System.Drawing.Size(39, 22);
             this.tbSwapName.TabIndex = 48;
@@ -1253,12 +1257,33 @@
             this.tableAdapterManager.ClientsTableAdapter = this.clientsTableAdapter;
             this.tableAdapterManager.UpdateOrder = GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // tbDocHandle
+            // 
+            this.tbDocHandle.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbDocHandle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDocHandle.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDocHandle.Location = new System.Drawing.Point(27, 134);
+            this.tbDocHandle.Name = "tbDocHandle";
+            this.tbDocHandle.Size = new System.Drawing.Size(82, 17);
+            this.tbDocHandle.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(-2, 134);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 19);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "DH:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(364, 473);
+            this.ClientSize = new System.Drawing.Size(360, 473);
             this.Controls.Add(this.ckMinimizeBehaviour);
             this.Controls.Add(this.lkSchedules);
             this.Controls.Add(this.btOutputToggle);
@@ -1426,6 +1451,8 @@
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbDocHandle;
+        private System.Windows.Forms.Label label7;
     }
 }
 

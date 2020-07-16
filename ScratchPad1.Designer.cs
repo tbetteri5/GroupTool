@@ -77,6 +77,8 @@
             this.tabScratchPad = new System.Windows.Forms.TabPage();
             this.tbNotes = new System.Windows.Forms.TextBox();
             this.tabInfo = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
@@ -128,8 +130,6 @@
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new GroupTool.GroupTooldbDataSetTableAdapters.ClientsTableAdapter();
             this.tableAdapterManager = new GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -321,20 +321,20 @@
             // 
             this.tbCheck8.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck8.Location = new System.Drawing.Point(22, 156);
+            this.tbCheck8.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck8.Location = new System.Drawing.Point(22, 158);
             this.tbCheck8.Name = "tbCheck8";
-            this.tbCheck8.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck8.Size = new System.Drawing.Size(191, 17);
             this.tbCheck8.TabIndex = 16;
             // 
             // tbCheck4
             // 
             this.tbCheck4.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck4.Location = new System.Drawing.Point(22, 76);
+            this.tbCheck4.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck4.Location = new System.Drawing.Point(22, 78);
             this.tbCheck4.Name = "tbCheck4";
-            this.tbCheck4.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck4.Size = new System.Drawing.Size(191, 17);
             this.tbCheck4.TabIndex = 8;
             // 
             // checkBox7
@@ -350,20 +350,20 @@
             // 
             this.tbCheck1.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck1.Location = new System.Drawing.Point(22, 16);
+            this.tbCheck1.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck1.Location = new System.Drawing.Point(22, 17);
             this.tbCheck1.Name = "tbCheck1";
-            this.tbCheck1.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck1.Size = new System.Drawing.Size(191, 17);
             this.tbCheck1.TabIndex = 1;
             // 
             // tbCheck7
             // 
             this.tbCheck7.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck7.Location = new System.Drawing.Point(22, 136);
+            this.tbCheck7.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck7.Location = new System.Drawing.Point(22, 138);
             this.tbCheck7.Name = "tbCheck7";
-            this.tbCheck7.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck7.Size = new System.Drawing.Size(191, 17);
             this.tbCheck7.TabIndex = 14;
             // 
             // checkBox1
@@ -388,20 +388,20 @@
             // 
             this.tbCheck2.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck2.Location = new System.Drawing.Point(22, 36);
+            this.tbCheck2.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck2.Location = new System.Drawing.Point(22, 38);
             this.tbCheck2.Name = "tbCheck2";
-            this.tbCheck2.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck2.Size = new System.Drawing.Size(191, 17);
             this.tbCheck2.TabIndex = 4;
             // 
             // tbCheck6
             // 
             this.tbCheck6.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck6.Location = new System.Drawing.Point(22, 116);
+            this.tbCheck6.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck6.Location = new System.Drawing.Point(22, 118);
             this.tbCheck6.Name = "tbCheck6";
-            this.tbCheck6.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck6.Size = new System.Drawing.Size(191, 17);
             this.tbCheck6.TabIndex = 12;
             // 
             // checkBox2
@@ -426,20 +426,20 @@
             // 
             this.tbCheck3.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck3.Location = new System.Drawing.Point(22, 56);
+            this.tbCheck3.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck3.Location = new System.Drawing.Point(22, 58);
             this.tbCheck3.Name = "tbCheck3";
-            this.tbCheck3.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck3.Size = new System.Drawing.Size(191, 17);
             this.tbCheck3.TabIndex = 6;
             // 
             // tbCheck5
             // 
             this.tbCheck5.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheck5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheck5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCheck5.Location = new System.Drawing.Point(22, 96);
+            this.tbCheck5.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheck5.Location = new System.Drawing.Point(22, 98);
             this.tbCheck5.Name = "tbCheck5";
-            this.tbCheck5.Size = new System.Drawing.Size(191, 15);
+            this.tbCheck5.Size = new System.Drawing.Size(191, 17);
             this.tbCheck5.TabIndex = 10;
             // 
             // checkBox3
@@ -693,6 +693,27 @@
             this.tabInfo.Size = new System.Drawing.Size(334, 184);
             this.tabInfo.TabIndex = 2;
             this.tabInfo.Text = "Info";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 16);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Service Desk: 519-931-5141";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 16);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "HardPhone: 519-931-3372";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox6
             // 
@@ -1230,27 +1251,6 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ClientsTableAdapter = this.clientsTableAdapter;
             this.tableAdapterManager.UpdateOrder = GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 16);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "HardPhone: 519-931-3372";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 16);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Service Desk: 519-931-5141";
             // 
             // ScratchPad
             // 

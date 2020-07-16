@@ -280,7 +280,7 @@
             // 
             this.tbCheckListNotes.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.tbCheckListNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCheckListNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCheckListNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCheckListNotes.Location = new System.Drawing.Point(0, 16);
             this.tbCheckListNotes.Multiline = true;
             this.tbCheckListNotes.Name = "tbCheckListNotes";

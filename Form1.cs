@@ -198,5 +198,12 @@ namespace GroupTool
             items = items.Substring(0, items.Length);
             CheckListLoad(items,"LT"); //Load the LongTerm Page
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CheckListSaveTD();
+            CheckListSaveLT();
+            this.Close();
+        }
     }
 }

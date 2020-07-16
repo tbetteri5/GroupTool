@@ -39,6 +39,7 @@
             this.btClose = new System.Windows.Forms.Button();
             this.btRemoveLT = new System.Windows.Forms.Button();
             this.btAddLT = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbAddCheck
@@ -66,7 +67,7 @@
             // 
             this.btAdd.Location = new System.Drawing.Point(267, 51);
             this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(56, 26);
+            this.btAdd.Size = new System.Drawing.Size(75, 26);
             this.btAdd.TabIndex = 2;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = true;
@@ -74,9 +75,9 @@
             // 
             // btDelete
             // 
-            this.btDelete.Location = new System.Drawing.Point(267, 84);
+            this.btDelete.Location = new System.Drawing.Point(267, 83);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(56, 26);
+            this.btDelete.Size = new System.Drawing.Size(75, 26);
             this.btDelete.TabIndex = 3;
             this.btDelete.Text = "Remove";
             this.btDelete.UseVisualStyleBackColor = true;
@@ -123,7 +124,7 @@
             // 
             this.btClose.Location = new System.Drawing.Point(263, 400);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(56, 23);
+            this.btClose.Size = new System.Drawing.Size(75, 23);
             this.btClose.TabIndex = 9;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
@@ -131,9 +132,9 @@
             // 
             // btRemoveLT
             // 
-            this.btRemoveLT.Location = new System.Drawing.Point(263, 259);
+            this.btRemoveLT.Location = new System.Drawing.Point(263, 256);
             this.btRemoveLT.Name = "btRemoveLT";
-            this.btRemoveLT.Size = new System.Drawing.Size(56, 26);
+            this.btRemoveLT.Size = new System.Drawing.Size(75, 26);
             this.btRemoveLT.TabIndex = 11;
             this.btRemoveLT.Text = "Remove";
             this.btRemoveLT.UseVisualStyleBackColor = true;
@@ -143,17 +144,27 @@
             // 
             this.btAddLT.Location = new System.Drawing.Point(263, 224);
             this.btAddLT.Name = "btAddLT";
-            this.btAddLT.Size = new System.Drawing.Size(56, 26);
+            this.btAddLT.Size = new System.Drawing.Size(75, 26);
             this.btAddLT.TabIndex = 10;
             this.btAddLT.Text = "Add";
             this.btAddLT.UseVisualStyleBackColor = true;
             this.btAddLT.Click += new System.EventHandler(this.btAddLT_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(267, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 26);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 431);
+            this.ClientSize = new System.Drawing.Size(351, 431);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btRemoveLT);
             this.Controls.Add(this.btAddLT);
             this.Controls.Add(this.btClose);
@@ -188,5 +199,6 @@
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Button btRemoveLT;
         private System.Windows.Forms.Button btAddLT;
+        private System.Windows.Forms.Button button1;
     }
 }

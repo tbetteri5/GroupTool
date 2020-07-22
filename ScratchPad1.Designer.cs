@@ -41,6 +41,9 @@
             this.Tab1 = new System.Windows.Forms.TabControl();
             this.tabHelp = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btDocHandleCopy = new System.Windows.Forms.Button();
+            this.btDocHandlePaste = new System.Windows.Forms.Button();
+            this.tbDocHandle = new System.Windows.Forms.TextBox();
             this.btOpenTodoList = new System.Windows.Forms.Button();
             this.tbCheckListNotes = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -130,8 +133,6 @@
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new GroupTool.GroupTooldbDataSetTableAdapters.ClientsTableAdapter();
             this.tableAdapterManager = new GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager();
-            this.tbDocHandle = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -254,7 +255,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.btDocHandleCopy);
+            this.groupBox4.Controls.Add(this.btDocHandlePaste);
             this.groupBox4.Controls.Add(this.tbDocHandle);
             this.groupBox4.Controls.Add(this.btOpenTodoList);
             this.groupBox4.Controls.Add(this.tbCheckListNotes);
@@ -264,6 +266,40 @@
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Sticky Note:";
+            // 
+            // btDocHandleCopy
+            // 
+            this.btDocHandleCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F);
+            this.btDocHandleCopy.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btDocHandleCopy.Location = new System.Drawing.Point(70, 118);
+            this.btDocHandleCopy.Name = "btDocHandleCopy";
+            this.btDocHandleCopy.Size = new System.Drawing.Size(39, 15);
+            this.btDocHandleCopy.TabIndex = 53;
+            this.btDocHandleCopy.Text = "Copy";
+            this.btDocHandleCopy.UseVisualStyleBackColor = true;
+            this.btDocHandleCopy.Click += new System.EventHandler(this.btDocHandleCopy_Click);
+            // 
+            // btDocHandlePaste
+            // 
+            this.btDocHandlePaste.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.75F);
+            this.btDocHandlePaste.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btDocHandlePaste.Location = new System.Drawing.Point(1, 118);
+            this.btDocHandlePaste.Name = "btDocHandlePaste";
+            this.btDocHandlePaste.Size = new System.Drawing.Size(68, 15);
+            this.btDocHandlePaste.TabIndex = 52;
+            this.btDocHandlePaste.Text = "Doc Handle:";
+            this.btDocHandlePaste.UseVisualStyleBackColor = true;
+            this.btDocHandlePaste.Click += new System.EventHandler(this.btDocHandlePaste_Click_1);
+            // 
+            // tbDocHandle
+            // 
+            this.tbDocHandle.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbDocHandle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDocHandle.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDocHandle.Location = new System.Drawing.Point(0, 134);
+            this.tbDocHandle.Name = "tbDocHandle";
+            this.tbDocHandle.Size = new System.Drawing.Size(109, 17);
+            this.tbDocHandle.TabIndex = 18;
             // 
             // btOpenTodoList
             // 
@@ -284,7 +320,7 @@
             this.tbCheckListNotes.Location = new System.Drawing.Point(0, 16);
             this.tbCheckListNotes.Multiline = true;
             this.tbCheckListNotes.Name = "tbCheckListNotes";
-            this.tbCheckListNotes.Size = new System.Drawing.Size(112, 114);
+            this.tbCheckListNotes.Size = new System.Drawing.Size(112, 99);
             this.tbCheckListNotes.TabIndex = 18;
             // 
             // groupBox2
@@ -1257,27 +1293,6 @@
             this.tableAdapterManager.ClientsTableAdapter = this.clientsTableAdapter;
             this.tableAdapterManager.UpdateOrder = GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tbDocHandle
-            // 
-            this.tbDocHandle.BackColor = System.Drawing.Color.BlanchedAlmond;
-            this.tbDocHandle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDocHandle.Font = new System.Drawing.Font("Arial Unicode MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDocHandle.Location = new System.Drawing.Point(27, 134);
-            this.tbDocHandle.Name = "tbDocHandle";
-            this.tbDocHandle.Size = new System.Drawing.Size(82, 17);
-            this.tbDocHandle.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(-2, 134);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 19);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "DH:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1452,7 +1467,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbDocHandle;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btDocHandleCopy;
+        private System.Windows.Forms.Button btDocHandlePaste;
     }
 }
 

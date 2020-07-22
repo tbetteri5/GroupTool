@@ -895,7 +895,23 @@ private void tbName_TextChanged(object sender, EventArgs e)
 
         }
 
-       
+        
+
+        private void btDocHandlePaste_Click(object sender, EventArgs e)
+        {
+
+            tbName.Text = Clipboard.GetText();
+        }
+
+        private void btDocHandlePaste_Click_1(object sender, EventArgs e)
+        {
+            tbDocHandle.Text = Clipboard.GetText();
+        }
+
+        private void btDocHandleCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbDocHandle.Text);
+        }
     }
 
 }

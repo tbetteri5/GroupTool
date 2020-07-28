@@ -65,6 +65,21 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.tabAccounting = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbCalc_Out = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbCalc_Div = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbCalc_Sub = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbCalc_Mult = new System.Windows.Forms.TextBox();
+            this.tbCalc_Add = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbCalc_In = new System.Windows.Forms.TextBox();
+            this.btCopyAccnt9 = new System.Windows.Forms.Button();
+            this.btCopyAccnt3 = new System.Windows.Forms.Button();
+            this.btCopyAccnt2 = new System.Windows.Forms.Button();
+            this.btCopyAccnt1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tbAccountNotes = new System.Windows.Forms.TextBox();
             this.tbAccnt9 = new System.Windows.Forms.TextBox();
@@ -133,6 +148,8 @@
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new GroupTool.GroupTooldbDataSetTableAdapters.ClientsTableAdapter();
             this.tableAdapterManager = new GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -156,6 +173,7 @@
             this.btPastePolicy.Name = "btPastePolicy";
             this.btPastePolicy.Size = new System.Drawing.Size(45, 23);
             this.btPastePolicy.TabIndex = 22;
+            this.btPastePolicy.TabStop = false;
             this.btPastePolicy.Text = "Policy";
             this.btPastePolicy.UseVisualStyleBackColor = true;
             this.btPastePolicy.Click += new System.EventHandler(this.btCopy_Click);
@@ -177,7 +195,7 @@
             this.tbPolicyD.Location = new System.Drawing.Point(55, 76);
             this.tbPolicyD.Name = "tbPolicyD";
             this.tbPolicyD.Size = new System.Drawing.Size(191, 22);
-            this.tbPolicyD.TabIndex = 13;
+            this.tbPolicyD.TabIndex = 51;
             // 
             // tbName
             // 
@@ -191,11 +209,13 @@
             // 
             // btCopyPolicyD
             // 
+            this.btCopyPolicyD.BackColor = System.Drawing.Color.YellowGreen;
             this.btCopyPolicyD.Location = new System.Drawing.Point(251, 75);
             this.btCopyPolicyD.Name = "btCopyPolicyD";
             this.btCopyPolicyD.Size = new System.Drawing.Size(19, 23);
             this.btCopyPolicyD.TabIndex = 18;
-            this.btCopyPolicyD.UseVisualStyleBackColor = true;
+            this.btCopyPolicyD.TabStop = false;
+            this.btCopyPolicyD.UseVisualStyleBackColor = false;
             this.btCopyPolicyD.Click += new System.EventHandler(this.btCopyPolicyD_Click);
             // 
             // btCopyPolicy
@@ -204,6 +224,7 @@
             this.btCopyPolicy.Name = "btCopyPolicy";
             this.btCopyPolicy.Size = new System.Drawing.Size(19, 23);
             this.btCopyPolicy.TabIndex = 16;
+            this.btCopyPolicy.TabStop = false;
             this.btCopyPolicy.UseVisualStyleBackColor = true;
             this.btCopyPolicy.Click += new System.EventHandler(this.btCopyPolicy_Click);
             // 
@@ -354,7 +375,8 @@
             this.checkBox8.Location = new System.Drawing.Point(5, 159);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 17;
+            this.checkBox8.TabIndex = 63;
+            this.checkBox8.TabStop = false;
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // tbCheck8
@@ -365,7 +387,7 @@
             this.tbCheck8.Location = new System.Drawing.Point(22, 158);
             this.tbCheck8.Name = "tbCheck8";
             this.tbCheck8.Size = new System.Drawing.Size(191, 17);
-            this.tbCheck8.TabIndex = 16;
+            this.tbCheck8.TabIndex = 8;
             // 
             // tbCheck4
             // 
@@ -375,7 +397,7 @@
             this.tbCheck4.Location = new System.Drawing.Point(22, 78);
             this.tbCheck4.Name = "tbCheck4";
             this.tbCheck4.Size = new System.Drawing.Size(191, 17);
-            this.tbCheck4.TabIndex = 8;
+            this.tbCheck4.TabIndex = 4;
             // 
             // checkBox7
             // 
@@ -383,7 +405,8 @@
             this.checkBox7.Location = new System.Drawing.Point(5, 139);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 15;
+            this.checkBox7.TabIndex = 62;
+            this.checkBox7.TabStop = false;
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // tbCheck1
@@ -404,7 +427,7 @@
             this.tbCheck7.Location = new System.Drawing.Point(22, 138);
             this.tbCheck7.Name = "tbCheck7";
             this.tbCheck7.Size = new System.Drawing.Size(191, 17);
-            this.tbCheck7.TabIndex = 14;
+            this.tbCheck7.TabIndex = 7;
             // 
             // checkBox1
             // 
@@ -412,7 +435,8 @@
             this.checkBox1.Location = new System.Drawing.Point(5, 19);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 3;
+            this.checkBox1.TabIndex = 55;
+            this.checkBox1.TabStop = false;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBox5
@@ -421,7 +445,8 @@
             this.checkBox5.Location = new System.Drawing.Point(5, 119);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 13;
+            this.checkBox5.TabIndex = 61;
+            this.checkBox5.TabStop = false;
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // tbCheck2
@@ -432,7 +457,7 @@
             this.tbCheck2.Location = new System.Drawing.Point(22, 38);
             this.tbCheck2.Name = "tbCheck2";
             this.tbCheck2.Size = new System.Drawing.Size(191, 17);
-            this.tbCheck2.TabIndex = 4;
+            this.tbCheck2.TabIndex = 2;
             // 
             // tbCheck6
             // 
@@ -442,7 +467,7 @@
             this.tbCheck6.Location = new System.Drawing.Point(22, 118);
             this.tbCheck6.Name = "tbCheck6";
             this.tbCheck6.Size = new System.Drawing.Size(191, 17);
-            this.tbCheck6.TabIndex = 12;
+            this.tbCheck6.TabIndex = 6;
             // 
             // checkBox2
             // 
@@ -450,7 +475,8 @@
             this.checkBox2.Location = new System.Drawing.Point(5, 39);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 5;
+            this.checkBox2.TabIndex = 56;
+            this.checkBox2.TabStop = false;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox6
@@ -459,7 +485,8 @@
             this.checkBox6.Location = new System.Drawing.Point(5, 99);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 11;
+            this.checkBox6.TabIndex = 60;
+            this.checkBox6.TabStop = false;
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // tbCheck3
@@ -470,7 +497,7 @@
             this.tbCheck3.Location = new System.Drawing.Point(22, 58);
             this.tbCheck3.Name = "tbCheck3";
             this.tbCheck3.Size = new System.Drawing.Size(191, 17);
-            this.tbCheck3.TabIndex = 6;
+            this.tbCheck3.TabIndex = 3;
             // 
             // tbCheck5
             // 
@@ -480,7 +507,7 @@
             this.tbCheck5.Location = new System.Drawing.Point(22, 98);
             this.tbCheck5.Name = "tbCheck5";
             this.tbCheck5.Size = new System.Drawing.Size(191, 17);
-            this.tbCheck5.TabIndex = 10;
+            this.tbCheck5.TabIndex = 5;
             // 
             // checkBox3
             // 
@@ -488,7 +515,8 @@
             this.checkBox3.Location = new System.Drawing.Point(5, 59);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 7;
+            this.checkBox3.TabIndex = 57;
+            this.checkBox3.TabStop = false;
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox4
@@ -497,7 +525,8 @@
             this.checkBox4.Location = new System.Drawing.Point(5, 79);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 9;
+            this.checkBox4.TabIndex = 59;
+            this.checkBox4.TabStop = false;
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // tabAccounting
@@ -512,6 +541,23 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.tbCalc_Out);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.tbCalc_Div);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.tbCalc_Sub);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.tbCalc_Mult);
+            this.groupBox1.Controls.Add(this.tbCalc_Add);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.tbCalc_In);
+            this.groupBox1.Controls.Add(this.btCopyAccnt9);
+            this.groupBox1.Controls.Add(this.btCopyAccnt3);
+            this.groupBox1.Controls.Add(this.btCopyAccnt2);
+            this.groupBox1.Controls.Add(this.btCopyAccnt1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.tbAccountNotes);
             this.groupBox1.Controls.Add(this.tbAccnt9);
@@ -532,15 +578,191 @@
             this.groupBox1.Text = "Accounting";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(74, 151);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(21, 24);
+            this.label11.TabIndex = 65;
+            this.label11.Text = "=";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbCalc_Out
+            // 
+            this.tbCalc_Out.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbCalc_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCalc_Out.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tbCalc_Out.Location = new System.Drawing.Point(95, 153);
+            this.tbCalc_Out.Multiline = true;
+            this.tbCalc_Out.Name = "tbCalc_Out";
+            this.tbCalc_Out.Size = new System.Drawing.Size(77, 20);
+            this.tbCalc_Out.TabIndex = 64;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(79, 134);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(12, 13);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "/";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbCalc_Div
+            // 
+            this.tbCalc_Div.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbCalc_Div.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCalc_Div.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCalc_Div.Location = new System.Drawing.Point(95, 132);
+            this.tbCalc_Div.Name = "tbCalc_Div";
+            this.tbCalc_Div.Size = new System.Drawing.Size(39, 17);
+            this.tbCalc_Div.TabIndex = 62;
+            this.tbCalc_Div.TextChanged += new System.EventHandler(this.tbCalc_Div_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(8, 129);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(14, 20);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "-";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbCalc_Sub
+            // 
+            this.tbCalc_Sub.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbCalc_Sub.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCalc_Sub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCalc_Sub.Location = new System.Drawing.Point(24, 132);
+            this.tbCalc_Sub.Name = "tbCalc_Sub";
+            this.tbCalc_Sub.Size = new System.Drawing.Size(51, 17);
+            this.tbCalc_Sub.TabIndex = 60;
+            this.tbCalc_Sub.TextChanged += new System.EventHandler(this.tbCalc_Sub_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(7, 106);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 20);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "+";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbCalc_Mult
+            // 
+            this.tbCalc_Mult.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbCalc_Mult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCalc_Mult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCalc_Mult.Location = new System.Drawing.Point(95, 111);
+            this.tbCalc_Mult.Name = "tbCalc_Mult";
+            this.tbCalc_Mult.Size = new System.Drawing.Size(39, 17);
+            this.tbCalc_Mult.TabIndex = 58;
+            this.tbCalc_Mult.TextChanged += new System.EventHandler(this.tbCalc_Mult_TextChanged);
+            // 
+            // tbCalc_Add
+            // 
+            this.tbCalc_Add.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbCalc_Add.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCalc_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCalc_Add.Location = new System.Drawing.Point(24, 109);
+            this.tbCalc_Add.Name = "tbCalc_Add";
+            this.tbCalc_Add.Size = new System.Drawing.Size(51, 17);
+            this.tbCalc_Add.TabIndex = 57;
+            this.tbCalc_Add.TextChanged += new System.EventHandler(this.tbCalc_Add_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(79, 112);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 13);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "X";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbCalc_In
+            // 
+            this.tbCalc_In.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbCalc_In.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCalc_In.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tbCalc_In.Location = new System.Drawing.Point(95, 81);
+            this.tbCalc_In.Multiline = true;
+            this.tbCalc_In.Name = "tbCalc_In";
+            this.tbCalc_In.Size = new System.Drawing.Size(77, 19);
+            this.tbCalc_In.TabIndex = 56;
+            this.tbCalc_In.TextChanged += new System.EventHandler(this.tbCalc_In_TextChanged);
+            // 
+            // btCopyAccnt9
+            // 
+            this.btCopyAccnt9.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCopyAccnt9.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btCopyAccnt9.Location = new System.Drawing.Point(313, 79);
+            this.btCopyAccnt9.Name = "btCopyAccnt9";
+            this.btCopyAccnt9.Size = new System.Drawing.Size(16, 25);
+            this.btCopyAccnt9.TabIndex = 55;
+            this.btCopyAccnt9.Text = "C";
+            this.btCopyAccnt9.UseVisualStyleBackColor = true;
+            this.btCopyAccnt9.Click += new System.EventHandler(this.btCopyAccnt9_Click);
+            // 
+            // btCopyAccnt3
+            // 
+            this.btCopyAccnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCopyAccnt3.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btCopyAccnt3.Location = new System.Drawing.Point(313, 54);
+            this.btCopyAccnt3.Name = "btCopyAccnt3";
+            this.btCopyAccnt3.Size = new System.Drawing.Size(16, 20);
+            this.btCopyAccnt3.TabIndex = 54;
+            this.btCopyAccnt3.Text = "C";
+            this.btCopyAccnt3.UseVisualStyleBackColor = true;
+            this.btCopyAccnt3.Click += new System.EventHandler(this.btCopyAccnt3_Click);
+            // 
+            // btCopyAccnt2
+            // 
+            this.btCopyAccnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCopyAccnt2.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btCopyAccnt2.Location = new System.Drawing.Point(313, 33);
+            this.btCopyAccnt2.Name = "btCopyAccnt2";
+            this.btCopyAccnt2.Size = new System.Drawing.Size(16, 20);
+            this.btCopyAccnt2.TabIndex = 53;
+            this.btCopyAccnt2.Text = "C";
+            this.btCopyAccnt2.UseVisualStyleBackColor = true;
+            this.btCopyAccnt2.Click += new System.EventHandler(this.btCopyAccnt2_Click);
+            // 
+            // btCopyAccnt1
+            // 
+            this.btCopyAccnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCopyAccnt1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btCopyAccnt1.Location = new System.Drawing.Point(313, 12);
+            this.btCopyAccnt1.Name = "btCopyAccnt1";
+            this.btCopyAccnt1.Size = new System.Drawing.Size(16, 20);
+            this.btCopyAccnt1.TabIndex = 52;
+            this.btCopyAccnt1.Text = "C";
+            this.btCopyAccnt1.UseVisualStyleBackColor = true;
+            this.btCopyAccnt1.Click += new System.EventHandler(this.btCopyAccnt1_Click);
+            // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(178, 156);
+            this.textBox2.Location = new System.Drawing.Point(178, 153);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 17);
-            this.textBox2.TabIndex = 44;
+            this.textBox2.Size = new System.Drawing.Size(147, 20);
+            this.textBox2.TabIndex = 7;
             // 
             // tbAccountNotes
             // 
@@ -551,8 +773,8 @@
             this.tbAccountNotes.Margin = new System.Windows.Forms.Padding(10);
             this.tbAccountNotes.Multiline = true;
             this.tbAccountNotes.Name = "tbAccountNotes";
-            this.tbAccountNotes.Size = new System.Drawing.Size(163, 162);
-            this.tbAccountNotes.TabIndex = 45;
+            this.tbAccountNotes.Size = new System.Drawing.Size(163, 61);
+            this.tbAccountNotes.TabIndex = 1;
             // 
             // tbAccnt9
             // 
@@ -561,9 +783,10 @@
             this.tbAccnt9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAccnt9.Location = new System.Drawing.Point(242, 80);
             this.tbAccnt9.Name = "tbAccnt9";
-            this.tbAccnt9.Size = new System.Drawing.Size(83, 24);
-            this.tbAccnt9.TabIndex = 18;
+            this.tbAccnt9.Size = new System.Drawing.Size(69, 24);
+            this.tbAccnt9.TabIndex = 5;
             this.tbAccnt9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbAccnt9.TextChanged += new System.EventHandler(this.tbAccnt9_TextChanged);
             // 
             // tbAccnt2
             // 
@@ -572,8 +795,8 @@
             this.tbAccnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAccnt2.Location = new System.Drawing.Point(242, 34);
             this.tbAccnt2.Name = "tbAccnt2";
-            this.tbAccnt2.Size = new System.Drawing.Size(83, 17);
-            this.tbAccnt2.TabIndex = 17;
+            this.tbAccnt2.Size = new System.Drawing.Size(69, 17);
+            this.tbAccnt2.TabIndex = 3;
             this.tbAccnt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbAccnt2.TextChanged += new System.EventHandler(this.tbAccnt2_TextChanged);
             this.tbAccnt2.Leave += new System.EventHandler(this.tbAccnt2_Leave);
@@ -586,7 +809,7 @@
             this.textBox10.Location = new System.Drawing.Point(178, 132);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(147, 17);
-            this.textBox10.TabIndex = 43;
+            this.textBox10.TabIndex = 6;
             // 
             // tbAccnt1
             // 
@@ -595,8 +818,8 @@
             this.tbAccnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAccnt1.Location = new System.Drawing.Point(242, 13);
             this.tbAccnt1.Name = "tbAccnt1";
-            this.tbAccnt1.Size = new System.Drawing.Size(83, 17);
-            this.tbAccnt1.TabIndex = 16;
+            this.tbAccnt1.Size = new System.Drawing.Size(69, 17);
+            this.tbAccnt1.TabIndex = 2;
             this.tbAccnt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbAccnt1.TextChanged += new System.EventHandler(this.tbAccnt1_TextChanged);
             this.tbAccnt1.Leave += new System.EventHandler(this.tbAccnt1_Leave);
@@ -637,7 +860,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(178, 81);
+            this.button2.Location = new System.Drawing.Point(178, 80);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 23);
             this.button2.TabIndex = 34;
@@ -652,8 +875,8 @@
             this.tbAccnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAccnt3.Location = new System.Drawing.Point(242, 55);
             this.tbAccnt3.Name = "tbAccnt3";
-            this.tbAccnt3.Size = new System.Drawing.Size(83, 17);
-            this.tbAccnt3.TabIndex = 18;
+            this.tbAccnt3.Size = new System.Drawing.Size(69, 17);
+            this.tbAccnt3.TabIndex = 4;
             this.tbAccnt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbAccnt3.TextChanged += new System.EventHandler(this.tbAccnt3_TextChanged);
             this.tbAccnt3.Leave += new System.EventHandler(this.tbAccnt3_Leave);
@@ -672,6 +895,8 @@
             "2428",
             "2426",
             "2424",
+            "2506",
+            "5594",
             "5595",
             "5596",
             "SUB",
@@ -986,7 +1211,7 @@
             this.lkSchedules.Location = new System.Drawing.Point(303, 106);
             this.lkSchedules.Name = "lkSchedules";
             this.lkSchedules.Size = new System.Drawing.Size(53, 16);
-            this.lkSchedules.TabIndex = 2;
+            this.lkSchedules.TabIndex = 50;
             this.lkSchedules.TabStop = true;
             this.lkSchedules.Text = "Google";
             this.lkSchedules.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkSchedules_LinkClicked);
@@ -1021,6 +1246,7 @@
             this.btPastePhone.Name = "btPastePhone";
             this.btPastePhone.Size = new System.Drawing.Size(45, 22);
             this.btPastePhone.TabIndex = 13;
+            this.btPastePhone.TabStop = false;
             this.btPastePhone.Text = "Phone";
             this.btPastePhone.UseVisualStyleBackColor = true;
             this.btPastePhone.Click += new System.EventHandler(this.btPastePhone_Click);
@@ -1034,6 +1260,7 @@
             this.tbPhone.Size = new System.Drawing.Size(191, 22);
             this.tbPhone.TabIndex = 3;
             this.tbPhone.TextChanged += new System.EventHandler(this.tbPhone_TextChanged);
+            this.tbPhone.Leave += new System.EventHandler(this.tbPhone_Leave);
             // 
             // btCopyPhone
             // 
@@ -1041,6 +1268,7 @@
             this.btCopyPhone.Name = "btCopyPhone";
             this.btCopyPhone.Size = new System.Drawing.Size(19, 22);
             this.btCopyPhone.TabIndex = 14;
+            this.btCopyPhone.TabStop = false;
             this.btCopyPhone.UseVisualStyleBackColor = true;
             this.btCopyPhone.Click += new System.EventHandler(this.btCopyPhone_Click);
             // 
@@ -1050,6 +1278,7 @@
             this.btCopyName.Name = "btCopyName";
             this.btCopyName.Size = new System.Drawing.Size(19, 22);
             this.btCopyName.TabIndex = 15;
+            this.btCopyName.TabStop = false;
             this.btCopyName.UseVisualStyleBackColor = true;
             this.btCopyName.Click += new System.EventHandler(this.btCopyName_Click);
             // 
@@ -1071,6 +1300,7 @@
             this.btCopyAddress.Name = "btCopyAddress";
             this.btCopyAddress.Size = new System.Drawing.Size(15, 24);
             this.btCopyAddress.TabIndex = 20;
+            this.btCopyAddress.TabStop = false;
             this.btCopyAddress.UseVisualStyleBackColor = true;
             this.btCopyAddress.Click += new System.EventHandler(this.btCopyAddress_Click);
             // 
@@ -1092,6 +1322,7 @@
             this.btAddressPaste.Name = "btAddressPaste";
             this.btAddressPaste.Size = new System.Drawing.Size(44, 24);
             this.btAddressPaste.TabIndex = 14;
+            this.btAddressPaste.TabStop = false;
             this.btAddressPaste.Text = "Addr";
             this.btAddressPaste.UseVisualStyleBackColor = true;
             this.btAddressPaste.Click += new System.EventHandler(this.btAddressPaste_Click);
@@ -1131,6 +1362,7 @@
             this.btCopySubject.Name = "btCopySubject";
             this.btCopySubject.Size = new System.Drawing.Size(80, 23);
             this.btCopySubject.TabIndex = 24;
+            this.btCopySubject.TabStop = false;
             this.btCopySubject.Text = "Copy Subject";
             this.btCopySubject.UseVisualStyleBackColor = true;
             this.btCopySubject.Click += new System.EventHandler(this.button1_Click);
@@ -1153,6 +1385,7 @@
             this.btAllCaps.Name = "btAllCaps";
             this.btAllCaps.Size = new System.Drawing.Size(39, 22);
             this.btAllCaps.TabIndex = 26;
+            this.btAllCaps.TabStop = false;
             this.btAllCaps.Text = "Caps";
             this.btAllCaps.UseVisualStyleBackColor = true;
             this.btAllCaps.Click += new System.EventHandler(this.btAllCaps_Click);
@@ -1165,6 +1398,7 @@
             this.btPasteName.Name = "btPasteName";
             this.btPasteName.Size = new System.Drawing.Size(44, 23);
             this.btPasteName.TabIndex = 29;
+            this.btPasteName.TabStop = false;
             this.btPasteName.Text = "Name";
             this.btPasteName.UseVisualStyleBackColor = true;
             this.btPasteName.Click += new System.EventHandler(this.btPasteName_Click);
@@ -1178,7 +1412,9 @@
             this.cbRequestType.Location = new System.Drawing.Point(184, 159);
             this.cbRequestType.Name = "cbRequestType";
             this.cbRequestType.Size = new System.Drawing.Size(171, 24);
+            this.cbRequestType.Sorted = true;
             this.cbRequestType.TabIndex = 17;
+            this.cbRequestType.TabStop = false;
             this.cbRequestType.Text = "Request...";
             this.cbRequestType.SelectedIndexChanged += new System.EventHandler(this.cbRequestType_SelectedIndexChanged);
             this.cbRequestType.TextChanged += new System.EventHandler(this.cbRequestType_TextChanged);
@@ -1239,6 +1475,7 @@
             this.tbSwapName.Name = "tbSwapName";
             this.tbSwapName.Size = new System.Drawing.Size(39, 22);
             this.tbSwapName.TabIndex = 48;
+            this.tbSwapName.TabStop = false;
             this.tbSwapName.Text = "Swap";
             this.tbSwapName.UseVisualStyleBackColor = true;
             this.tbSwapName.Click += new System.EventHandler(this.tbSwapName_Click);
@@ -1293,12 +1530,34 @@
             this.tableAdapterManager.ClientsTableAdapter = this.clientsTableAdapter;
             this.tableAdapterManager.UpdateOrder = GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(24, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 20);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(24, 80);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(51, 20);
+            this.button3.TabIndex = 67;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(360, 473);
+            this.ClientSize = new System.Drawing.Size(361, 473);
             this.Controls.Add(this.ckMinimizeBehaviour);
             this.Controls.Add(this.lkSchedules);
             this.Controls.Add(this.btOutputToggle);
@@ -1469,6 +1728,23 @@
         private System.Windows.Forms.TextBox tbDocHandle;
         private System.Windows.Forms.Button btDocHandleCopy;
         private System.Windows.Forms.Button btDocHandlePaste;
+        private System.Windows.Forms.Button btCopyAccnt9;
+        private System.Windows.Forms.Button btCopyAccnt3;
+        private System.Windows.Forms.Button btCopyAccnt2;
+        private System.Windows.Forms.Button btCopyAccnt1;
+        private System.Windows.Forms.TextBox tbCalc_Mult;
+        private System.Windows.Forms.TextBox tbCalc_Add;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbCalc_In;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbCalc_Out;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbCalc_Div;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbCalc_Sub;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

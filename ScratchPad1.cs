@@ -5,6 +5,7 @@ using System.Management.Instrumentation;
 using System.Windows.Forms;
 using GroupTool.Func;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GroupTool
 {
@@ -261,10 +262,10 @@ namespace GroupTool
 
             string txt = string.Empty;
 
-            txt = DateTime.Now.ToString("MMM d.yy") + " " + DateTime.Now.ToLongTimeString() + "--->" + ",";
+            txt = DateTime.Now.ToString("MMM d.yy") + " " + DateTime.Now.ToLongTimeString() + "--->";
+            txt = MyFunc.StringOut(txt, "DH:", tbDocHandle.Text, "");
             txt = MyFunc.StringOut(txt, "Request Type", cbRequestType.Text,"Request...");
-            txt = MyFunc.StringOut(txt, "Policy", tbPolicy.Text,"");
-            txt = MyFunc.StringOut(txt, "Name", tbName.Text,"");
+            txt = MyFunc.StringOut(txt, "Subject", tbPolicy.Text + " " + tbName.Text, "");
             txt = MyFunc.StringOut(txt, "Phone", tbPhone.Text,"");
             txt = MyFunc.StringOut(txt, "Addr", tbAddress.Text,"");
 
@@ -358,27 +359,7 @@ private void tbName_TextChanged(object sender, EventArgs e)
         }
 
 
-        private string TextAdd(string val1, string val2)
-        {
-            double operand1, operand2, result;
-
-            if (val1 == "" || val1 == "-") { val1 = "0"; }
-            if (val2 == "" || val2 == "-") { val2 = "0"; }
-
-            try
-            {
-                operand1 = Convert.ToDouble(val1);
-                operand2 = Convert.ToDouble(val2);
-
-                result = operand1 + operand2;
-                return Convert.ToString(result);
-            }
-            catch (InvalidCastException e)
-            {
-                return "error";
-            }
-
-        }
+        
 
         private void UpdateAccounting()
         {
@@ -388,13 +369,13 @@ private void tbName_TextChanged(object sender, EventArgs e)
             if (cbMars2.Text.Substring(0, 2) == "SU" || cbMars2.Text.Substring(0, 2) == "24")
             {
                 //Hold the result in temp if subtract
-                temp = TextAdd(tbAccnt1.Text, "-" + tbAccnt2.Text);
+                temp = MyFunc.TextMath("+",tbAccnt1.Text, "-" + tbAccnt2.Text);
                 
             }
             else
             {
                 //Hold result if add
-                temp = TextAdd(tbAccnt1.Text, tbAccnt2.Text);
+                temp = MyFunc.TextMath("+",tbAccnt1.Text, tbAccnt2.Text);
             }
 
             result = temp;
@@ -407,11 +388,11 @@ private void tbName_TextChanged(object sender, EventArgs e)
                 if (cbMars3.Text.Substring(0, 2) == "SU" || cbMars3.Text.Substring(0, 2) == "24")
                 {
 
-                    result = TextAdd(temp, "-" + tbAccnt3.Text);
+                    result = MyFunc.TextMath("-",temp,tbAccnt3.Text);
                 }
                 else if (cbMars3.Text.Substring(0, 2) != "")
                 {
-                    result = TextAdd(temp, tbAccnt3.Text);
+                    result = MyFunc.TextMath("-", temp, tbAccnt3.Text);
                 }
             }
             
@@ -446,9 +427,9 @@ private void tbName_TextChanged(object sender, EventArgs e)
 
             //Set output
             string filePath = MyFunc.FilePath() + "CheckList.txt";
-        
+
             //Read Checklist Data
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = { "", "" }; //File.ReadAllLines(filePath);
 
             //New String out
             string NewCheckString = "";
@@ -911,6 +892,99 @@ private void tbName_TextChanged(object sender, EventArgs e)
         private void btDocHandleCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(tbDocHandle.Text);
+        }
+
+        private void tbPhone_Leave(object sender, EventArgs e)
+        {
+            tbPhone.Text = MyFunc.FormatPhone(tbPhone.Text);
+        }
+
+        private void btCopyAccnt1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt1.Text);
+        }
+
+        private void btCopyAccnt2_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt2.Text);
+        }
+
+        private void btCopyAccnt3_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt3.Text);
+        }
+
+        private void btCopyAccnt9_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt9.Text);
+        }
+
+        private void tbCalc_In_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
+
+        private void tbAccnt9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateCalculator()
+        {
+            if (tbCalc_Add.Text != "")
+            {
+                tbCalc_Out.Text = MyFunc.TextMath("+",tbCalc_In.Text, tbCalc_Add.Text);
+            }
+            else if(tbCalc_Sub.Text != "")
+            {
+                tbCalc_Out.Text = MyFunc.TextMath("-",tbCalc_In.Text, tbCalc_Sub.Text);
+            }
+            else if (tbCalc_Mult.Text != "")
+            {
+                tbCalc_Out.Text = MyFunc.TextMath("x", tbCalc_In.Text, tbCalc_Mult.Text);
+            }
+            else if (tbCalc_Div.Text != "")
+            {
+                tbCalc_Out.Text = MyFunc.TextMath("/", tbCalc_In.Text, tbCalc_Div.Text);
+            }
+
+
+            tbCalc_Out.Text = UpdateFormat(tbCalc_Out.Text);
+            tbCalc_In.Text = UpdateFormat(tbCalc_In.Text);
+        }
+
+        private void tbCalc_Add_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tbCalc_Out.Text = "";
+            tbCalc_Add.Text = "";
+            tbCalc_Mult.Text = "";
+            tbCalc_Sub.Text = "";
+            tbCalc_Div.Text = "";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tbCalc_In.Text = "";
+        }
+
+        private void tbCalc_Sub_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
+
+        private void tbCalc_Mult_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
+
+        private void tbCalc_Div_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -56,5 +57,81 @@ namespace GroupTool.Func
             return words;
 
         }
+        public static string CleanStringOfNonDigits_V5(string s)
+        {
+            if (string.IsNullOrEmpty(s)) return s;
+            string cleaned = new string(s.Where(c => c - '0' < 10).ToArray());
+            return cleaned;
+        }
+        public static string FormatPhone(string s)
+        {
+            string ou = "";
+            //Replace characters with a letter that will be removed
+            s = s.Replace('-', 'a');
+            s = s.Replace(')', 'a');
+            s = s.Replace('(', 'a');
+            s = s.Replace(' ', 'a'); 
+            s = s.Replace('.', 'a');
+
+            string s1 =  MyFunc.CleanStringOfNonDigits_V5(s);
+            if(s1.Length == 10)
+            {
+                ou = s1.Substring(0, 3) + "-" + s1.Substring(3,3) + "-" + s1.Substring(6, 4);
+                    
+            }
+            else
+            {
+                ou = s1;
+            }
+            return ou;
+
+            
+        }
+
+        public static string TextMath(string oper,string val1, string val2)
+        {
+            //oper {+,-,/,x}  val1 - text value 1
+            double operand1, operand2, result;
+
+            if (val1 == "" || val1 == "-") { val1 = "0"; }
+            if (val2 == "" || val2 == "-") { val2 = "0"; }
+
+            try
+            {
+                operand1 = Convert.ToDouble(val1);
+                operand2 = Convert.ToDouble(val2);
+
+                result = 0;
+                if (oper == "+")
+                {
+                    result = operand1 + operand2;
+                }
+                
+                else if(oper == "-")
+                {
+                    result = operand1 - operand2;
+                }
+                else if (oper == "x")
+                {
+                    result = operand1 * operand2;
+                }
+                else if (oper == "/")
+                {
+                    result = operand1 / operand2;
+                }
+
+                return Convert.ToString(result);
+            }
+            catch (InvalidCastException e)
+            {
+                return "error";
+            }
+
+        }
+       
     }
+
+    //HELP
+    //tbPhone.SelectionStart = tbPhone.Text.Length;
+     //tbPhone.SelectionLength = 0;
 }

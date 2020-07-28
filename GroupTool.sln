@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupTool", "GroupTool.cspr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{315A95A0-B0D7-41EF-8AC1-7F5A1FB0511F}"
 EndProject
-Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "GroupTool8", "..\GroupTool8\GroupTool8.aiproj", "{8F9E69A8-9643-45F8-B3E2-88CF9A9B5D79}"
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Project Group Tool", "..\Project Group Tool\Project Group Tool.aiproj", "{AF58B5B0-D9EA-4565-8AF0-ABD96879958B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,12 +22,12 @@ Global
 		{21F23824-428C-44F7-9D9E-948FFC6AC3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F23824-428C-44F7-9D9E-948FFC6AC3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F23824-428C-44F7-9D9E-948FFC6AC3A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F9E69A8-9643-45F8-B3E2-88CF9A9B5D79}.All|Any CPU.ActiveCfg = DefaultBuild
-		{8F9E69A8-9643-45F8-B3E2-88CF9A9B5D79}.All|Any CPU.Build.0 = DefaultBuild
-		{8F9E69A8-9643-45F8-B3E2-88CF9A9B5D79}.Debug|Any CPU.ActiveCfg = DefaultBuild
-		{8F9E69A8-9643-45F8-B3E2-88CF9A9B5D79}.Debug|Any CPU.Build.0 = DefaultBuild
-		{8F9E69A8-9643-45F8-B3E2-88CF9A9B5D79}.Release|Any CPU.ActiveCfg = DefaultBuild
-		{8F9E69A8-9643-45F8-B3E2-88CF9A9B5D79}.Release|Any CPU.Build.0 = DefaultBuild
+		{AF58B5B0-D9EA-4565-8AF0-ABD96879958B}.All|Any CPU.ActiveCfg = DefaultBuild
+		{AF58B5B0-D9EA-4565-8AF0-ABD96879958B}.All|Any CPU.Build.0 = DefaultBuild
+		{AF58B5B0-D9EA-4565-8AF0-ABD96879958B}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{AF58B5B0-D9EA-4565-8AF0-ABD96879958B}.Debug|Any CPU.Build.0 = DefaultBuild
+		{AF58B5B0-D9EA-4565-8AF0-ABD96879958B}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{AF58B5B0-D9EA-4565-8AF0-ABD96879958B}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

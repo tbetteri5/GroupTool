@@ -65,6 +65,8 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.tabAccounting = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.tbCalc_Out = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -116,6 +118,32 @@
             this.tbAddRequestName = new System.Windows.Forms.TextBox();
             this.tbCheckEdit = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btClearAnn = new System.Windows.Forms.Button();
+            this.btClearSpouse = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.tbAnnOut = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.tbSpouseID = new System.Windows.Forms.TextBox();
+            this.btCopyNameOut = new System.Windows.Forms.Button();
+            this.tbNameOut = new System.Windows.Forms.TextBox();
+            this.rdMale = new System.Windows.Forms.RadioButton();
+            this.rdFemale = new System.Windows.Forms.RadioButton();
+            this.btTransferPaste = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btTPasteDOD = new System.Windows.Forms.Button();
+            this.tbTDOD = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btTPasteID = new System.Windows.Forms.Button();
+            this.tbTID = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btTPasteDOB = new System.Windows.Forms.Button();
+            this.tbTDOB = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btTPasteSIN = new System.Windows.Forms.Button();
+            this.tbTSIN = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btTPasteName = new System.Windows.Forms.Button();
+            this.tbTName = new System.Windows.Forms.TextBox();
             this.lkSchedules = new System.Windows.Forms.LinkLabel();
             this.btClose = new System.Windows.Forms.Button();
             this.btClear = new System.Windows.Forms.Button();
@@ -127,7 +155,6 @@
             this.btCopyAddress = new System.Windows.Forms.Button();
             this.tbAddress = new System.Windows.Forms.TextBox();
             this.btAddressPaste = new System.Windows.Forms.Button();
-            this.lbTime = new System.Windows.Forms.Label();
             this.tmTimer = new System.Windows.Forms.Timer(this.components);
             this.btSaveRecord = new System.Windows.Forms.Button();
             this.btCopySubject = new System.Windows.Forms.Button();
@@ -148,8 +175,21 @@
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new GroupTool.GroupTooldbDataSetTableAdapters.ClientsTableAdapter();
             this.tableAdapterManager = new GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btOpenTelLog = new System.Windows.Forms.Button();
+            this.tbCopyWindow = new System.Windows.Forms.TextBox();
+            this.btCopyToggle = new System.Windows.Forms.Button();
+            this.btPasteAndSend = new System.Windows.Forms.Button();
+            this.btClearOut = new System.Windows.Forms.Button();
+            this.btCopySubjectAll = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lbCharCount = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tbSpokeWith = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btCopyData = new System.Windows.Forms.Button();
+            this.lbTime = new System.Windows.Forms.Label();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -161,8 +201,11 @@
             this.groupBox6.SuspendLayout();
             this.tabEditChecks.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupTooldbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btPastePolicy
@@ -176,7 +219,7 @@
             this.btPastePolicy.TabStop = false;
             this.btPastePolicy.Text = "Policy";
             this.btPastePolicy.UseVisualStyleBackColor = true;
-            this.btPastePolicy.Click += new System.EventHandler(this.btCopy_Click);
+            this.btPastePolicy.Click += new System.EventHandler(this.btPastePolicy_Click);
             // 
             // tbPolicy
             // 
@@ -201,9 +244,9 @@
             // 
             this.tbName.BackColor = System.Drawing.Color.LightBlue;
             this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.Location = new System.Drawing.Point(56, 23);
+            this.tbName.Location = new System.Drawing.Point(55, 23);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(190, 22);
+            this.tbName.Size = new System.Drawing.Size(191, 22);
             this.tbName.TabIndex = 1;
             this.tbName.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
@@ -260,7 +303,7 @@
             this.Tab1.Multiline = true;
             this.Tab1.Name = "Tab1";
             this.Tab1.SelectedIndex = 0;
-            this.Tab1.Size = new System.Drawing.Size(342, 210);
+            this.Tab1.Size = new System.Drawing.Size(343, 210);
             this.Tab1.TabIndex = 5;
             // 
             // tabHelp
@@ -269,7 +312,7 @@
             this.tabHelp.Controls.Add(this.groupBox2);
             this.tabHelp.Location = new System.Drawing.Point(4, 22);
             this.tabHelp.Name = "tabHelp";
-            this.tabHelp.Size = new System.Drawing.Size(334, 184);
+            this.tabHelp.Size = new System.Drawing.Size(335, 184);
             this.tabHelp.TabIndex = 3;
             this.tabHelp.Text = "Checks";
             this.tabHelp.UseVisualStyleBackColor = true;
@@ -335,7 +378,7 @@
             // 
             // tbCheckListNotes
             // 
-            this.tbCheckListNotes.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.tbCheckListNotes.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.tbCheckListNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCheckListNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCheckListNotes.Location = new System.Drawing.Point(0, 16);
@@ -534,7 +577,7 @@
             this.tabAccounting.Controls.Add(this.groupBox1);
             this.tabAccounting.Location = new System.Drawing.Point(4, 22);
             this.tabAccounting.Name = "tabAccounting";
-            this.tabAccounting.Size = new System.Drawing.Size(334, 184);
+            this.tabAccounting.Size = new System.Drawing.Size(335, 184);
             this.tabAccounting.TabIndex = 5;
             this.tabAccounting.Text = "Accounting";
             this.tabAccounting.UseVisualStyleBackColor = true;
@@ -577,6 +620,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Accounting";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(24, 80);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(51, 20);
+            this.button3.TabIndex = 67;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(24, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 20);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label11
             // 
@@ -925,23 +990,28 @@
             // tabScratchPad
             // 
             this.tabScratchPad.BackColor = System.Drawing.Color.White;
+            this.tabScratchPad.Controls.Add(this.label18);
+            this.tabScratchPad.Controls.Add(this.tbSpokeWith);
+            this.tabScratchPad.Controls.Add(this.label17);
             this.tabScratchPad.Controls.Add(this.tbNotes);
+            this.tabScratchPad.Controls.Add(this.btOpenTelLog);
             this.tabScratchPad.Location = new System.Drawing.Point(4, 22);
             this.tabScratchPad.Name = "tabScratchPad";
             this.tabScratchPad.Padding = new System.Windows.Forms.Padding(3);
-            this.tabScratchPad.Size = new System.Drawing.Size(334, 184);
+            this.tabScratchPad.Size = new System.Drawing.Size(335, 184);
             this.tabScratchPad.TabIndex = 1;
-            this.tabScratchPad.Text = "Notepad";
+            this.tabScratchPad.Text = "Call Log";
             // 
             // tbNotes
             // 
             this.tbNotes.BackColor = System.Drawing.Color.LightYellow;
             this.tbNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNotes.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.tbNotes.Location = new System.Drawing.Point(0, 2);
+            this.tbNotes.Location = new System.Drawing.Point(0, 26);
             this.tbNotes.Multiline = true;
             this.tbNotes.Name = "tbNotes";
-            this.tbNotes.Size = new System.Drawing.Size(331, 178);
+            this.tbNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbNotes.Size = new System.Drawing.Size(331, 154);
             this.tbNotes.TabIndex = 5;
             // 
             // tabInfo
@@ -955,7 +1025,7 @@
             this.tabInfo.Location = new System.Drawing.Point(4, 22);
             this.tabInfo.Name = "tabInfo";
             this.tabInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInfo.Size = new System.Drawing.Size(334, 184);
+            this.tabInfo.Size = new System.Drawing.Size(335, 184);
             this.tabInfo.TabIndex = 2;
             this.tabInfo.Text = "Info";
             // 
@@ -1084,7 +1154,7 @@
             this.tabEditChecks.Controls.Add(this.tbCheckEdit);
             this.tabEditChecks.Location = new System.Drawing.Point(4, 22);
             this.tabEditChecks.Name = "tabEditChecks";
-            this.tabEditChecks.Size = new System.Drawing.Size(334, 184);
+            this.tabEditChecks.Size = new System.Drawing.Size(335, 184);
             this.tabEditChecks.TabIndex = 4;
             this.tabEditChecks.Text = "Edit Checks";
             this.tabEditChecks.UseVisualStyleBackColor = true;
@@ -1197,18 +1267,325 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btClearAnn);
+            this.tabPage1.Controls.Add(this.btClearSpouse);
+            this.tabPage1.Controls.Add(this.button6);
+            this.tabPage1.Controls.Add(this.tbAnnOut);
+            this.tabPage1.Controls.Add(this.button5);
+            this.tabPage1.Controls.Add(this.tbSpouseID);
+            this.tabPage1.Controls.Add(this.btCopyNameOut);
+            this.tabPage1.Controls.Add(this.tbNameOut);
+            this.tabPage1.Controls.Add(this.rdMale);
+            this.tabPage1.Controls.Add(this.rdFemale);
+            this.tabPage1.Controls.Add(this.btTransferPaste);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.btTPasteDOD);
+            this.tabPage1.Controls.Add(this.tbTDOD);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.btTPasteID);
+            this.tabPage1.Controls.Add(this.tbTID);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.btTPasteDOB);
+            this.tabPage1.Controls.Add(this.tbTDOB);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.btTPasteSIN);
+            this.tabPage1.Controls.Add(this.tbTSIN);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.btTPasteName);
+            this.tabPage1.Controls.Add(this.tbTName);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(334, 184);
+            this.tabPage1.Size = new System.Drawing.Size(335, 184);
             this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "Settings";
+            this.tabPage1.Text = "Transfer";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btClearAnn
+            // 
+            this.btClearAnn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClearAnn.Location = new System.Drawing.Point(163, 103);
+            this.btClearAnn.Name = "btClearAnn";
+            this.btClearAnn.Size = new System.Drawing.Size(38, 22);
+            this.btClearAnn.TabIndex = 81;
+            this.btClearAnn.TabStop = false;
+            this.btClearAnn.Text = "Clear";
+            this.btClearAnn.UseVisualStyleBackColor = true;
+            this.btClearAnn.Click += new System.EventHandler(this.btClearAnn_Click);
+            // 
+            // btClearSpouse
+            // 
+            this.btClearSpouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClearSpouse.Location = new System.Drawing.Point(163, 52);
+            this.btClearSpouse.Name = "btClearSpouse";
+            this.btClearSpouse.Size = new System.Drawing.Size(38, 22);
+            this.btClearSpouse.TabIndex = 80;
+            this.btClearSpouse.TabStop = false;
+            this.btClearSpouse.Text = "Clear";
+            this.btClearSpouse.UseVisualStyleBackColor = true;
+            this.btClearSpouse.Click += new System.EventHandler(this.btClearSpouse_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(8, 160);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(13, 20);
+            this.button6.TabIndex = 79;
+            this.button6.TabStop = false;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // tbAnnOut
+            // 
+            this.tbAnnOut.BackColor = System.Drawing.Color.LightBlue;
+            this.tbAnnOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAnnOut.Location = new System.Drawing.Point(140, 160);
+            this.tbAnnOut.Name = "tbAnnOut";
+            this.tbAnnOut.Size = new System.Drawing.Size(175, 20);
+            this.tbAnnOut.TabIndex = 78;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(318, 160);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(13, 20);
+            this.button5.TabIndex = 76;
+            this.button5.TabStop = false;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // tbSpouseID
+            // 
+            this.tbSpouseID.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tbSpouseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSpouseID.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.tbSpouseID.Location = new System.Drawing.Point(24, 160);
+            this.tbSpouseID.Name = "tbSpouseID";
+            this.tbSpouseID.Size = new System.Drawing.Size(113, 20);
+            this.tbSpouseID.TabIndex = 77;
+            // 
+            // btCopyNameOut
+            // 
+            this.btCopyNameOut.Location = new System.Drawing.Point(318, 138);
+            this.btCopyNameOut.Name = "btCopyNameOut";
+            this.btCopyNameOut.Size = new System.Drawing.Size(13, 20);
+            this.btCopyNameOut.TabIndex = 60;
+            this.btCopyNameOut.TabStop = false;
+            this.btCopyNameOut.UseVisualStyleBackColor = true;
+            this.btCopyNameOut.Click += new System.EventHandler(this.btCopyNameOut_Click);
+            // 
+            // tbNameOut
+            // 
+            this.tbNameOut.BackColor = System.Drawing.Color.LightBlue;
+            this.tbNameOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNameOut.Location = new System.Drawing.Point(8, 138);
+            this.tbNameOut.Name = "tbNameOut";
+            this.tbNameOut.Size = new System.Drawing.Size(307, 20);
+            this.tbNameOut.TabIndex = 75;
+            this.tbNameOut.TextChanged += new System.EventHandler(this.tbNameOut_TextChanged);
+            // 
+            // rdMale
+            // 
+            this.rdMale.AutoSize = true;
+            this.rdMale.Location = new System.Drawing.Point(234, 46);
+            this.rdMale.Name = "rdMale";
+            this.rdMale.Size = new System.Drawing.Size(48, 17);
+            this.rdMale.TabIndex = 74;
+            this.rdMale.TabStop = true;
+            this.rdMale.Text = "Male";
+            this.rdMale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdMale.UseVisualStyleBackColor = true;
+            this.rdMale.CheckedChanged += new System.EventHandler(this.rdMale_CheckedChanged);
+            // 
+            // rdFemale
+            // 
+            this.rdFemale.AutoSize = true;
+            this.rdFemale.Location = new System.Drawing.Point(234, 30);
+            this.rdFemale.Name = "rdFemale";
+            this.rdFemale.Size = new System.Drawing.Size(59, 17);
+            this.rdFemale.TabIndex = 73;
+            this.rdFemale.TabStop = true;
+            this.rdFemale.Text = "Female";
+            this.rdFemale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdFemale.UseVisualStyleBackColor = true;
+            this.rdFemale.CheckedChanged += new System.EventHandler(this.rdFemale_CheckedChanged);
+            // 
+            // btTransferPaste
+            // 
+            this.btTransferPaste.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTransferPaste.Location = new System.Drawing.Point(231, 80);
+            this.btTransferPaste.Name = "btTransferPaste";
+            this.btTransferPaste.Size = new System.Drawing.Size(100, 22);
+            this.btTransferPaste.TabIndex = 60;
+            this.btTransferPaste.TabStop = false;
+            this.btTransferPaste.Text = "Transfer Paste All";
+            this.btTransferPaste.UseVisualStyleBackColor = true;
+            this.btTransferPaste.Click += new System.EventHandler(this.btTransferPaste_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(5, 109);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 13);
+            this.label15.TabIndex = 70;
+            this.label15.Text = "DOD:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btTPasteDOD
+            // 
+            this.btTPasteDOD.Location = new System.Drawing.Point(45, 104);
+            this.btTPasteDOD.Name = "btTPasteDOD";
+            this.btTPasteDOD.Size = new System.Drawing.Size(19, 22);
+            this.btTPasteDOD.TabIndex = 71;
+            this.btTPasteDOD.TabStop = false;
+            this.btTPasteDOD.UseVisualStyleBackColor = true;
+            this.btTPasteDOD.Click += new System.EventHandler(this.btTPasteDOD_Click);
+            // 
+            // tbTDOD
+            // 
+            this.tbTDOD.BackColor = System.Drawing.Color.LightBlue;
+            this.tbTDOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTDOD.Location = new System.Drawing.Point(70, 104);
+            this.tbTDOD.Name = "tbTDOD";
+            this.tbTDOD.Size = new System.Drawing.Size(92, 21);
+            this.tbTDOD.TabIndex = 72;
+            this.tbTDOD.TextChanged += new System.EventHandler(this.tbTDOD_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label16.Location = new System.Drawing.Point(5, 86);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(21, 13);
+            this.label16.TabIndex = 67;
+            this.label16.Text = "ID:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btTPasteID
+            // 
+            this.btTPasteID.Location = new System.Drawing.Point(45, 81);
+            this.btTPasteID.Name = "btTPasteID";
+            this.btTPasteID.Size = new System.Drawing.Size(19, 22);
+            this.btTPasteID.TabIndex = 68;
+            this.btTPasteID.TabStop = false;
+            this.btTPasteID.UseVisualStyleBackColor = true;
+            this.btTPasteID.Click += new System.EventHandler(this.btTPasteID_Click);
+            // 
+            // tbTID
+            // 
+            this.tbTID.BackColor = System.Drawing.Color.LightBlue;
+            this.tbTID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTID.Location = new System.Drawing.Point(70, 81);
+            this.tbTID.Name = "tbTID";
+            this.tbTID.Size = new System.Drawing.Size(131, 21);
+            this.tbTID.TabIndex = 69;
+            this.tbTID.TextChanged += new System.EventHandler(this.tbTID_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(5, 57);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(33, 13);
+            this.label14.TabIndex = 64;
+            this.label14.Text = "DOB:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btTPasteDOB
+            // 
+            this.btTPasteDOB.Location = new System.Drawing.Point(45, 52);
+            this.btTPasteDOB.Name = "btTPasteDOB";
+            this.btTPasteDOB.Size = new System.Drawing.Size(19, 22);
+            this.btTPasteDOB.TabIndex = 65;
+            this.btTPasteDOB.TabStop = false;
+            this.btTPasteDOB.UseVisualStyleBackColor = true;
+            this.btTPasteDOB.Click += new System.EventHandler(this.btTPasteDOB_Click);
+            // 
+            // tbTDOB
+            // 
+            this.tbTDOB.BackColor = System.Drawing.Color.Bisque;
+            this.tbTDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTDOB.Location = new System.Drawing.Point(70, 52);
+            this.tbTDOB.Name = "tbTDOB";
+            this.tbTDOB.Size = new System.Drawing.Size(92, 21);
+            this.tbTDOB.TabIndex = 66;
+            this.tbTDOB.TextChanged += new System.EventHandler(this.tbTDOB_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(5, 34);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(28, 13);
+            this.label13.TabIndex = 61;
+            this.label13.Text = "SIN:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btTPasteSIN
+            // 
+            this.btTPasteSIN.Location = new System.Drawing.Point(45, 29);
+            this.btTPasteSIN.Name = "btTPasteSIN";
+            this.btTPasteSIN.Size = new System.Drawing.Size(19, 22);
+            this.btTPasteSIN.TabIndex = 62;
+            this.btTPasteSIN.TabStop = false;
+            this.btTPasteSIN.UseVisualStyleBackColor = true;
+            this.btTPasteSIN.Click += new System.EventHandler(this.btTPasteSIN_Click);
+            // 
+            // tbTSIN
+            // 
+            this.tbTSIN.BackColor = System.Drawing.Color.Bisque;
+            this.tbTSIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTSIN.Location = new System.Drawing.Point(70, 29);
+            this.tbTSIN.Name = "tbTSIN";
+            this.tbTSIN.Size = new System.Drawing.Size(131, 21);
+            this.tbTSIN.TabIndex = 63;
+            this.tbTSIN.TextChanged += new System.EventHandler(this.tbTSIN_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(5, 11);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "Name:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btTPasteName
+            // 
+            this.btTPasteName.Location = new System.Drawing.Point(45, 6);
+            this.btTPasteName.Name = "btTPasteName";
+            this.btTPasteName.Size = new System.Drawing.Size(19, 22);
+            this.btTPasteName.TabIndex = 60;
+            this.btTPasteName.TabStop = false;
+            this.btTPasteName.UseVisualStyleBackColor = true;
+            this.btTPasteName.Click += new System.EventHandler(this.btTPasteName_Click);
+            // 
+            // tbTName
+            // 
+            this.tbTName.BackColor = System.Drawing.Color.Bisque;
+            this.tbTName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTName.Location = new System.Drawing.Point(70, 6);
+            this.tbTName.Name = "tbTName";
+            this.tbTName.Size = new System.Drawing.Size(245, 21);
+            this.tbTName.TabIndex = 60;
+            this.tbTName.TextChanged += new System.EventHandler(this.tbTName_TextChanged);
             // 
             // lkSchedules
             // 
             this.lkSchedules.AutoSize = true;
             this.lkSchedules.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lkSchedules.Location = new System.Drawing.Point(303, 106);
+            this.lkSchedules.Location = new System.Drawing.Point(109, 3);
             this.lkSchedules.Name = "lkSchedules";
             this.lkSchedules.Size = new System.Drawing.Size(53, 16);
             this.lkSchedules.TabIndex = 50;
@@ -1327,18 +1704,6 @@
             this.btAddressPaste.UseVisualStyleBackColor = true;
             this.btAddressPaste.Click += new System.EventHandler(this.btAddressPaste_Click);
             // 
-            // lbTime
-            // 
-            this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTime.Location = new System.Drawing.Point(56, 450);
-            this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(95, 20);
-            this.lbTime.TabIndex = 22;
-            this.lbTime.Text = "Date / Time";
-            this.lbTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbTime.Click += new System.EventHandler(this.lbTime_Click);
-            // 
             // tmTimer
             // 
             this.tmTimer.Enabled = true;
@@ -1358,7 +1723,7 @@
             // btCopySubject
             // 
             this.btCopySubject.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btCopySubject.Location = new System.Drawing.Point(276, 48);
+            this.btCopySubject.Location = new System.Drawing.Point(276, 22);
             this.btCopySubject.Name = "btCopySubject";
             this.btCopySubject.Size = new System.Drawing.Size(80, 23);
             this.btCopySubject.TabIndex = 24;
@@ -1371,7 +1736,7 @@
             // 
             this.btCalc.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btCalc.Image = ((System.Drawing.Image)(resources.GetObject("btCalc.Image")));
-            this.btCalc.Location = new System.Drawing.Point(332, 75);
+            this.btCalc.Location = new System.Drawing.Point(6, 77);
             this.btCalc.Name = "btCalc";
             this.btCalc.Size = new System.Drawing.Size(24, 23);
             this.btCalc.TabIndex = 25;
@@ -1381,9 +1746,9 @@
             // btAllCaps
             // 
             this.btAllCaps.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAllCaps.Location = new System.Drawing.Point(276, 23);
+            this.btAllCaps.Location = new System.Drawing.Point(207, 1);
             this.btAllCaps.Name = "btAllCaps";
-            this.btAllCaps.Size = new System.Drawing.Size(39, 22);
+            this.btAllCaps.Size = new System.Drawing.Size(39, 20);
             this.btAllCaps.TabIndex = 26;
             this.btAllCaps.TabStop = false;
             this.btAllCaps.Text = "Caps";
@@ -1471,9 +1836,9 @@
             // tbSwapName
             // 
             this.tbSwapName.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSwapName.Location = new System.Drawing.Point(317, 23);
+            this.tbSwapName.Location = new System.Drawing.Point(165, 1);
             this.tbSwapName.Name = "tbSwapName";
-            this.tbSwapName.Size = new System.Drawing.Size(39, 22);
+            this.tbSwapName.Size = new System.Drawing.Size(39, 20);
             this.tbSwapName.TabIndex = 48;
             this.tbSwapName.TabStop = false;
             this.tbSwapName.Text = "Swap";
@@ -1530,34 +1895,195 @@
             this.tableAdapterManager.ClientsTableAdapter = this.clientsTableAdapter;
             this.tableAdapterManager.UpdateOrder = GroupTool.GroupTooldbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // button1
+            // btOpenTelLog
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(24, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 20);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btOpenTelLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btOpenTelLog.Location = new System.Drawing.Point(61, 2);
+            this.btOpenTelLog.Name = "btOpenTelLog";
+            this.btOpenTelLog.Size = new System.Drawing.Size(89, 22);
+            this.btOpenTelLog.TabIndex = 52;
+            this.btOpenTelLog.TabStop = false;
+            this.btOpenTelLog.Text = "Open Excel Log";
+            this.btOpenTelLog.UseVisualStyleBackColor = true;
+            this.btOpenTelLog.Click += new System.EventHandler(this.btOpenTelLog_Click);
             // 
-            // button3
+            // tbCopyWindow
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(24, 80);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(51, 20);
-            this.button3.TabIndex = 67;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.tbCopyWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCopyWindow.Location = new System.Drawing.Point(3, 3);
+            this.tbCopyWindow.Multiline = true;
+            this.tbCopyWindow.Name = "tbCopyWindow";
+            this.tbCopyWindow.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbCopyWindow.Size = new System.Drawing.Size(372, 329);
+            this.tbCopyWindow.TabIndex = 53;
+            // 
+            // btCopyToggle
+            // 
+            this.btCopyToggle.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btCopyToggle.FlatAppearance.BorderSize = 0;
+            this.btCopyToggle.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCopyToggle.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btCopyToggle.Location = new System.Drawing.Point(276, 75);
+            this.btCopyToggle.Name = "btCopyToggle";
+            this.btCopyToggle.Padding = new System.Windows.Forms.Padding(1);
+            this.btCopyToggle.Size = new System.Drawing.Size(80, 23);
+            this.btCopyToggle.TabIndex = 54;
+            this.btCopyToggle.TabStop = false;
+            this.btCopyToggle.Text = "Toggle";
+            this.btCopyToggle.UseVisualStyleBackColor = false;
+            this.btCopyToggle.Click += new System.EventHandler(this.btCopyToggle_Click);
+            // 
+            // btPasteAndSend
+            // 
+            this.btPasteAndSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPasteAndSend.Location = new System.Drawing.Point(3, 338);
+            this.btPasteAndSend.Name = "btPasteAndSend";
+            this.btPasteAndSend.Size = new System.Drawing.Size(121, 22);
+            this.btPasteAndSend.TabIndex = 55;
+            this.btPasteAndSend.TabStop = false;
+            this.btPasteAndSend.Text = "Client Paste All";
+            this.btPasteAndSend.UseVisualStyleBackColor = true;
+            this.btPasteAndSend.Click += new System.EventHandler(this.btPasteAndSend_Click);
+            // 
+            // btClearOut
+            // 
+            this.btClearOut.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btClearOut.Location = new System.Drawing.Point(314, 337);
+            this.btClearOut.Name = "btClearOut";
+            this.btClearOut.Size = new System.Drawing.Size(61, 22);
+            this.btClearOut.TabIndex = 58;
+            this.btClearOut.Text = "Clear";
+            this.btClearOut.UseVisualStyleBackColor = true;
+            this.btClearOut.Click += new System.EventHandler(this.btClearOut_Click);
+            // 
+            // btCopySubjectAll
+            // 
+            this.btCopySubjectAll.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btCopySubjectAll.Location = new System.Drawing.Point(276, 48);
+            this.btCopySubjectAll.Name = "btCopySubjectAll";
+            this.btCopySubjectAll.Size = new System.Drawing.Size(80, 23);
+            this.btCopySubjectAll.TabIndex = 59;
+            this.btCopySubjectAll.TabStop = false;
+            this.btCopySubjectAll.Text = "Copy All";
+            this.btCopySubjectAll.UseVisualStyleBackColor = true;
+            this.btCopySubjectAll.Click += new System.EventHandler(this.btCopySubjectAll_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(375, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(386, 389);
+            this.tabControl1.TabIndex = 60;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btPasteAndSend);
+            this.tabPage2.Controls.Add(this.btClearOut);
+            this.tabPage2.Controls.Add(this.tbCopyWindow);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(378, 363);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Copy Window";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(378, 363);
+            this.tabPage3.TabIndex = 1;
+            this.tabPage3.Text = "Spare";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lbCharCount
+            // 
+            this.lbCharCount.AutoSize = true;
+            this.lbCharCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCharCount.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lbCharCount.Location = new System.Drawing.Point(273, 108);
+            this.lbCharCount.Name = "lbCharCount";
+            this.lbCharCount.Size = new System.Drawing.Size(88, 13);
+            this.lbCharCount.TabIndex = 61;
+            this.lbCharCount.Text = "Addr Char Count:";
+            this.lbCharCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(155, 6);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(66, 13);
+            this.label17.TabIndex = 62;
+            this.label17.Text = "Spoke With:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbSpokeWith
+            // 
+            this.tbSpokeWith.BackColor = System.Drawing.Color.Bisque;
+            this.tbSpokeWith.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSpokeWith.Location = new System.Drawing.Point(219, 3);
+            this.tbSpokeWith.Name = "tbSpokeWith";
+            this.tbSpokeWith.Size = new System.Drawing.Size(112, 20);
+            this.tbSpokeWith.TabIndex = 62;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(2, 7);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 13);
+            this.label18.TabIndex = 63;
+            this.label18.Text = "Notes:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btCopyData
+            // 
+            this.btCopyData.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btCopyData.Location = new System.Drawing.Point(57, 445);
+            this.btCopyData.Name = "btCopyData";
+            this.btCopyData.Size = new System.Drawing.Size(94, 25);
+            this.btCopyData.TabIndex = 62;
+            this.btCopyData.Text = "Copy All Data";
+            this.btCopyData.UseVisualStyleBackColor = true;
+            this.btCopyData.Click += new System.EventHandler(this.btCopyData_Click);
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lbTime.Location = new System.Drawing.Point(825, 247);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(30, 13);
+            this.lbTime.TabIndex = 63;
+            this.lbTime.Text = "Time";
+            this.lbTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(361, 473);
+            this.ClientSize = new System.Drawing.Size(364, 473);
+            this.Controls.Add(this.lbTime);
+            this.Controls.Add(this.btCopyData);
+            this.Controls.Add(this.lbCharCount);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btCopySubject);
+            this.Controls.Add(this.btCopySubjectAll);
+            this.Controls.Add(this.btCopyToggle);
             this.Controls.Add(this.ckMinimizeBehaviour);
             this.Controls.Add(this.lkSchedules);
             this.Controls.Add(this.btOutputToggle);
@@ -1570,9 +2096,7 @@
             this.Controls.Add(this.btPasteName);
             this.Controls.Add(this.btAllCaps);
             this.Controls.Add(this.btCalc);
-            this.Controls.Add(this.btCopySubject);
             this.Controls.Add(this.btSaveRecord);
-            this.Controls.Add(this.lbTime);
             this.Controls.Add(this.btCopyAddress);
             this.Controls.Add(this.tbAddress);
             this.Controls.Add(this.btAddressPaste);
@@ -1616,8 +2140,13 @@
             this.tabEditChecks.ResumeLayout(false);
             this.tabEditChecks.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupTooldbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1647,7 +2176,6 @@
         private System.Windows.Forms.Button btCopyAddress;
         private System.Windows.Forms.TextBox tbAddress;
         private System.Windows.Forms.Button btAddressPaste;
-        private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Timer tmTimer;
         private System.Windows.Forms.Button btSaveRecord;
         private System.Windows.Forms.Button btCopySubject;
@@ -1745,6 +2273,47 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btOpenTelLog;
+        private System.Windows.Forms.TextBox tbCopyWindow;
+        private System.Windows.Forms.Button btCopyToggle;
+        private System.Windows.Forms.Button btPasteAndSend;
+        private System.Windows.Forms.Button btClearOut;
+        private System.Windows.Forms.Button btCopySubjectAll;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btTPasteDOD;
+        private System.Windows.Forms.TextBox tbTDOD;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btTPasteID;
+        private System.Windows.Forms.TextBox tbTID;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btTPasteDOB;
+        private System.Windows.Forms.TextBox tbTDOB;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btTPasteSIN;
+        private System.Windows.Forms.TextBox tbTSIN;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btTPasteName;
+        private System.Windows.Forms.TextBox tbTName;
+        private System.Windows.Forms.Button btTransferPaste;
+        private System.Windows.Forms.RadioButton rdMale;
+        private System.Windows.Forms.RadioButton rdFemale;
+        private System.Windows.Forms.TextBox tbNameOut;
+        private System.Windows.Forms.Button btCopyNameOut;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox tbAnnOut;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox tbSpouseID;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btClearAnn;
+        private System.Windows.Forms.Button btClearSpouse;
+        private System.Windows.Forms.Label lbCharCount;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox tbSpokeWith;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btCopyData;
+        private System.Windows.Forms.Label lbTime;
     }
 }
 

@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using System.Xml;
 
 namespace GroupTool.Func
@@ -44,17 +47,40 @@ namespace GroupTool.Func
             string[] words;
             if (val.Contains(sep.ToString()))
             {
-
                 words = val.Split((char)sep);
             }
             else
             {
                 //Return a 1 dim array with val
                 words = (val + "," + " ").Split(',');
-
             }
-
             return words;
+
+        }
+        public static string SplitTwice(string val, string sep1, string sep2)
+        {
+            string tmp;
+            string[] words;
+            val = val.ToUpper();
+            sep1 = sep1.ToUpper();
+            
+
+            
+            tmp = val.Replace(sep1, "~");
+            words = tmp.Split('~');
+
+            try
+            {
+                //This exception is ignored
+                tmp = words[1].Replace(sep2, "~");
+                return tmp.Split('~')[0].Trim();
+            }
+            catch{
+                
+                return "";
+            }
+            
+           
 
         }
         public static string CleanStringOfNonDigits_V5(string s)
@@ -95,7 +121,8 @@ namespace GroupTool.Func
 
             if (val1 == "" || val1 == "-") { val1 = "0"; }
             if (val2 == "" || val2 == "-") { val2 = "0"; }
-
+            if (val1 == ".") { val1 = "0"; }
+            if (val2 == ".") { val2 = "0"; }
             try
             {
                 operand1 = Convert.ToDouble(val1);
@@ -128,7 +155,73 @@ namespace GroupTool.Func
             }
 
         }
-       
+        public static string PullData(string srch, string input)
+        {
+            //srch - Type of data to filter: Address, Phone, Name;
+            //input - input text string to filter for srch
+
+            string temp;
+
+            return MyFunc.SplitTwice(input, srch, "\r\n");
+        }
+
+        public static string SelectedTextOveride(string selText)
+        {
+            /*This function checks to see if any text is selectedin
+             * copyWindow. If so, it will paste if not then the 
+             * contents of clipboard are pasted.
+             */
+
+            if (selText == "")
+            {
+                return Clipboard.GetText();
+            }
+            else
+            {
+                return selText;
+            }
+        }
+        public static string CleanAddress(string addr)
+        {
+            addr = addr.Replace("\r\n", ",");
+            addr = addr.Replace("Drive", "Dr ");
+            addr = addr.Replace(".", "");
+            addr = addr.Replace("Avenue", "Ave");
+            addr = addr.Replace("Place", "Pl");
+            addr = addr.Replace("Street", "St");
+            addr = addr.Replace("Court", "Crt");
+            
+            return addr;
+        }
+        public static string DateConvert(string dt)
+        {
+            dt = dt.Replace(",", "");
+            dt = dt.Replace(" ", ".");
+
+            string[] words = MyFunc.SplitIt(dt, '.');
+            if (words[1].Length == 1) { words[1] = "0" + words[1]; }
+
+
+            return words[0] + "." + words[1] + "." + words[2];
+        }
+        public static string RemoveLeadingZero(string pol)
+        {
+            string tmp = "";
+
+            
+                if (pol.Substring(0,2) == "00")
+                {
+                    tmp = pol.Substring(2, pol.Length - 2);
+                   
+                }
+                else if(pol.Substring(0,1) == "0")
+                {
+                    tmp = pol.Substring(2, pol.Length - 1);
+                }
+
+            return tmp;
+            
+        }
     }
 
     //HELP

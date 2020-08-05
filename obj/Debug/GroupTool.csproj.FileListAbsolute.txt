@@ -41,3 +41,4 @@ C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.csproj.CopyComplete
 C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.exe
 C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.pdb
 C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.csprojAssemblyReference.cache
+C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.csproj.ResolveComReference.cache

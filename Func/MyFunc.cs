@@ -19,9 +19,13 @@ namespace GroupTool.Func
     {
         public static string FilePath()
         {
-            return @"M:\Desktop\GroupTool\ScratchPad\";
+            return @"M:\Agent Tool Folder\ScratchPad\";
         }
-
+        public static string LLNumber()
+        {
+            return Environment.UserName;
+        }
+        
         public static string nl()
         {
             return System.Environment.NewLine;

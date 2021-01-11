@@ -33,6 +33,19 @@ namespace GroupTool
         bool FormBeingCleared = false;
         string sptString; //SPT data pulled from file SPTList
 
+        //Path Strings
+        //string M_Path_Excel = @"M:\Desktop\GroupTool\Excel\";
+        string M_Path_Excel = @"N:\Brenda\Admin\Agent Tool\Excel Templates\";
+
+        //string M_Path_Email = @"M:\Desktop\Outlook\email templates\";
+        string M_Path_Email = @"N:\Brenda\Admin\Agent Tool\Email Templates\";
+
+        string M_Path_AgentTool = @"N:\Brenda\Admin\Agent Tool\";
+
+        string N_Path_Letters = @"N:\Brenda\Admin\Agent Tool\Letter Templates\";
+
+
+
         public bool Visible { get; set; }
         //public string SelectedRecord;
 
@@ -81,7 +94,8 @@ namespace GroupTool
 
         private void btOutput_Click(object sender, EventArgs e)
         {
-            if (tbOutput.Text != "") { 
+            if (tbOutput.Text != "")
+            {
                 Clipboard.SetText(tbOutput.Text);
             }
         }
@@ -96,14 +110,14 @@ namespace GroupTool
             SaveRecord();
             ClearForm();
 
-            
+
 
 
         }
 
         private void ClearForm()
         {
-            
+
             ClearOtherControls();
             clearCheckBoxSection();
 
@@ -111,11 +125,11 @@ namespace GroupTool
             {
                 ScratchPad.ActiveForm.Text = "ScratchPad Tool";
             }
-             catch
+            catch
             {
 
             }
-           
+
             cbRequestType.Text = string.Empty;
         }
         private void clearCheckBoxSection()
@@ -197,8 +211,14 @@ namespace GroupTool
 
 
             tbSpokeWith.Text = "";
+
+
+            tbExecutionDate.Text = "";
+            tbCoAnnName.Text = "";
+            tbLetterDate.Text = "";
+
         }
- 
+
 
         private void btClose_Click(object sender, EventArgs e)
         {
@@ -269,14 +289,14 @@ namespace GroupTool
             if (MyFunc.CountChar(tbAddress.Text, ',') == 2)
             {
 
-            lbLetterAddr1.Text = MyFunc.SplitIt(tbAddress.Text, ',')[0].Trim();
-            lbLetterAddr2.Text = MyFunc.SplitIt(tbAddress.Text, ',')[1].Trim() + "  " +
-                MyFunc.SplitIt(tbAddress.Text, ',')[2].Trim();
+                lbLetterAddr1.Text = MyFunc.SplitIt(tbAddress.Text, ',')[0].Trim();
+                lbLetterAddr2.Text = MyFunc.SplitIt(tbAddress.Text, ',')[1].Trim() + "  " +
+                    MyFunc.SplitIt(tbAddress.Text, ',')[2].Trim();
             }
 
-            lbTaxSubject.Text = tbPolicy.Text + tbName.Text;
+            lbTaxSubject.Text = tbPolicy.Text + " " + tbName.Text;
             tbTaxAddress.Text = tbAddress.Text;
-            
+
 
         }
         private void UpdateTitle()
@@ -355,10 +375,10 @@ namespace GroupTool
             StoreRecord frm = new StoreRecord();
 
             EmptyRecordToTextFile();
-            
+
         }
 
-       
+
 
 
         private void SaveRecord()
@@ -415,12 +435,12 @@ namespace GroupTool
         private void tbName_TextChanged(object sender, EventArgs e)
         {
 
-            if( FormBeingCleared == false) 
+            if (FormBeingCleared == false)
             {
                 UpdateOutput();
                 UpdateTitle();
             }
-           
+
 
 
         }
@@ -553,6 +573,13 @@ namespace GroupTool
             tbEmailSignature.Text = "Tim Betteridge" + "\r\n" +
                                     "Client Service Co-ordinator" + "\r\n" +
                                     "Wealth Operations, Group Annuities T424 (4B)";
+
+            //Clear out letters header
+            lbLetterClientName.Text = "";
+            lbLetterGroup.Text = "";
+            lbLetterCert.Text = "";
+            lbLetterAddr1.Text = "";
+            lbLetterAddr2.Text = "";
         }
 
 
@@ -565,7 +592,8 @@ namespace GroupTool
 
             //Read Checklist Data
             string[] lines;
-            if (File.Exists(filePath)) {
+            if (File.Exists(filePath))
+            {
                 lines = File.ReadAllLines(filePath); //{ "", "" };
             }
             else
@@ -878,476 +906,478 @@ namespace GroupTool
 
             }
         }
-            private void cbMars2_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbMars2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateAccounting();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            ClearCalc();
+        }
+
+        private void ClearCalc()
+        {
+            tbAccnt1.Text = string.Empty;
+            tbAccnt2.Text = string.Empty;
+            tbAccnt3.Text = string.Empty;
+            tbAccnt9.Text = string.Empty;
+            cbMars1.Text = string.Empty;
+            cbMars2.Text = "SUB";
+            cbMars3.Text = "SUB";
+
+        }
+
+        private void cbMars3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateAccounting();
+        }
+
+        private void cbMars1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateAccounting();
+
+        }
+
+
+
+        // Formatting
+        private void tbAccnt1_Leave(object sender, EventArgs e)
+        {
+            tbAccnt1.Text = UpdateFormat(tbAccnt1.Text);
+            tbAccnt9.Text = UpdateFormat(tbAccnt9.Text);
+        }
+
+        private void tbAccnt2_Leave(object sender, EventArgs e)
+        {
+            tbAccnt2.Text = UpdateFormat(tbAccnt2.Text);
+            tbAccnt9.Text = UpdateFormat(tbAccnt9.Text);
+        }
+
+        private void tbAccnt3_Leave(object sender, EventArgs e)
+        {
+            tbAccnt3.Text = UpdateFormat(tbAccnt3.Text);
+            tbAccnt9.Text = UpdateFormat(tbAccnt9.Text);
+        }
+
+        private string UpdateFormat(string val)
+        {
+            if (val == "") { val = "0"; }
+            return Convert.ToDouble(val).ToString("0.00", CultureInfo.InvariantCulture);
+        }
+
+
+
+        private void tbYOB_TextChanged(object sender, EventArgs e)
+        {
+
+            String year = DateTime.Now.Year.ToString();
+            if (tbYOB.Text == String.Empty)
             {
-                UpdateAccounting();
+                tbYOB.Text = "";
+                tbAgeOut.Text = "";
             }
-
-            private void button2_Click_1(object sender, EventArgs e)
+            else
             {
-                ClearCalc();
+                double age = Convert.ToDouble(year) - Convert.ToDouble(tbYOB.Text);
+                tbAgeOut.Text = age.ToString();
             }
+        }
 
-            private void ClearCalc()
+        private void tbAgeOut_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbSwapName_Click(object sender, EventArgs e)
+        {
+            string[] words = MyFunc.SplitIt(tbName.Text, ' ');
+            tbName.Text = (words[1] + " " + words[0]).Trim();
+        }
+
+
+
+        private void tmOpenDuration_Tick(object sender, EventArgs e)
+        {
+            long elapsedTicks = DateTime.Now.Ticks - FormOpenedtimeStamp.Ticks;
+            TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
+
+
+
+            //lbOpenDuration.Text = elapsedSpan.TotalMinutes.ToString();
+            // lbOpenDuration.Text = Convert.ToDateTime(elapsedSpan.TotalMinutes).ToShortTimeString();
+            tmOpenDuration.Start();
+        }
+
+        private void lbOpenDuration_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btUpdateChecks_Click(object sender, EventArgs e)
+        {
+            RequestItems("Update", cbRequestType.Text);
+            RequestItems("FillItems", cbRequestType.Text);
+        }
+
+        private void btNewRequest_Click(object sender, EventArgs e)
+        {
+            tbAddRequestName.Show();
+            lbAddRequestName.Show();
+            tbCheckEdit.Text = "";
+            btAddRequest.Show();
+            btRequestReset.Show();
+        }
+
+        private void tbAddRequest_Click(object sender, EventArgs e)
+        {
+
+            RequestItems("Append", tbAddRequestName.Text);
+            RequestItems("FillItems", cbRequestType.Text);
+            CheckEditReset();
+
+            //Re-load the menu of items. Clear cbRequesttype first
+            cbRequestType.Items.Clear();
+            RequestItems("Load", "");
+
+            //Leave this last
+            tbAddRequestName.Text = "";
+        }
+
+        private void btRequestReset_Click(object sender, EventArgs e)
+        {
+            CheckEditReset();
+            tbCheckEdit.Text = "";
+        }
+
+        private void btRemoveCheck_Click(object sender, EventArgs e)
+        {
+            CheckEditReset();
+            RequestItems("Remove", cbRequestType.Text);
+
+            //Re-load the menu of items. Clear cbRequesttype first
+            cbRequestType.Items.Clear();
+            cbRequestType.Text = "";
+            tbCheckEdit.Text = "";
+            RequestItems("Load", "");
+
+        }
+        private void CheckEditReset()
+        {
+            tbAddRequestName.Hide();
+            tbAddRequestName.Text = "";
+            lbAddRequestName.Hide();
+            btAddRequest.Hide();
+            btRequestReset.Hide();
+            tbCheckEdit.Text = "";
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lkSchedules_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.google.com.au/search?q=" + tbName.Text + " obit");
+        }
+
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @"\\Llfsp2\irisadmin\Brenda\At Home\Schedules");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @"\\Llfsp2\irisadmin\LL Scripting\LL Manual Payments");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @"N:\Letters\Certificate of existence\London Life\COE 2020\IMS");
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @"\\Llfsp2\irisadmin\Brenda\Admin");
+        }
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @"C:\Users\ll67305\OneDrive - Enterprise 365\++Client Files OD\Templates\PDF Templates");
+        }
+
+        private void btOpenTodoList_Click(object sender, EventArgs e)
+        {
+            Form1 todo = new Form1();
+            todo.ShowDialog();
+        }
+
+        private void ckMinimizeBehaviour_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckMinimizeBehaviour.Checked) //Minimize to Taskbar
             {
-                tbAccnt1.Text = string.Empty;
-                tbAccnt2.Text = string.Empty;
-                tbAccnt3.Text = string.Empty;
-                tbAccnt9.Text = string.Empty;
-                cbMars1.Text = string.Empty;
-                cbMars2.Text = "SUB";
-                cbMars3.Text = "SUB";
-
+                this.ShowInTaskbar = true;
             }
-
-            private void cbMars3_SelectedIndexChanged(object sender, EventArgs e)
+            else
             {
-                UpdateAccounting();
+                this.ShowInTaskbar = false;
             }
+        }
 
-            private void cbMars1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btOutputToggle_Click(object sender, EventArgs e)
+        {
+
+
+            if (tbOutput.Visible == true)
             {
-                UpdateAccounting();
+                tbOutput.Hide(); //Text box
+                lbOutput.Hide(); // Label
+                                 //btCopyOutput.Hide(); //Button
+                btOutputToggle.Text = "...";
 
-            }
-
-
-
-            // Formatting
-            private void tbAccnt1_Leave(object sender, EventArgs e)
-            {
-                tbAccnt1.Text = UpdateFormat(tbAccnt1.Text);
-                tbAccnt9.Text = UpdateFormat(tbAccnt9.Text);
-            }
-
-            private void tbAccnt2_Leave(object sender, EventArgs e)
-            {
-                tbAccnt2.Text = UpdateFormat(tbAccnt2.Text);
-                tbAccnt9.Text = UpdateFormat(tbAccnt9.Text);
-            }
-
-            private void tbAccnt3_Leave(object sender, EventArgs e)
-            {
-                tbAccnt3.Text = UpdateFormat(tbAccnt3.Text);
-                tbAccnt9.Text = UpdateFormat(tbAccnt9.Text);
-            }
-
-            private string UpdateFormat(string val)
-            {
-                if (val == "") { val = "0"; }
-                return Convert.ToDouble(val).ToString("0.00", CultureInfo.InvariantCulture);
-            }
+                int offset = 45; //Offset the controls collapse/expand
 
 
+                btSaveRecord.Top = btSaveRecord.Top - offset;
+                btClear.Top = btClear.Top - offset;
+                btClose.Top = btClose.Top - offset;
+                lbTime.Top = lbTime.Top - offset;
+                btLoadRecord.Top = btLoadRecord.Top - offset;
 
-            private void tbYOB_TextChanged(object sender, EventArgs e)
-            {
-
-                String year = DateTime.Now.Year.ToString();
-                if (tbYOB.Text == String.Empty)
-                {
-                    tbYOB.Text = "";
-                    tbAgeOut.Text = "";
-                }
-                else
-                {
-                    double age = Convert.ToDouble(year) - Convert.ToDouble(tbYOB.Text);
-                    tbAgeOut.Text = age.ToString();
-                }
-            }
-
-            private void tbAgeOut_TextChanged(object sender, EventArgs e)
-            {
-
-            }
-
-            private void tbSwapName_Click(object sender, EventArgs e)
-            {
-                string[] words = MyFunc.SplitIt(tbName.Text, ' ');
-                tbName.Text = (words[1] + " " + words[0]).Trim();
-            }
-
-
-
-            private void tmOpenDuration_Tick(object sender, EventArgs e)
-            {
-                long elapsedTicks = DateTime.Now.Ticks - FormOpenedtimeStamp.Ticks;
-                TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
-
-
-
-                //lbOpenDuration.Text = elapsedSpan.TotalMinutes.ToString();
-                // lbOpenDuration.Text = Convert.ToDateTime(elapsedSpan.TotalMinutes).ToShortTimeString();
-                tmOpenDuration.Start();
-            }
-
-            private void lbOpenDuration_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void btUpdateChecks_Click(object sender, EventArgs e)
-            {
-                RequestItems("Update", cbRequestType.Text);
-                RequestItems("FillItems", cbRequestType.Text);
-            }
-
-            private void btNewRequest_Click(object sender, EventArgs e)
-            {
-                tbAddRequestName.Show();
-                lbAddRequestName.Show();
-                tbCheckEdit.Text = "";
-                btAddRequest.Show();
-                btRequestReset.Show();
-            }
-
-            private void tbAddRequest_Click(object sender, EventArgs e)
-            {
-
-                RequestItems("Append", tbAddRequestName.Text);
-                RequestItems("FillItems", cbRequestType.Text);
-                CheckEditReset();
-
-                //Re-load the menu of items. Clear cbRequesttype first
-                cbRequestType.Items.Clear();
-                RequestItems("Load", "");
-
-                //Leave this last
-                tbAddRequestName.Text = "";
-            }
-
-            private void btRequestReset_Click(object sender, EventArgs e)
-            {
-                CheckEditReset();
-                tbCheckEdit.Text = "";
-            }
-
-            private void btRemoveCheck_Click(object sender, EventArgs e)
-            {
-                CheckEditReset();
-                RequestItems("Remove", cbRequestType.Text);
-
-                //Re-load the menu of items. Clear cbRequesttype first
-                cbRequestType.Items.Clear();
-                cbRequestType.Text = "";
-                tbCheckEdit.Text = "";
-                RequestItems("Load", "");
-
-            }
-            private void CheckEditReset()
-            {
-                tbAddRequestName.Hide();
-                tbAddRequestName.Text = "";
-                lbAddRequestName.Hide();
-                btAddRequest.Hide();
-                btRequestReset.Hide();
-                tbCheckEdit.Text = "";
-            }
-
-            private void groupBox1_Enter(object sender, EventArgs e)
-            {
-
-            }
-
-            private void lkSchedules_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-            {
-                System.Diagnostics.Process.Start("http://www.google.com.au/search?q=" + tbName.Text + " obit");
-            }
-
-            private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-            {
-                System.Diagnostics.Process.Start("explorer.exe", @"\\Llfsp2\irisadmin\Brenda\At Home\Schedules");
-            }
-
-            private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-            {
-                System.Diagnostics.Process.Start("explorer.exe", @"\\Llfsp2\irisadmin\LL Scripting\LL Manual Payments");
-            }
-
-            private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-            {
-                System.Diagnostics.Process.Start("explorer.exe", @"N:\Letters\Certificate of existence\London Life\COE 2020\IMS");
-            }
-
-            private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-            {
-                System.Diagnostics.Process.Start("explorer.exe", @"\\Llfsp2\irisadmin\Brenda\Admin");
-            }
-            private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-            {
-                System.Diagnostics.Process.Start("explorer.exe", @"C:\Users\ll67305\OneDrive - Enterprise 365\++Client Files OD\Templates\PDF Templates");
-            }
-
-            private void btOpenTodoList_Click(object sender, EventArgs e)
-            {
-                Form1 todo = new Form1();
-                todo.ShowDialog();
-            }
-
-            private void ckMinimizeBehaviour_CheckedChanged(object sender, EventArgs e)
-            {
-                if (ckMinimizeBehaviour.Checked) //Minimize to Taskbar
-                {
-                    this.ShowInTaskbar = true;
-                }
-                else
-                {
-                    this.ShowInTaskbar = false;
-                }
-            }
-
-            private void btOutputToggle_Click(object sender, EventArgs e)
-            {
-
-
-                if (tbOutput.Visible == true)
-                {
-                    tbOutput.Hide(); //Text box
-                    lbOutput.Hide(); // Label
-                    //btCopyOutput.Hide(); //Button
-                    btOutputToggle.Text = "...";
-
-                    int offset = 45; //Offset the controls collapse/expand
-
-                   
-                    btSaveRecord.Top = btSaveRecord.Top - offset;
-                    btClear.Top = btClear.Top - offset;
-                    btClose.Top = btClose.Top - offset;
-                    lbTime.Top = lbTime.Top - offset;
-                    btLoadRecord.Top = btLoadRecord.Top - offset;
-
-                    //ckMinimizeBehaviour.Top = ckMinimizeBehaviour.Top - offset;
+                //ckMinimizeBehaviour.Top = ckMinimizeBehaviour.Top - offset;
                 btOutputToggle.Top = btOutputToggle.Top - offset;
-                    this.Height = this.Height - offset;
+                this.Height = this.Height - offset;
 
 
-                }
-                else
-                {
-                    tbOutput.Show(); //Text box
-                    lbOutput.Show(); // Label
-                    //btCopyOutput.Show(); //Button
-                    btOutputToggle.Text = "^";
+            }
+            else
+            {
+                tbOutput.Show(); //Text box
+                lbOutput.Show(); // Label
+                                 //btCopyOutput.Show(); //Button
+                btOutputToggle.Text = "^";
 
-                    int offset = 45; //Offset the controls collapse/expand
+                int offset = 45; //Offset the controls collapse/expand
 
-                    
-                    btSaveRecord.Top = btSaveRecord.Top + offset;
-                    btClear.Top = btClear.Top + offset;
-                    btClose.Top = btClose.Top + offset;
-                    lbTime.Top = lbTime.Top + offset;
-                    btLoadRecord.Top = btLoadRecord.Top + offset;
+
+                btSaveRecord.Top = btSaveRecord.Top + offset;
+                btClear.Top = btClear.Top + offset;
+                btClose.Top = btClose.Top + offset;
+                lbTime.Top = lbTime.Top + offset;
+                btLoadRecord.Top = btLoadRecord.Top + offset;
 
                 //ckMinimizeBehaviour.Top = ckMinimizeBehaviour.Top + offset;
                 btOutputToggle.Top = btOutputToggle.Top + offset;
-                    this.Height = this.Height + offset;
-                }
-
-
+                this.Height = this.Height + offset;
             }
 
 
+        }
 
-            private void lbTime_Click(object sender, EventArgs e)
+
+
+        private void lbTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void btDocHandlePaste_Click(object sender, EventArgs e)
+        {
+
+            tbName.Text = Clipboard.GetText();
+        }
+
+        private void btDocHandlePaste_Click_1(object sender, EventArgs e)
+        {
+            tbDocHandle.Text = Clipboard.GetText();
+        }
+
+        private void btDocHandleCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbDocHandle.Text);
+        }
+
+        private void tbPhone_Leave(object sender, EventArgs e)
+        {
+            tbPhone.Text = MyFunc.FormatPhone(tbPhone.Text);
+        }
+
+        private void btCopyAccnt1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt1.Text);
+        }
+
+        private void btCopyAccnt2_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt2.Text);
+        }
+
+        private void btCopyAccnt3_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt3.Text);
+        }
+
+        private void btCopyAccnt9_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAccnt9.Text);
+        }
+
+        private void tbCalc_In_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
+
+        private void tbAccnt9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateCalculator()
+        {
+            if (tbCalc_Add.Text != "")
             {
-
+                tbCalc_Out.Text = MyFunc.TextMath("+", tbCalc_In.Text, tbCalc_Add.Text);
+            }
+            else if (tbCalc_Sub.Text != "")
+            {
+                tbCalc_Out.Text = MyFunc.TextMath("-", tbCalc_In.Text, tbCalc_Sub.Text);
+            }
+            else if (tbCalc_Mult.Text != "")
+            {
+                tbCalc_Out.Text = MyFunc.TextMath("x", tbCalc_In.Text, tbCalc_Mult.Text);
+            }
+            else if (tbCalc_Div.Text != "")
+            {
+                tbCalc_Out.Text = MyFunc.TextMath("/", tbCalc_In.Text, tbCalc_Div.Text);
             }
 
-            
-            private void label1_Click(object sender, EventArgs e)
-            {
 
-            }
+            tbCalc_Out.Text = UpdateFormat(tbCalc_Out.Text);
+            //tbCalc_In.Text = UpdateFormat(tbCalc_In.Text);
+        }
 
+        private void tbCalc_Add_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tbCalc_Out.Text = "";
+            tbCalc_Add.Text = "";
+            tbCalc_Mult.Text = "";
+            tbCalc_Sub.Text = "";
+            tbCalc_Div.Text = "";
+        }
 
-            private void btDocHandlePaste_Click(object sender, EventArgs e)
-            {
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tbCalc_In.Text = "";
+        }
 
-                tbName.Text = Clipboard.GetText();
-            }
+        private void tbCalc_Sub_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
 
-            private void btDocHandlePaste_Click_1(object sender, EventArgs e)
-            {
-                tbDocHandle.Text = Clipboard.GetText();
-            }
+        private void tbCalc_Mult_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
 
-            private void btDocHandleCopy_Click(object sender, EventArgs e)
-            {
-                Clipboard.SetText(tbDocHandle.Text);
-            }
+        private void tbCalc_Div_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCalculator();
+        }
 
-            private void tbPhone_Leave(object sender, EventArgs e)
-            {
-                tbPhone.Text = MyFunc.FormatPhone(tbPhone.Text);
-            }
+        private void btOpenTelLog_Click(object sender, EventArgs e)
+        {
 
-            private void btCopyAccnt1_Click(object sender, EventArgs e)
-            {
-                Clipboard.SetText(tbAccnt1.Text);
-            }
-
-            private void btCopyAccnt2_Click(object sender, EventArgs e)
-            {
-                Clipboard.SetText(tbAccnt2.Text);
-            }
-
-            private void btCopyAccnt3_Click(object sender, EventArgs e)
-            {
-                Clipboard.SetText(tbAccnt3.Text);
-            }
-
-            private void btCopyAccnt9_Click(object sender, EventArgs e)
-            {
-                Clipboard.SetText(tbAccnt9.Text);
-            }
-
-            private void tbCalc_In_TextChanged(object sender, EventArgs e)
-            {
-                UpdateCalculator();
-            }
-
-            private void tbAccnt9_TextChanged(object sender, EventArgs e)
-            {
-
-            }
-
-            private void UpdateCalculator()
-            {
-                if (tbCalc_Add.Text != "")
-                {
-                    tbCalc_Out.Text = MyFunc.TextMath("+", tbCalc_In.Text, tbCalc_Add.Text);
-                }
-                else if (tbCalc_Sub.Text != "")
-                {
-                    tbCalc_Out.Text = MyFunc.TextMath("-", tbCalc_In.Text, tbCalc_Sub.Text);
-                }
-                else if (tbCalc_Mult.Text != "")
-                {
-                    tbCalc_Out.Text = MyFunc.TextMath("x", tbCalc_In.Text, tbCalc_Mult.Text);
-                }
-                else if (tbCalc_Div.Text != "")
-                {
-                    tbCalc_Out.Text = MyFunc.TextMath("/", tbCalc_In.Text, tbCalc_Div.Text);
-                }
-
-
-                tbCalc_Out.Text = UpdateFormat(tbCalc_Out.Text);
-                //tbCalc_In.Text = UpdateFormat(tbCalc_In.Text);
-            }
-
-            private void tbCalc_Add_TextChanged(object sender, EventArgs e)
-            {
-                UpdateCalculator();
-            }
-
-            private void button1_Click_1(object sender, EventArgs e)
-            {
-                tbCalc_Out.Text = "";
-                tbCalc_Add.Text = "";
-                tbCalc_Mult.Text = "";
-                tbCalc_Sub.Text = "";
-                tbCalc_Div.Text = "";
-            }
-
-            private void button3_Click(object sender, EventArgs e)
-            {
-                tbCalc_In.Text = "";
-            }
-
-            private void tbCalc_Sub_TextChanged(object sender, EventArgs e)
-            {
-                UpdateCalculator();
-            }
-
-            private void tbCalc_Mult_TextChanged(object sender, EventArgs e)
-            {
-                UpdateCalculator();
-            }
-
-            private void tbCalc_Div_TextChanged(object sender, EventArgs e)
-            {
-                UpdateCalculator();
-            }
-
-            private void btOpenTelLog_Click(object sender, EventArgs e)
-            {
-
-                if(tbSpokeWith.Text == "")
+            if (tbSpokeWith.Text == "")
             {
                 MessageBox.Show("Please fill in 'Spoke With' field!");
                 return;
             }
 
-                Excel excel = new Excel(@"M:\Desktop\GroupTool\Excel\TelephoneLog.xlsm", 1);
-                //MessageBox.Show(excel.ReadCell(3, 1));
+            Excel excel = new Excel(M_Path_Excel + "TelephoneLog.xlsm", 1);
+            //MessageBox.Show(excel.ReadCell(3, 1));
 
-                excel.WriteToRange(tbPhone.Text, "Phone");
-                excel.WriteToRange(tbName.Text, "ClientName");
-                excel.WriteToRange(tbSpokeWith.Text, "SpokeWith");
-                excel.WriteToRange(MyFunc.SplitIt(tbPolicy.Text, '-')[0], "Group");
-                excel.WriteToRange(MyFunc.SplitIt(tbPolicy.Text, '-')[1], "Cert");
-                excel.WriteToRange(tbNotes.Text, "Notes");
-                excel.SelectRange("G1");
+            excel.WriteToRange(tbPhone.Text, "Phone");
+            excel.WriteToRange(tbName.Text, "ClientName");
+            excel.WriteToRange(tbSpokeWith.Text, "SpokeWith");
+            excel.WriteToRange(MyFunc.SplitIt(tbPolicy.Text, '-')[0], "Group");
+            excel.WriteToRange(MyFunc.SplitIt(tbPolicy.Text, '-')[1], "Cert");
+            excel.WriteToRange(tbNotes.Text, "Notes");
+            excel.SelectRange("G1");
+        }
+
+        private void btCopyToggle_Click(object sender, EventArgs e)
+        {
+            CopyWindowToggle();
+
+        }
+
+        public void CopyWindowToggle()
+        {
+            if (this.Width == 784)
+            {
+                this.Width = 382;
+                btCopyToggle.Text = "Open -->";
+            }
+            else
+            {
+                this.Width = 784;
+                btCopyToggle.Text = "<-- Close";
             }
 
-            private void btCopyToggle_Click(object sender, EventArgs e)
-            {
-                CopyWindowToggle();
+        }
 
+
+        private void btTest_Click(object sender, EventArgs e)
+        {
+            string a = tbCopyWindow.SelectedText.Replace("\r\n", " ");
+            Clipboard.SetText(a);
+        }
+
+        private void btClearOut_Click(object sender, EventArgs e)
+        {
+
+            tbCopyWindow.Text = "";
+        }
+
+        private void btPasteAndSend_Click(object sender, EventArgs e)
+        {
+            tbCopyWindow.Text = Clipboard.GetText();
+
+            if (tbName.Text == "" && tbPhone.Text == "" && tbPolicy.Text == "")
+            {
+                tbName.Text = MyFunc.PullData("Owner:", tbCopyWindow.Text);
+                tbPhone.Text = MyFunc.CleanStringOfNonDigits_V5(MyFunc.PullData("home phone:", tbCopyWindow.Text));
+                tbPolicy.Text = MyFunc.PullData("policy number:", tbCopyWindow.Text);
+
+                btAllCaps.PerformClick();
             }
-
-            public void CopyWindowToggle()
-            {
-                if (this.Width == 784)
-                {
-                    this.Width = 382;
-                    btCopyToggle.Text = "Open -->";
-                }
-                else
-                {
-                    this.Width = 784;
-                    btCopyToggle.Text = "<-- Close";
-                }
-
-            }
-
-
-            private void btTest_Click(object sender, EventArgs e)
-            {
-                string a = tbCopyWindow.SelectedText.Replace("\r\n", " ");
-                Clipboard.SetText(a);
-            }
-
-            private void btClearOut_Click(object sender, EventArgs e)
-            {
-
-                tbCopyWindow.Text = "";
-            }
-
-            private void btPasteAndSend_Click(object sender, EventArgs e)
-            {
-                tbCopyWindow.Text = Clipboard.GetText();
-
-                if (tbName.Text == "" && tbPhone.Text == "" && tbPolicy.Text == "") {
-                    tbName.Text = MyFunc.PullData("Owner:", tbCopyWindow.Text);
-                    tbPhone.Text = MyFunc.CleanStringOfNonDigits_V5(MyFunc.PullData("home phone:", tbCopyWindow.Text));
-                    tbPolicy.Text = MyFunc.PullData("policy number:", tbCopyWindow.Text);
-
-                    btAllCaps.PerformClick();
-                }
 
             UpdateSPT();
         }
 
-            private void btCopySubjectAll_Click(object sender, EventArgs e)
-            {
+        private void btCopySubjectAll_Click(object sender, EventArgs e)
+        {
 
-                Clipboard.SetText(GetSubjectAll());
-            }
+            Clipboard.SetText(GetSubjectAll());
+        }
 
-            private string GetSubjectAll()
-            {
+        private string GetSubjectAll()
+        {
             string sep = "";
             string request = cbRequestType.Text;
 
@@ -1361,206 +1391,206 @@ namespace GroupTool
                 request = cbEmailItems.Text;
                 sep = ", ";
             }
-                
-                return tbPolicy.Text + " " + tbName.Text + sep + request;
-            }
-            private void btTransferPaste_Click(object sender, EventArgs e)
+
+            return tbPolicy.Text + " " + tbName.Text + sep + request;
+        }
+        private void btTransferPaste_Click(object sender, EventArgs e)
+        {
+            tbCopyWindow.Text = Clipboard.GetText();
+        }
+
+        private void btTPasteName_Click(object sender, EventArgs e)
+        {
+            string tmp;
+            tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
+            tmp = tmp.Replace(" ", ".");
+
+
+            string[] words = MyFunc.SplitIt(tmp, '.');
+
+            if (words.Length == 2)
             {
-                tbCopyWindow.Text = Clipboard.GetText();
+                tbTName.Text = (words[1] + "." + words[0]).Trim() + ".";
             }
-
-            private void btTPasteName_Click(object sender, EventArgs e)
+            else
             {
-                string tmp;
-                tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
-                tmp = tmp.Replace(" ", ".");
-
-
-                string[] words = MyFunc.SplitIt(tmp, '.');
-
-                if (words.Length == 2)
-                {
-                    tbTName.Text = (words[1] + "." + words[0]).Trim() + ".";
-                }
-                else
-                {
-                    tbTName.Text = (words[2] + "." + words[0] + "." + words[1]).Trim();
-                }
-                UpdatetransferOut();
-
-
+                tbTName.Text = (words[2] + "." + words[0] + "." + words[1]).Trim();
             }
+            UpdatetransferOut();
 
-            private void UpdateCharCount()
+
+        }
+
+        private void UpdateCharCount()
+        {
+            string[] words;
+            string tmp = tbAddress.Text;
+            if (tmp.Contains(","))
             {
-                string[] words;
-                string tmp = tbAddress.Text;
-                if (tmp.Contains(","))
+                words = MyFunc.SplitIt(tmp, ',');
+                if (words.Length == 3)
                 {
-                    words = MyFunc.SplitIt(tmp, ',');
-                    if (words.Length == 3)
-                    {
-                        lbCharCount.Text = words[0].Length + "," + words[1].Length + "," + words[2].Length;
-                    }
-                    else if (words.Length == 2)
-                    {
-                        lbCharCount.Text = words[0].Length + "," + words[1].Length;
-                    }
-
+                    lbCharCount.Text = words[0].Length + "," + words[1].Length + "," + words[2].Length;
                 }
-                else
+                else if (words.Length == 2)
                 {
-                    lbCharCount.Text = tmp.Length.ToString();
+                    lbCharCount.Text = words[0].Length + "," + words[1].Length;
                 }
 
-
-
+            }
+            else
+            {
+                lbCharCount.Text = tmp.Length.ToString();
             }
 
-            private void btTPasteSIN_Click(object sender, EventArgs e)
-            {
-                string tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
-                tmp = tmp.Replace("-", ".");
-                tmp = tmp.Replace(" ", ".");
 
-                if (tmp.Length == 9) //no dash or decimal
+
+        }
+
+        private void btTPasteSIN_Click(object sender, EventArgs e)
+        {
+            string tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
+            tmp = tmp.Replace("-", ".");
+            tmp = tmp.Replace(" ", ".");
+
+            if (tmp.Length == 9) //no dash or decimal
             {
                 tmp = tmp.Substring(0, 3) + "." + tmp.Substring(3, 3) + "." + tmp.Substring(6, 3);
             }
-                tbTSIN.Text = tmp;
-                UpdatetransferOut();
-            }
+            tbTSIN.Text = tmp;
+            UpdatetransferOut();
+        }
 
-            private void btTPasteDOB_Click(object sender, EventArgs e)
+        private void btTPasteDOB_Click(object sender, EventArgs e)
+        {
+            string tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
+            tbTDOB.Text = MyFunc.DateConvert(tmp);
+            UpdatetransferOut();
+        }
+
+        private void btTPasteID_Click(object sender, EventArgs e)
+        {
+            tbTID.Text = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
+            UpdatetransferOut();
+        }
+
+        private void btTPasteDOD_Click(object sender, EventArgs e)
+        {
+            string tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
+            tbTDOD.Text = MyFunc.DateConvert(tmp);
+            UpdatetransferOut();
+        }
+
+        private void rdFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            tbTName.Text = tbTName.Text + ".F";
+            UpdatetransferOut();
+        }
+
+        private void rdMale_CheckedChanged(object sender, EventArgs e)
+        {
+            tbTName.Text = tbTName.Text + ".M";
+            UpdatetransferOut();
+        }
+
+        private void tbNameOut_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void UpdatetransferOut()
+        {
+            tbNameOut.Text = tbTName.Text + "." + tbTSIN.Text + "." +
+                                tbTDOB.Text;
+
+            tbAnnOut.Text = tbTID.Text + "." + tbTDOD.Text;
+        }
+
+        private void tbTName_TextChanged(object sender, EventArgs e)
+        {
+            UpdatetransferOut();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbAnnOut.Text);
+        }
+
+        private void btCopyNameOut_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbNameOut.Text);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            tbSpouseID.Text = Clipboard.GetText();
+        }
+
+        private void tbTSIN_TextChanged(object sender, EventArgs e)
+        {
+            UpdatetransferOut();
+        }
+
+        private void tbTDOB_TextChanged(object sender, EventArgs e)
+        {
+            UpdatetransferOut();
+        }
+
+        private void tbTID_TextChanged(object sender, EventArgs e)
+        {
+            UpdatetransferOut();
+        }
+
+        private void tbTDOD_TextChanged(object sender, EventArgs e)
+        {
+            UpdatetransferOut();
+        }
+
+        private void btClearSpouse_Click(object sender, EventArgs e)
+        {
+            tbTName.Text = "";
+            tbTSIN.Text = "";
+            tbTDOB.Text = "";
+        }
+
+        private void btClearAnn_Click(object sender, EventArgs e)
+        {
+            tbTID.Text = "";
+            tbTDOD.Text = "";
+        }
+
+        private void btCopyData_Click(object sender, EventArgs e)
+        {
+            GetAllDataPoints();
+            Clipboard.SetText(txtToFile);
+
+
+        }
+        private void lbSPT_Click(object sender, EventArgs e)
+        {
+            UpdateSPT();
+        }
+
+        private void UpdateSPT()
+        {
+            if (tbPolicy.Text == "")
             {
-                string tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
-                tbTDOB.Text = MyFunc.DateConvert(tmp);
-                UpdatetransferOut();
+                lbSPT.Text = "None";
             }
-
-            private void btTPasteID_Click(object sender, EventArgs e)
+            else
             {
-                tbTID.Text = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
-                UpdatetransferOut();
-            }
-
-            private void btTPasteDOD_Click(object sender, EventArgs e)
-            {
-                string tmp = MyFunc.SelectedTextOveride(tbCopyWindow.SelectedText.Trim());
-                tbTDOD.Text = MyFunc.DateConvert(tmp);
-                UpdatetransferOut();
-            }
-
-            private void rdFemale_CheckedChanged(object sender, EventArgs e)
-            {
-                tbTName.Text = tbTName.Text + ".F";
-                UpdatetransferOut();
-            }
-
-            private void rdMale_CheckedChanged(object sender, EventArgs e)
-            {
-                tbTName.Text = tbTName.Text + ".M";
-                UpdatetransferOut();
-            }
-
-            private void tbNameOut_TextChanged(object sender, EventArgs e)
-            {
-
-            }
-            private void UpdatetransferOut()
-            {
-                tbNameOut.Text = tbTName.Text + "." + tbTSIN.Text + "." +
-                                    tbTDOB.Text;
-
-                tbAnnOut.Text = tbTID.Text + "." + tbTDOD.Text;
-            }
-
-            private void tbTName_TextChanged(object sender, EventArgs e)
-            {
-                UpdatetransferOut();
-            }
-
-            private void button5_Click(object sender, EventArgs e)
-            {
-                Clipboard.SetText(tbAnnOut.Text);
-            }
-
-            private void btCopyNameOut_Click(object sender, EventArgs e)
-            {
-                Clipboard.SetText(tbNameOut.Text);
-            }
-
-            private void button6_Click(object sender, EventArgs e)
-            {
-                tbSpouseID.Text = Clipboard.GetText();
-            }
-
-            private void tbTSIN_TextChanged(object sender, EventArgs e)
-            {
-                UpdatetransferOut();
-            }
-
-            private void tbTDOB_TextChanged(object sender, EventArgs e)
-            {
-                UpdatetransferOut();
-            }
-
-            private void tbTID_TextChanged(object sender, EventArgs e)
-            {
-                UpdatetransferOut();
-            }
-
-            private void tbTDOD_TextChanged(object sender, EventArgs e)
-            {
-                UpdatetransferOut();
-            }
-
-            private void btClearSpouse_Click(object sender, EventArgs e)
-            {
-                tbTName.Text = "";
-                tbTSIN.Text = "";
-                tbTDOB.Text = "";
-            }
-
-            private void btClearAnn_Click(object sender, EventArgs e)
-            {
-                tbTID.Text = "";
-                tbTDOD.Text = "";
-            }
-
-            private void btCopyData_Click(object sender, EventArgs e)
-            {
-                GetAllDataPoints();
-                Clipboard.SetText(txtToFile);
-
-
-            }
-            private void lbSPT_Click(object sender, EventArgs e)
-            {
-                UpdateSPT();
-            }
-
-            private void UpdateSPT()
-            {
-                if (tbPolicy.Text == "")
-                {
-                    lbSPT.Text = "None";
-                }
-                else
-                {
                 lbSPT.Text = SearchSPT(0);
                 lbSalutation.Text = "Hello " + SearchSPT(1) + ",";
                 tbEmailTo.Text = SearchSPT(3) + " (" + SearchSPT(2) + ")";
 
-                }
-
             }
+
+        }
         private string SearchSPT(int n)
         {
             //This opens the text file and searches the SPT based on the 
             //Policy number.
 
-            string filepath = MyFunc.FilePath() + "SPT List.txt";
+            string filepath = M_Path_AgentTool + "SPT List.txt";
             //string filepath = @"C:\Users\ll67305\Desktop\SPT List.txt";
             string ou = "";
             string cnt = "";
@@ -1647,7 +1677,7 @@ namespace GroupTool
                             if (targetCrt.Substring(0, 5) == MyFunc.SplitTwice(mylist.ElementAt(j), "-", ","))
                             {
                                 ou = MyFunc.SplitIt(mylist.ElementAt(j), ',')[1];
-                                return MyFunc.SplitIt(ou, '.')[n]; 
+                                return MyFunc.SplitIt(ou, '.')[n];
                             }
                             else
                             {
@@ -1684,35 +1714,35 @@ namespace GroupTool
 
             }
 
-            if (ou.Length <3)
+            if (ou.Length < 3)
             {
                 return ou;
             }
             else
             {
-                return MyFunc.SplitIt(ou, '.')[n]; 
+                return MyFunc.SplitIt(ou, '.')[n];
             }
 
         }
-            
 
-            private void btEmailOpen_Click(object sender, EventArgs e)
-            {
-                OutlookApp _App = new OutlookApp();
-                Outlook.MailItem mail = (Outlook.MailItem)_App.CreateItem(Outlook.OlItemType.olMailItem);
-                mail.To = MyFunc.SplitIt(tbEmailTo.Text,'(')[0];
-                mail.Subject = tbEmailSubject.Text; // GetSubjectAll();
-                mail.Body = lbSalutation.Text + MyFunc.nl() + MyFunc.nl() + tbEmailBody.Text;
-                mail.Body = mail.Body + MyFunc.nl() + MyFunc.nl() + tbEmailSignature.Text;
 
-                mail.Display();
-            }
-       
+        private void btEmailOpen_Click(object sender, EventArgs e)
+        {
+            OutlookApp _App = new OutlookApp();
+            Outlook.MailItem mail = (Outlook.MailItem)_App.CreateItem(Outlook.OlItemType.olMailItem);
+            mail.To = MyFunc.SplitIt(tbEmailTo.Text, '(')[0];
+            mail.Subject = tbEmailSubject.Text; // GetSubjectAll();
+            mail.Body = lbSalutation.Text + MyFunc.nl() + MyFunc.nl() + tbEmailBody.Text;
+            mail.Body = mail.Body + MyFunc.nl() + MyFunc.nl() + tbEmailSignature.Text;
+
+            mail.Display();
+        }
+
 
         private void btCloseSide_Click(object sender, EventArgs e)
-            {
-                CopyWindowToggle();
-            }
+        {
+            CopyWindowToggle();
+        }
 
         private void cbEmailItems_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1726,7 +1756,7 @@ namespace GroupTool
 
         }
 
-        
+
 
         private void tbEmailBody_TextChanged(object sender, EventArgs e)
         {
@@ -1757,17 +1787,17 @@ namespace GroupTool
             mail.Body = MyFunc.ReplaceWord(mail.Body, "dirxxx", "We did it!");
             int a = 5;
             //mail.SaveAs(
-              // AppDomain.CurrentDomain.BaseDirectory + "\\asdf.oft");
+            // AppDomain.CurrentDomain.BaseDirectory + "\\asdf.oft");
 
         }
-        
+
 
         private void btOpenLetter_Click(object sender, EventArgs e)
         {
             WordApp app = new WordApp();
             Document doc = new Document();
 
-            
+
 
             string LetterPath = "";
             string selectedLetter = "";
@@ -1776,25 +1806,25 @@ namespace GroupTool
             if (cbLetterSelected.Text == "Tax Increase Letter")
             {
                 selectedLetter = "Tax";
-                LetterPath = @"C:\Users\ll67305\OneDrive - Enterprise 365\++Client Files OD\Templates\Withholding Tax Templates\Additional Tax Letter Custom - Call Centre.docm";
+                LetterPath = N_Path_Letters + "Additional Tax Letter Custom.docm";
                 docType = "word";
             }
             else if (cbLetterSelected.Text == "CoAnn Letter")
             {
                 selectedLetter = "CoAnn";
-                LetterPath = @"C:\Users\ll67305\OneDrive - Enterprise 365\++Client Files OD\Templates\CoAnnuitant Letter Auto Template.docm";
+                LetterPath = N_Path_Letters + "CoAnnuitant Letter Auto Template.docm";
                 docType = "word";
             }
             else if (cbLetterSelected.Text == "Equifax Letter")
             {
                 selectedLetter = "Equifax";
-                LetterPath = @"C:\Users\ll67305\OneDrive - Enterprise 365\++Client Files OD\Templates\Equifax Letter Auto Template.docx";
+                LetterPath = N_Path_Letters + "Equifax Letter Auto Template.docx";
                 docType = "word";
             }
             else if (cbLetterSelected.Text == "POA Confirmation Letter")
             {
                 selectedLetter = "POA";
-                LetterPath = @"C:\Users\ll67305\OneDrive - Enterprise 365\++Client Files OD\Templates\POA Confirmation.docx";
+                LetterPath = N_Path_Letters + "POA Confirmation.docx";
                 docType = "word";
             }
             else if (cbLetterSelected.Text == "Direct Deposit - Eng")
@@ -1809,16 +1839,16 @@ namespace GroupTool
                 return;
             }
 
-            if(docType == "word")
+            if (docType == "word")
             {
                 doc = app.Documents.Open(LetterPath);
                 doc.Application.Visible = true;
             }
-            else if(docType == "pdf")
+            else if (docType == "pdf")
             {
                 System.Diagnostics.Process.Start("explorer.exe", LetterPath);
             }
-            
+
 
             if (selectedLetter == "Tax")
             {
@@ -1834,9 +1864,9 @@ namespace GroupTool
             {
                 string name = lbLetterClientName.Text;
                 doc.FormFields["ClientName"].Result = name.ToUpper();
-                doc.FormFields["ClientName2"].Result = name.ToUpper();
-                doc.FormFields["ClientName3"].Result = name.ToUpper();
-                doc.FormFields["ClientName4"].Result = name.ToUpper();
+                doc.FormFields["ClientName2"].Result = name;
+                doc.FormFields["ClientName3"].Result = name;
+                doc.FormFields["ClientName4"].Result = name;
 
                 doc.FormFields["ClientAddr1"].Result = lbLetterAddr1.Text.ToUpper();
                 doc.FormFields["ClientAddr2"].Result = lbLetterAddr2.Text.ToUpper();
@@ -1873,7 +1903,7 @@ namespace GroupTool
             }
             else if (selectedLetter == "DirDep")
             {
-                    SendKeys.Send("{TAB}");
+                SendKeys.Send("{TAB}");
                 SendKeys.Send("{TAB}");
                 SendKeys.Send("{TAB}");
                 SendKeys.Send("{TAB}");
@@ -1895,7 +1925,7 @@ namespace GroupTool
 
         private void cbLetterSelected_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbLetterSelected.Text == "Bank Letter")
+            if (cbLetterSelected.Text == "Bank Letter")
             {
                 tsLetters.SelectTab("Banking");
             }
@@ -1912,8 +1942,8 @@ namespace GroupTool
 
         private void btBankStringPaste_Click(object sender, EventArgs e)
         {
-          
-          tbBankString.Text = Clipboard.GetText();
+
+            tbBankString.Text = Clipboard.GetText();
 
         }
 
@@ -1944,8 +1974,8 @@ namespace GroupTool
             {
                 MessageBox.Show("Check that outlook app is open");
             }
- 
-            
+
+
         }
         public static Microsoft.Office.Interop.Outlook.Application GetActiveOutlookApplication()
         {
@@ -1954,9 +1984,9 @@ namespace GroupTool
             {
                 app = (Microsoft.Office.Interop.Outlook.Application)System.Runtime.InteropServices.Marshal.GetActiveObject("Outlook.Application");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                
+
                 return null;
             }
             return app;
@@ -1981,17 +2011,17 @@ namespace GroupTool
 
         private void tabPage3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btPasteSubject_Click(object sender, EventArgs e)
         {
             string tmp = Clipboard.GetText();
-            
+
             //Validate. Make sure spaces > 1
-            if(MyFunc.CountChar(tmp,' ') < 1) { return; }
-            
-            tbName.Text = MyFunc.SplitFunc(tmp,' ',1) + " " + MyFunc.SplitFunc(MyFunc.SplitFunc(tmp,';',0),' ',2);
+            if (MyFunc.CountChar(tmp, ' ') < 1) { return; }
+
+            tbName.Text = MyFunc.SplitFunc(tmp, ' ', 1) + " " + MyFunc.SplitFunc(MyFunc.SplitFunc(tmp, ';', 0), ' ', 2);
             tbPolicy.Text = MyFunc.SplitFunc(tmp, ' ', 0);
 
             UpdateSPT();
@@ -2007,7 +2037,7 @@ namespace GroupTool
             if (frm.m_cancelled) { return; }
 
             FillRecordFromTextfile(frm.SelectedRecord);
-            
+
 
         }
         private void EmptyRecordToTextFile()
@@ -2022,9 +2052,9 @@ namespace GroupTool
 
             //Copies all data points to DataBase.txt for retrieval
             txtToRecord = "";
-            txtToRecord = MyFunc.RecordOut(txtToRecord, "", frm.desc,0);
-            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tbPolicy.Text,1);
-            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tbName.Text,2);
+            txtToRecord = MyFunc.RecordOut(txtToRecord, "", frm.desc, 0);
+            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tbPolicy.Text, 1);
+            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tbName.Text, 2);
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tbPhone.Text, 3);
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tbAddress.Text, 4);
 
@@ -2067,13 +2097,13 @@ namespace GroupTool
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tb10.Text, 41);
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tb2.Text, 42);
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", tbSpokeWith.Text, 43);
-            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", MyFunc.ReplaceWord(tbNotes.Text,"\r\n",""), 44);
+            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", MyFunc.ReplaceWord(tbNotes.Text, "\r\n", ""), 44);
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", cbMars1.Text, 45);
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", cbMars2.Text, 46);
             txtToRecord = MyFunc.RecordOut(txtToRecord, "@", cbMars3.Text, 47);
 
 
-            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", "",50);
+            txtToRecord = MyFunc.RecordOut(txtToRecord, "@", "", 50);
 
             //Append record to file
             string line = File.ReadAllText(StoreRecordFilePath);
@@ -2081,13 +2111,13 @@ namespace GroupTool
 
             //Clear Form
             ClearForm();
-            
+
         }
-        
+
 
         private void FillRecordFromTextfile(string selRec)
         {
-            if(MyFunc.CountChar(selRec, '@') == 0) { return; }
+            if (MyFunc.CountChar(selRec, '@') == 0) { return; }
 
             string[] arr = MyFunc.SplitIt(selRec, '@');
             tbPolicy.Text = arr[1];
@@ -2175,7 +2205,7 @@ namespace GroupTool
 
             Outlook.Application application = new Outlook.Application();
             Outlook.MailItem mail = application.CreateItemFromTemplate(
-                @"M:\Desktop\Outlook\email templates\TaxRequest.oft"
+                M_Path_Email + "TaxRequest.oft"
                  ) as Outlook.MailItem;
             mail.Subject = lnm + "," + fnm + "," + grp; //Last,First,Group;
                                                         //mail.To = "tim.betteridge@canadalife.com";
@@ -2184,7 +2214,7 @@ namespace GroupTool
             mail.HTMLBody = MyFunc.ReplaceWord(mail.HTMLBody, "reasonxxx", cbTaxReason.Text);
             mail.HTMLBody = MyFunc.ReplaceWord(mail.HTMLBody, "taxyearxxx", cbTaxYear.Text);
             mail.HTMLBody = MyFunc.ReplaceWord(mail.HTMLBody, "addressxxx", tbTaxAddress.Text);
-            mail.HTMLBody = MyFunc.ReplaceWord(mail.HTMLBody, "specialinstructionsxxx",cbTaxSpecialInstruction.Text);
+            mail.HTMLBody = MyFunc.ReplaceWord(mail.HTMLBody, "specialinstructionsxxx", cbTaxSpecialInstruction.Text);
 
             mail.HTMLBody = MyFunc.ReplaceWord(mail.HTMLBody, "certxxx", crt);
             //string a = mail.HTMLBody;
@@ -2205,9 +2235,40 @@ namespace GroupTool
         {
             CopyWindowToggle();
             tsMain.SelectTab(3);
-            
+
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @"file:///\\file-s3\irisdocs\Reference\POA_PGT_ADMIN_TRACKING_London_LIFE.xlsx");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbClientPolicy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbLetterClientName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbLetterCert_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbLetterDate_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
+        
 }
 
 

@@ -110,13 +110,15 @@
             this.tbNotes = new System.Windows.Forms.TextBox();
             this.btOpenTelLog = new System.Windows.Forms.Button();
             this.tabInfo = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.tabEditChecks = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btRemoveCheck = new System.Windows.Forms.Button();
@@ -154,6 +156,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btTPasteName = new System.Windows.Forms.Button();
             this.tbTName = new System.Windows.Forms.TextBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.lkSchedules = new System.Windows.Forms.LinkLabel();
             this.btClose = new System.Windows.Forms.Button();
             this.btClear = new System.Windows.Forms.Button();
@@ -230,11 +234,6 @@
             this.lbLetterGroup = new System.Windows.Forms.Label();
             this.lbLetterAddr2 = new System.Windows.Forms.Label();
             this.lbLetterClientName = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cbLetterSelected = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label35 = new System.Windows.Forms.Label();
@@ -255,6 +254,8 @@
             this.btClearPartial = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.btTaxUpdateShortcut = new System.Windows.Forms.Button();
+            this.tooltip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -263,7 +264,10 @@
             this.groupBox1.SuspendLayout();
             this.tabScratchPad.SuspendLayout();
             this.tabInfo.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.tabEditChecks.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -275,7 +279,6 @@
             this.tsLetters.SuspendLayout();
             this.POA.SuspendLayout();
             this.grPOA.SuspendLayout();
-            this.Banking.SuspendLayout();
             this.grBankZone.SuspendLayout();
             this.CoAnn.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -1244,8 +1247,7 @@
             // tabInfo
             // 
             this.tabInfo.BackColor = System.Drawing.Color.OldLace;
-            this.tabInfo.Controls.Add(this.label2);
-            this.tabInfo.Controls.Add(this.groupBox6);
+            this.tabInfo.Controls.Add(this.tabControl1);
             this.tabInfo.Location = new System.Drawing.Point(4, 22);
             this.tabInfo.Name = "tabInfo";
             this.tabInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -1253,47 +1255,35 @@
             this.tabInfo.TabIndex = 2;
             this.tabInfo.Text = "Info";
             // 
-            // label2
+            // tabControl1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 16);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Service Desk: 519-931-5141";
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Location = new System.Drawing.Point(6, 6);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(323, 214);
+            this.tabControl1.TabIndex = 0;
             // 
-            // groupBox6
+            // tabPage6
             // 
-            this.groupBox6.Controls.Add(this.linkLabel5);
-            this.groupBox6.Controls.Add(this.linkLabel4);
-            this.groupBox6.Controls.Add(this.linkLabel1);
-            this.groupBox6.Controls.Add(this.linkLabel3);
-            this.groupBox6.Controls.Add(this.linkLabel2);
-            this.groupBox6.Location = new System.Drawing.Point(12, 118);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(320, 99);
-            this.groupBox6.TabIndex = 54;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Folders / Links";
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel5.Location = new System.Drawing.Point(6, 48);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(103, 16);
-            this.linkLabel5.TabIndex = 55;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "PDF Templates";
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            this.tabPage6.Controls.Add(this.linkLabel4);
+            this.tabPage6.Controls.Add(this.label2);
+            this.tabPage6.Controls.Add(this.linkLabel1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(315, 188);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Admin";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.Location = new System.Drawing.Point(6, 32);
+            this.linkLabel4.Location = new System.Drawing.Point(23, 20);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(88, 16);
             this.linkLabel4.TabIndex = 54;
@@ -1301,11 +1291,21 @@
             this.linkLabel4.Text = "Admin Folder";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 153);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 16);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Service Desk: 519-931-5141";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(6, 16);
+            this.linkLabel1.Location = new System.Drawing.Point(23, 36);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(72, 16);
             this.linkLabel1.TabIndex = 51;
@@ -1313,29 +1313,51 @@
             this.linkLabel1.Text = "Schedules";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel3
+            // tabPage7
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.Location = new System.Drawing.Point(182, 32);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(67, 16);
-            this.linkLabel3.TabIndex = 53;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "COE 2020";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.tabPage7.Controls.Add(this.linkLabel6);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(315, 188);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "POA";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // linkLabel2
+            // linkLabel6
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(182, 16);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(132, 16);
-            this.linkLabel2.TabIndex = 52;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "LL Manual Payments";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel6.Location = new System.Drawing.Point(23, 18);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(117, 16);
+            this.linkLabel6.TabIndex = 57;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "POA Spreadsheet";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.linkLabel5);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(315, 188);
+            this.tabPage8.TabIndex = 2;
+            this.tabPage8.Text = "Banking";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel5.Location = new System.Drawing.Point(24, 23);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(103, 16);
+            this.linkLabel5.TabIndex = 55;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "PDF Templates";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // tabEditChecks
             // 
@@ -1774,6 +1796,30 @@
             this.tbTName.TabIndex = 60;
             this.tbTName.TextChanged += new System.EventHandler(this.tbTName_TextChanged);
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(207, 100);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(132, 16);
+            this.linkLabel2.TabIndex = 52;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "LL Manual Payments";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Location = new System.Drawing.Point(43, 121);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(67, 16);
+            this.linkLabel3.TabIndex = 53;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "COE 2020";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
             // lkSchedules
             // 
             this.lkSchedules.AutoSize = true;
@@ -2131,6 +2177,7 @@
             this.btCopySubjectAll.TabIndex = 59;
             this.btCopySubjectAll.TabStop = false;
             this.btCopySubjectAll.Text = "Copy All";
+            this.tooltip1.SetToolTip(this.btCopySubjectAll, "bbbbbb");
             this.btCopySubjectAll.UseVisualStyleBackColor = true;
             this.btCopySubjectAll.Click += new System.EventHandler(this.btCopySubjectAll_Click);
             // 
@@ -2154,6 +2201,8 @@
             this.tabPage2.Controls.Add(this.btPasteAndSend);
             this.tabPage2.Controls.Add(this.btClearOut);
             this.tabPage2.Controls.Add(this.tbCopyWindow);
+            this.tabPage2.Controls.Add(this.linkLabel2);
+            this.tabPage2.Controls.Add(this.linkLabel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -2339,20 +2388,16 @@
             // 
             this.tabPage4.AccessibleName = "";
             this.tabPage4.AllowDrop = true;
+            this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.tsLetters);
+            this.tabPage4.Controls.Add(this.lbLetterAddr2);
+            this.tabPage4.Controls.Add(this.lbLetterAddr1);
             this.tabPage4.Controls.Add(this.btOpenLetter);
             this.tabPage4.Controls.Add(this.label28);
-            this.tabPage4.Controls.Add(this.lbLetterAddr1);
-            this.tabPage4.Controls.Add(this.lbLetterCert);
-            this.tabPage4.Controls.Add(this.lbLetterGroup);
-            this.tabPage4.Controls.Add(this.lbLetterAddr2);
-            this.tabPage4.Controls.Add(this.lbLetterClientName);
-            this.tabPage4.Controls.Add(this.label27);
-            this.tabPage4.Controls.Add(this.label26);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.cbLetterSelected);
+            this.tabPage4.Controls.Add(this.lbLetterGroup);
+            this.tabPage4.Controls.Add(this.lbLetterClientName);
+            this.tabPage4.Controls.Add(this.lbLetterCert);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(376, 418);
@@ -2411,9 +2456,9 @@
             this.label29.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label29.Location = new System.Drawing.Point(9, 19);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(89, 13);
+            this.label29.Size = new System.Drawing.Size(83, 13);
             this.label29.TabIndex = 102;
-            this.label29.Text = "Execuation Date:";
+            this.label29.Text = "Execution Date:";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbExecutionDate
@@ -2427,7 +2472,6 @@
             // 
             // Banking
             // 
-            this.Banking.Controls.Add(this.grBankZone);
             this.Banking.Location = new System.Drawing.Point(4, 4);
             this.Banking.Name = "Banking";
             this.Banking.Padding = new System.Windows.Forms.Padding(3);
@@ -2443,7 +2487,7 @@
             this.grBankZone.Controls.Add(this.btBankAddressPaste);
             this.grBankZone.Controls.Add(this.btBankStringPaste);
             this.grBankZone.Controls.Add(this.tbBankString);
-            this.grBankZone.Location = new System.Drawing.Point(6, 8);
+            this.grBankZone.Location = new System.Drawing.Point(794, 166);
             this.grBankZone.Name = "grBankZone";
             this.grBankZone.Size = new System.Drawing.Size(292, 199);
             this.grBankZone.TabIndex = 101;
@@ -2556,6 +2600,7 @@
             this.tbLetterDate.Name = "tbLetterDate";
             this.tbLetterDate.Size = new System.Drawing.Size(136, 22);
             this.tbLetterDate.TabIndex = 103;
+            this.tbLetterDate.TextChanged += new System.EventHandler(this.tbLetterDate_TextChanged);
             // 
             // btOpenLetter
             // 
@@ -2585,10 +2630,11 @@
             this.lbLetterAddr1.AutoSize = true;
             this.lbLetterAddr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLetterAddr1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterAddr1.Location = new System.Drawing.Point(94, 71);
+            this.lbLetterAddr1.Location = new System.Drawing.Point(170, 70);
             this.lbLetterAddr1.Name = "lbLetterAddr1";
-            this.lbLetterAddr1.Size = new System.Drawing.Size(0, 13);
+            this.lbLetterAddr1.Size = new System.Drawing.Size(35, 13);
             this.lbLetterAddr1.TabIndex = 99;
+            this.lbLetterAddr1.Text = "Addr1";
             this.lbLetterAddr1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbLetterAddr1.Click += new System.EventHandler(this.lbLetterAddr1_Click);
             // 
@@ -2597,21 +2643,24 @@
             this.lbLetterCert.AutoSize = true;
             this.lbLetterCert.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLetterCert.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterCert.Location = new System.Drawing.Point(224, 75);
+            this.lbLetterCert.Location = new System.Drawing.Point(66, 83);
             this.lbLetterCert.Name = "lbLetterCert";
-            this.lbLetterCert.Size = new System.Drawing.Size(0, 13);
+            this.lbLetterCert.Size = new System.Drawing.Size(26, 13);
             this.lbLetterCert.TabIndex = 98;
-            this.lbLetterCert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbLetterCert.Text = "Cert";
+            this.lbLetterCert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbLetterCert.Click += new System.EventHandler(this.lbLetterCert_Click);
             // 
             // lbLetterGroup
             // 
             this.lbLetterGroup.AutoSize = true;
             this.lbLetterGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLetterGroup.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterGroup.Location = new System.Drawing.Point(224, 57);
+            this.lbLetterGroup.Location = new System.Drawing.Point(27, 83);
             this.lbLetterGroup.Name = "lbLetterGroup";
-            this.lbLetterGroup.Size = new System.Drawing.Size(0, 13);
+            this.lbLetterGroup.Size = new System.Drawing.Size(36, 13);
             this.lbLetterGroup.TabIndex = 97;
+            this.lbLetterGroup.Text = "Group";
             this.lbLetterGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbLetterAddr2
@@ -2619,10 +2668,11 @@
             this.lbLetterAddr2.AutoSize = true;
             this.lbLetterAddr2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLetterAddr2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterAddr2.Location = new System.Drawing.Point(94, 83);
+            this.lbLetterAddr2.Location = new System.Drawing.Point(170, 84);
             this.lbLetterAddr2.Name = "lbLetterAddr2";
-            this.lbLetterAddr2.Size = new System.Drawing.Size(0, 13);
+            this.lbLetterAddr2.Size = new System.Drawing.Size(35, 13);
             this.lbLetterAddr2.TabIndex = 96;
+            this.lbLetterAddr2.Text = "Addr2";
             this.lbLetterAddr2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbLetterClientName
@@ -2630,71 +2680,13 @@
             this.lbLetterClientName.AutoSize = true;
             this.lbLetterClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLetterClientName.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterClientName.Location = new System.Drawing.Point(94, 57);
+            this.lbLetterClientName.Location = new System.Drawing.Point(27, 70);
             this.lbLetterClientName.Name = "lbLetterClientName";
-            this.lbLetterClientName.Size = new System.Drawing.Size(0, 13);
+            this.lbLetterClientName.Size = new System.Drawing.Size(35, 13);
             this.lbLetterClientName.TabIndex = 94;
+            this.lbLetterClientName.Text = "Name";
             this.lbLetterClientName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(189, 70);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(29, 13);
-            this.label27.TabIndex = 93;
-            this.label27.Text = "Cert:";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(50, 83);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(35, 13);
-            this.label26.TabIndex = 92;
-            this.label26.Text = "Addr2";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(50, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 91;
-            this.label5.Text = "Addr1:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(180, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 90;
-            this.label4.Text = "Policy:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(24, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "ClientName:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbLetterClientName.Click += new System.EventHandler(this.lbLetterClientName_Click);
             // 
             // cbLetterSelected
             // 
@@ -2726,11 +2718,13 @@
             this.tabPage5.Controls.Add(this.cbTaxSpecialInstruction);
             this.tabPage5.Controls.Add(this.cbTaxYear);
             this.tabPage5.Controls.Add(this.cbTaxReason);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 76);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(376, 418);
+            this.tabPage5.Size = new System.Drawing.Size(26, 364);
             this.tabPage5.TabIndex = 3;
             this.tabPage5.Text = "Tax";
+            this.tooltip1.SetToolTip(this.tabPage5, "\r\n");
+            this.tabPage5.ToolTipText = "     asfasfas asfasf asfasf asdfasf asfasfasf asfasfdafsa";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // label35
@@ -2762,7 +2756,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label33.Location = new System.Drawing.Point(27, 186);
+            this.label33.Location = new System.Drawing.Point(27, 190);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(97, 13);
             this.label33.TabIndex = 95;
@@ -2772,9 +2766,9 @@
             // btLaunchTaxemail
             // 
             this.btLaunchTaxemail.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btLaunchTaxemail.Location = new System.Drawing.Point(110, 254);
+            this.btLaunchTaxemail.Location = new System.Drawing.Point(263, 247);
             this.btLaunchTaxemail.Name = "btLaunchTaxemail";
-            this.btLaunchTaxemail.Size = new System.Drawing.Size(91, 22);
+            this.btLaunchTaxemail.Size = new System.Drawing.Size(91, 29);
             this.btLaunchTaxemail.TabIndex = 92;
             this.btLaunchTaxemail.Text = "Launch email";
             this.btLaunchTaxemail.UseVisualStyleBackColor = true;
@@ -2785,7 +2779,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(27, 135);
+            this.label23.Location = new System.Drawing.Point(27, 146);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(73, 13);
             this.label23.TabIndex = 92;
@@ -2808,7 +2802,7 @@
             // 
             this.tbTaxAddress.BackColor = System.Drawing.Color.Bisque;
             this.tbTaxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTaxAddress.Location = new System.Drawing.Point(30, 150);
+            this.tbTaxAddress.Location = new System.Drawing.Point(30, 161);
             this.tbTaxAddress.Name = "tbTaxAddress";
             this.tbTaxAddress.Size = new System.Drawing.Size(324, 22);
             this.tbTaxAddress.TabIndex = 92;
@@ -2823,7 +2817,7 @@
             "email Admin PDF copy",
             "None",
             "Return to Admin"});
-            this.cbTaxSpecialInstruction.Location = new System.Drawing.Point(30, 201);
+            this.cbTaxSpecialInstruction.Location = new System.Drawing.Point(30, 205);
             this.cbTaxSpecialInstruction.Name = "cbTaxSpecialInstruction";
             this.cbTaxSpecialInstruction.Size = new System.Drawing.Size(171, 24);
             this.cbTaxSpecialInstruction.Sorted = true;
@@ -2965,12 +2959,30 @@
             this.btTaxUpdateShortcut.UseVisualStyleBackColor = true;
             this.btTaxUpdateShortcut.Click += new System.EventHandler(this.btTaxUpdateShortcut_Click);
             // 
+            // tooltip1
+            // 
+            this.tooltip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.tooltip1.ForeColor = System.Drawing.Color.Red;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(59, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "-";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(825, 537);
+            this.ClientSize = new System.Drawing.Size(360, 537);
+            this.Controls.Add(this.grBankZone);
             this.Controls.Add(this.btTaxUpdateShortcut);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.btClearPartial);
@@ -3033,9 +3045,13 @@
             this.tabScratchPad.ResumeLayout(false);
             this.tabScratchPad.PerformLayout();
             this.tabInfo.ResumeLayout(false);
-            this.tabInfo.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.tabEditChecks.ResumeLayout(false);
             this.tabEditChecks.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -3053,7 +3069,6 @@
             this.POA.ResumeLayout(false);
             this.grPOA.ResumeLayout(false);
             this.grPOA.PerformLayout();
-            this.Banking.ResumeLayout(false);
             this.grBankZone.ResumeLayout(false);
             this.grBankZone.PerformLayout();
             this.CoAnn.ResumeLayout(false);
@@ -3153,7 +3168,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.LinkLabel linkLabel4;
         private System.Windows.Forms.Button btOpenTodoList;
         private System.Windows.Forms.CheckBox ckMinimizeBehaviour;
@@ -3245,11 +3259,6 @@
         private System.Windows.Forms.Label lbLetterGroup;
         private System.Windows.Forms.Label lbLetterAddr2;
         private System.Windows.Forms.Label lbLetterClientName;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbLetterAddr1;
         private System.Windows.Forms.Button btOpenLetter;
         private System.Windows.Forms.Label label28;
@@ -3292,6 +3301,13 @@
         private System.Windows.Forms.ComboBox cbTaxReason;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button btTaxUpdateShortcut;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.ToolTip tooltip1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Label label1;
     }
 }
 

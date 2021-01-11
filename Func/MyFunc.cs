@@ -4,10 +4,14 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml;
+using Microsoft.Office.Interop.Outlook;
+using Outlook = Microsoft.Office.Interop.Outlook;
+using OutlookApp = Microsoft.Office.Interop.Outlook.Application;
 
 namespace GroupTool.Func
 {
@@ -42,18 +46,44 @@ namespace GroupTool.Func
             }
             return ou;
         }
-        public static string[] SplitIt(string val, char sep)
+
+        public static string RecordOut(string StrToAppend, string sep, string data,int dummycount)
         {
-            string[] words;
-            if (val.Contains(sep.ToString()))
+            string ou = "";
+            if (data == "")
             {
-                words = val.Split((char)sep);
+                ou = StrToAppend + sep;
             }
             else
             {
-                //Return a 1 dim array with val
-                words = (val + "," + " ").Split(',');
+                ou = StrToAppend + sep + data;
             }
+            
+            return ou;
+        }
+
+        public static string[] SplitIt(string val, char sep)
+        {
+            string[] words = { };
+
+            try
+            {
+                if (val.Contains(sep.ToString()))
+                {
+                    words = val.Split((char)sep);
+                }
+                else
+                {
+                    //Return a 1 dim array with val
+                    words = (val + "," + " ").Split(',');
+                }
+            }
+            catch (System.Exception ex)
+            {
+
+                MessageBox.Show("SplitIt Error: " + ex.Message);
+            }
+            
             return words;
 
         }
@@ -206,7 +236,7 @@ namespace GroupTool.Func
         }
         public static string RemoveLeadingZero(string pol)
         {
-            string tmp = "";
+            string tmp = pol;
 
             
                 if (pol.Substring(0,2) == "00")
@@ -222,8 +252,36 @@ namespace GroupTool.Func
             return tmp;
             
         }
-    }
 
+        public static string ReplaceWord(string input,string oldword, string newword)
+        {
+            return  Regex.Replace(input, oldword, newword);
+
+           
+        }
+
+        public static int CountChar(string input,char character)
+        {
+            if(input == null) { return 0; }
+            return input.ToCharArray().Count(c => c == character);
+        }
+
+
+        public static string SplitFunc(string input, char splitchar, int elem)
+        {
+            string ou = "";
+
+           
+
+            if (MyFunc.CountChar(input, splitchar) > 0)
+            {
+                ou = MyFunc.SplitIt(input, splitchar)[elem];
+            }
+
+            return ou;
+        }
+    }
+    
     //HELP
     //tbPhone.SelectionStart = tbPhone.Text.Length;
      //tbPhone.SelectionLength = 0;

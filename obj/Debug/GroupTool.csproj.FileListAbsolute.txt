@@ -1,4 +1,3 @@
-C:\Users\ll67305\source\repos\GroupTool\bin\Debug\GroupTooldb.mdb
 C:\Users\ll67305\source\repos\GroupTool\bin\Debug\GroupTool.exe.config
 C:\Users\ll67305\source\repos\GroupTool\bin\Debug\GroupTool.exe
 C:\Users\ll67305\source\repos\GroupTool\bin\Debug\GroupTool.pdb
@@ -42,3 +41,15 @@ C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.exe
 C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.pdb
 C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.csprojAssemblyReference.cache
 C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.csproj.ResolveComReference.cache
+C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.BankEdit.resources
+C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.FUDays.resources
+C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.StoreRecord.resources
+C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.LoadRecord.resources
+C:\Users\ll67305\source\repos\GroupTool\bin\Debug\GroupTool.exe.manifest
+C:\Users\ll67305\source\repos\GroupTool\bin\Debug\GroupTool.application
+C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.exe.manifest
+C:\Users\ll67305\source\repos\GroupTool\obj\Debug\GroupTool.application
+C:\Users\ll67305\source\repos\GroupTool\bin\Debug\System.Text.Json.dll
+C:\Users\ll67305\source\repos\GroupTool\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\ll67305\source\repos\GroupTool\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ll67305\source\repos\GroupTool\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll

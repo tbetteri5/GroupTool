@@ -203,7 +203,7 @@ namespace GroupTool
             tbSpouseID.Text = "";
             tbAnnOut.Text = "";
 
-
+            //
             tbEmailTo.Text = "";
             tbEmailSubject.Text = "";
             tbEmailBody.Text = "";
@@ -2266,6 +2266,17 @@ namespace GroupTool
         private void tbLetterDate_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btLaunchICS_Click(object sender, EventArgs e)
+        {
+            Excel excel = new Excel(@"https://769372677-my.sharepoint.com/personal/tim_betteridge_canadalife_com/Documents/Manual%20Cheques/ICS%20Annuity%20Worksheet.xlsm?web=1", 1);
+            //MessageBox.Show(excel.ReadCell(3, 1));
+
+            
+            excel.WriteToRange(tbPhone.Text, "Phone");
+            excel.WriteToRange(tbName.Text, "ClientName");
+            excel.WriteToRange(tbSpokeWith.Text, "SpokeWith");
         }
     }
         

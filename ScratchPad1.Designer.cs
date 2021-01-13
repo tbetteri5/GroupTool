@@ -209,6 +209,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.tbEmailTo = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.tsLetters = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.POA = new System.Windows.Forms.TabPage();
@@ -216,25 +217,19 @@
             this.label29 = new System.Windows.Forms.Label();
             this.tbExecutionDate = new System.Windows.Forms.TextBox();
             this.Banking = new System.Windows.Forms.TabPage();
-            this.grBankZone = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.tbBankAddressString = new System.Windows.Forms.TextBox();
-            this.btBankAddressPaste = new System.Windows.Forms.Button();
-            this.btBankStringPaste = new System.Windows.Forms.Button();
-            this.tbBankString = new System.Windows.Forms.TextBox();
             this.CoAnn = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
             this.tbCoAnnName = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.tbLetterDate = new System.Windows.Forms.TextBox();
+            this.lbLetterAddr2 = new System.Windows.Forms.Label();
+            this.lbLetterAddr1 = new System.Windows.Forms.Label();
             this.btOpenLetter = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
-            this.lbLetterAddr1 = new System.Windows.Forms.Label();
-            this.lbLetterCert = new System.Windows.Forms.Label();
-            this.lbLetterGroup = new System.Windows.Forms.Label();
-            this.lbLetterAddr2 = new System.Windows.Forms.Label();
-            this.lbLetterClientName = new System.Windows.Forms.Label();
             this.cbLetterSelected = new System.Windows.Forms.ComboBox();
+            this.lbLetterGroup = new System.Windows.Forms.Label();
+            this.lbLetterClientName = new System.Windows.Forms.Label();
+            this.lbLetterCert = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -246,6 +241,12 @@
             this.cbTaxSpecialInstruction = new System.Windows.Forms.ComboBox();
             this.cbTaxYear = new System.Windows.Forms.ComboBox();
             this.cbTaxReason = new System.Windows.Forms.ComboBox();
+            this.grBankZone = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.tbBankAddressString = new System.Windows.Forms.TextBox();
+            this.btBankAddressPaste = new System.Windows.Forms.Button();
+            this.btBankStringPaste = new System.Windows.Forms.Button();
+            this.tbBankString = new System.Windows.Forms.TextBox();
             this.lbCharCount = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.lbSPT = new System.Windows.Forms.Label();
@@ -255,7 +256,8 @@
             this.label36 = new System.Windows.Forms.Label();
             this.btTaxUpdateShortcut = new System.Windows.Forms.Button();
             this.tooltip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.btLaunchICS = new System.Windows.Forms.Button();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -279,9 +281,10 @@
             this.tsLetters.SuspendLayout();
             this.POA.SuspendLayout();
             this.grPOA.SuspendLayout();
-            this.grBankZone.SuspendLayout();
             this.CoAnn.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.grBankZone.SuspendLayout();
+            this.tabPage9.SuspendLayout();
             this.SuspendLayout();
             // 
             // btPastePolicy
@@ -1260,6 +1263,7 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Location = new System.Drawing.Point(6, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -2405,6 +2409,18 @@
             this.tabPage4.Text = "Letters";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(59, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "-";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tsLetters
             // 
             this.tsLetters.Alignment = System.Windows.Forms.TabAlignment.Bottom;
@@ -2480,72 +2496,6 @@
             this.Banking.Text = "Banking";
             this.Banking.UseVisualStyleBackColor = true;
             // 
-            // grBankZone
-            // 
-            this.grBankZone.Controls.Add(this.button7);
-            this.grBankZone.Controls.Add(this.tbBankAddressString);
-            this.grBankZone.Controls.Add(this.btBankAddressPaste);
-            this.grBankZone.Controls.Add(this.btBankStringPaste);
-            this.grBankZone.Controls.Add(this.tbBankString);
-            this.grBankZone.Location = new System.Drawing.Point(794, 166);
-            this.grBankZone.Name = "grBankZone";
-            this.grBankZone.Size = new System.Drawing.Size(292, 199);
-            this.grBankZone.TabIndex = 101;
-            this.grBankZone.TabStop = false;
-            this.grBankZone.Text = "Banking Zone";
-            // 
-            // button7
-            // 
-            this.button7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button7.Location = new System.Drawing.Point(6, 84);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(117, 23);
-            this.button7.TabIndex = 105;
-            this.button7.Text = "Edit";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // tbBankAddressString
-            // 
-            this.tbBankAddressString.BackColor = System.Drawing.SystemColors.Control;
-            this.tbBankAddressString.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBankAddressString.Location = new System.Drawing.Point(129, 54);
-            this.tbBankAddressString.Multiline = true;
-            this.tbBankAddressString.Name = "tbBankAddressString";
-            this.tbBankAddressString.Size = new System.Drawing.Size(157, 22);
-            this.tbBankAddressString.TabIndex = 104;
-            // 
-            // btBankAddressPaste
-            // 
-            this.btBankAddressPaste.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btBankAddressPaste.Location = new System.Drawing.Point(6, 53);
-            this.btBankAddressPaste.Name = "btBankAddressPaste";
-            this.btBankAddressPaste.Size = new System.Drawing.Size(117, 23);
-            this.btBankAddressPaste.TabIndex = 103;
-            this.btBankAddressPaste.Text = "Paste Bank Address";
-            this.btBankAddressPaste.UseVisualStyleBackColor = true;
-            this.btBankAddressPaste.Click += new System.EventHandler(this.btBankAddressPaste_Click);
-            // 
-            // btBankStringPaste
-            // 
-            this.btBankStringPaste.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btBankStringPaste.Location = new System.Drawing.Point(6, 24);
-            this.btBankStringPaste.Name = "btBankStringPaste";
-            this.btBankStringPaste.Size = new System.Drawing.Size(117, 23);
-            this.btBankStringPaste.TabIndex = 102;
-            this.btBankStringPaste.Text = "Paste Client Banking";
-            this.btBankStringPaste.UseVisualStyleBackColor = true;
-            this.btBankStringPaste.Click += new System.EventHandler(this.btBankStringPaste_Click);
-            // 
-            // tbBankString
-            // 
-            this.tbBankString.BackColor = System.Drawing.SystemColors.Control;
-            this.tbBankString.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBankString.Location = new System.Drawing.Point(129, 24);
-            this.tbBankString.Name = "tbBankString";
-            this.tbBankString.Size = new System.Drawing.Size(157, 22);
-            this.tbBankString.TabIndex = 89;
-            // 
             // CoAnn
             // 
             this.CoAnn.Controls.Add(this.label32);
@@ -2602,6 +2552,31 @@
             this.tbLetterDate.TabIndex = 103;
             this.tbLetterDate.TextChanged += new System.EventHandler(this.tbLetterDate_TextChanged);
             // 
+            // lbLetterAddr2
+            // 
+            this.lbLetterAddr2.AutoSize = true;
+            this.lbLetterAddr2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLetterAddr2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lbLetterAddr2.Location = new System.Drawing.Point(170, 84);
+            this.lbLetterAddr2.Name = "lbLetterAddr2";
+            this.lbLetterAddr2.Size = new System.Drawing.Size(35, 13);
+            this.lbLetterAddr2.TabIndex = 96;
+            this.lbLetterAddr2.Text = "Addr2";
+            this.lbLetterAddr2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbLetterAddr1
+            // 
+            this.lbLetterAddr1.AutoSize = true;
+            this.lbLetterAddr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLetterAddr1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lbLetterAddr1.Location = new System.Drawing.Point(170, 70);
+            this.lbLetterAddr1.Name = "lbLetterAddr1";
+            this.lbLetterAddr1.Size = new System.Drawing.Size(35, 13);
+            this.lbLetterAddr1.TabIndex = 99;
+            this.lbLetterAddr1.Text = "Addr1";
+            this.lbLetterAddr1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbLetterAddr1.Click += new System.EventHandler(this.lbLetterAddr1_Click);
+            // 
             // btOpenLetter
             // 
             this.btOpenLetter.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -2625,69 +2600,6 @@
             this.label28.Text = "_______________________________________________________";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lbLetterAddr1
-            // 
-            this.lbLetterAddr1.AutoSize = true;
-            this.lbLetterAddr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLetterAddr1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterAddr1.Location = new System.Drawing.Point(170, 70);
-            this.lbLetterAddr1.Name = "lbLetterAddr1";
-            this.lbLetterAddr1.Size = new System.Drawing.Size(35, 13);
-            this.lbLetterAddr1.TabIndex = 99;
-            this.lbLetterAddr1.Text = "Addr1";
-            this.lbLetterAddr1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbLetterAddr1.Click += new System.EventHandler(this.lbLetterAddr1_Click);
-            // 
-            // lbLetterCert
-            // 
-            this.lbLetterCert.AutoSize = true;
-            this.lbLetterCert.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLetterCert.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterCert.Location = new System.Drawing.Point(66, 83);
-            this.lbLetterCert.Name = "lbLetterCert";
-            this.lbLetterCert.Size = new System.Drawing.Size(26, 13);
-            this.lbLetterCert.TabIndex = 98;
-            this.lbLetterCert.Text = "Cert";
-            this.lbLetterCert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbLetterCert.Click += new System.EventHandler(this.lbLetterCert_Click);
-            // 
-            // lbLetterGroup
-            // 
-            this.lbLetterGroup.AutoSize = true;
-            this.lbLetterGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLetterGroup.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterGroup.Location = new System.Drawing.Point(27, 83);
-            this.lbLetterGroup.Name = "lbLetterGroup";
-            this.lbLetterGroup.Size = new System.Drawing.Size(36, 13);
-            this.lbLetterGroup.TabIndex = 97;
-            this.lbLetterGroup.Text = "Group";
-            this.lbLetterGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbLetterAddr2
-            // 
-            this.lbLetterAddr2.AutoSize = true;
-            this.lbLetterAddr2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLetterAddr2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterAddr2.Location = new System.Drawing.Point(170, 84);
-            this.lbLetterAddr2.Name = "lbLetterAddr2";
-            this.lbLetterAddr2.Size = new System.Drawing.Size(35, 13);
-            this.lbLetterAddr2.TabIndex = 96;
-            this.lbLetterAddr2.Text = "Addr2";
-            this.lbLetterAddr2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbLetterClientName
-            // 
-            this.lbLetterClientName.AutoSize = true;
-            this.lbLetterClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLetterClientName.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lbLetterClientName.Location = new System.Drawing.Point(27, 70);
-            this.lbLetterClientName.Name = "lbLetterClientName";
-            this.lbLetterClientName.Size = new System.Drawing.Size(35, 13);
-            this.lbLetterClientName.TabIndex = 94;
-            this.lbLetterClientName.Text = "Name";
-            this.lbLetterClientName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbLetterClientName.Click += new System.EventHandler(this.lbLetterClientName_Click);
-            // 
             // cbLetterSelected
             // 
             this.cbLetterSelected.ForeColor = System.Drawing.Color.Black;
@@ -2706,6 +2618,44 @@
             this.cbLetterSelected.Text = "...Select Letter";
             this.cbLetterSelected.SelectedIndexChanged += new System.EventHandler(this.cbLetterSelected_SelectedIndexChanged);
             // 
+            // lbLetterGroup
+            // 
+            this.lbLetterGroup.AutoSize = true;
+            this.lbLetterGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLetterGroup.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lbLetterGroup.Location = new System.Drawing.Point(27, 83);
+            this.lbLetterGroup.Name = "lbLetterGroup";
+            this.lbLetterGroup.Size = new System.Drawing.Size(36, 13);
+            this.lbLetterGroup.TabIndex = 97;
+            this.lbLetterGroup.Text = "Group";
+            this.lbLetterGroup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbLetterClientName
+            // 
+            this.lbLetterClientName.AutoSize = true;
+            this.lbLetterClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLetterClientName.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lbLetterClientName.Location = new System.Drawing.Point(27, 70);
+            this.lbLetterClientName.Name = "lbLetterClientName";
+            this.lbLetterClientName.Size = new System.Drawing.Size(35, 13);
+            this.lbLetterClientName.TabIndex = 94;
+            this.lbLetterClientName.Text = "Name";
+            this.lbLetterClientName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbLetterClientName.Click += new System.EventHandler(this.lbLetterClientName_Click);
+            // 
+            // lbLetterCert
+            // 
+            this.lbLetterCert.AutoSize = true;
+            this.lbLetterCert.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLetterCert.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lbLetterCert.Location = new System.Drawing.Point(66, 83);
+            this.lbLetterCert.Name = "lbLetterCert";
+            this.lbLetterCert.Size = new System.Drawing.Size(26, 13);
+            this.lbLetterCert.TabIndex = 98;
+            this.lbLetterCert.Text = "Cert";
+            this.lbLetterCert.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbLetterCert.Click += new System.EventHandler(this.lbLetterCert_Click);
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.label35);
@@ -2718,9 +2668,9 @@
             this.tabPage5.Controls.Add(this.cbTaxSpecialInstruction);
             this.tabPage5.Controls.Add(this.cbTaxYear);
             this.tabPage5.Controls.Add(this.cbTaxReason);
-            this.tabPage5.Location = new System.Drawing.Point(4, 76);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(26, 364);
+            this.tabPage5.Size = new System.Drawing.Size(376, 418);
             this.tabPage5.TabIndex = 3;
             this.tabPage5.Text = "Tax";
             this.tooltip1.SetToolTip(this.tabPage5, "\r\n");
@@ -2862,6 +2812,72 @@
             this.cbTaxReason.TabStop = false;
             this.cbTaxReason.Text = "Address Update";
             // 
+            // grBankZone
+            // 
+            this.grBankZone.Controls.Add(this.button7);
+            this.grBankZone.Controls.Add(this.tbBankAddressString);
+            this.grBankZone.Controls.Add(this.btBankAddressPaste);
+            this.grBankZone.Controls.Add(this.btBankStringPaste);
+            this.grBankZone.Controls.Add(this.tbBankString);
+            this.grBankZone.Location = new System.Drawing.Point(794, 166);
+            this.grBankZone.Name = "grBankZone";
+            this.grBankZone.Size = new System.Drawing.Size(292, 199);
+            this.grBankZone.TabIndex = 101;
+            this.grBankZone.TabStop = false;
+            this.grBankZone.Text = "Banking Zone";
+            // 
+            // button7
+            // 
+            this.button7.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.button7.Location = new System.Drawing.Point(6, 84);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(117, 23);
+            this.button7.TabIndex = 105;
+            this.button7.Text = "Edit";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // tbBankAddressString
+            // 
+            this.tbBankAddressString.BackColor = System.Drawing.SystemColors.Control;
+            this.tbBankAddressString.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBankAddressString.Location = new System.Drawing.Point(129, 54);
+            this.tbBankAddressString.Multiline = true;
+            this.tbBankAddressString.Name = "tbBankAddressString";
+            this.tbBankAddressString.Size = new System.Drawing.Size(157, 22);
+            this.tbBankAddressString.TabIndex = 104;
+            // 
+            // btBankAddressPaste
+            // 
+            this.btBankAddressPaste.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btBankAddressPaste.Location = new System.Drawing.Point(6, 53);
+            this.btBankAddressPaste.Name = "btBankAddressPaste";
+            this.btBankAddressPaste.Size = new System.Drawing.Size(117, 23);
+            this.btBankAddressPaste.TabIndex = 103;
+            this.btBankAddressPaste.Text = "Paste Bank Address";
+            this.btBankAddressPaste.UseVisualStyleBackColor = true;
+            this.btBankAddressPaste.Click += new System.EventHandler(this.btBankAddressPaste_Click);
+            // 
+            // btBankStringPaste
+            // 
+            this.btBankStringPaste.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btBankStringPaste.Location = new System.Drawing.Point(6, 24);
+            this.btBankStringPaste.Name = "btBankStringPaste";
+            this.btBankStringPaste.Size = new System.Drawing.Size(117, 23);
+            this.btBankStringPaste.TabIndex = 102;
+            this.btBankStringPaste.Text = "Paste Client Banking";
+            this.btBankStringPaste.UseVisualStyleBackColor = true;
+            this.btBankStringPaste.Click += new System.EventHandler(this.btBankStringPaste_Click);
+            // 
+            // tbBankString
+            // 
+            this.tbBankString.BackColor = System.Drawing.SystemColors.Control;
+            this.tbBankString.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBankString.Location = new System.Drawing.Point(129, 24);
+            this.tbBankString.Name = "tbBankString";
+            this.tbBankString.Size = new System.Drawing.Size(157, 22);
+            this.tbBankString.TabIndex = 89;
+            // 
             // lbCharCount
             // 
             this.lbCharCount.AutoSize = true;
@@ -2964,24 +2980,35 @@
             this.tooltip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tooltip1.ForeColor = System.Drawing.Color.Red;
             // 
-            // label1
+            // tabPage9
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(59, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 13);
-            this.label1.TabIndex = 102;
-            this.label1.Text = "-";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabPage9.Controls.Add(this.btLaunchICS);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(315, 188);
+            this.tabPage9.TabIndex = 3;
+            this.tabPage9.Text = "Tools";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // btLaunchICS
+            // 
+            this.btLaunchICS.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLaunchICS.Location = new System.Drawing.Point(39, 30);
+            this.btLaunchICS.Name = "btLaunchICS";
+            this.btLaunchICS.Size = new System.Drawing.Size(62, 20);
+            this.btLaunchICS.TabIndex = 102;
+            this.btLaunchICS.TabStop = false;
+            this.btLaunchICS.Text = "ICS Tool";
+            this.btLaunchICS.UseVisualStyleBackColor = true;
+            this.btLaunchICS.Click += new System.EventHandler(this.btLaunchICS_Click);
             // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(360, 537);
+            this.ClientSize = new System.Drawing.Size(756, 537);
             this.Controls.Add(this.grBankZone);
             this.Controls.Add(this.btTaxUpdateShortcut);
             this.Controls.Add(this.label36);
@@ -3069,12 +3096,13 @@
             this.POA.ResumeLayout(false);
             this.grPOA.ResumeLayout(false);
             this.grPOA.PerformLayout();
-            this.grBankZone.ResumeLayout(false);
-            this.grBankZone.PerformLayout();
             this.CoAnn.ResumeLayout(false);
             this.CoAnn.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.grBankZone.ResumeLayout(false);
+            this.grBankZone.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3308,6 +3336,8 @@
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Button btLaunchICS;
     }
 }
 

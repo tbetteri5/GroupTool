@@ -258,7 +258,6 @@
             this.tooltip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.btLaunchICS = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.Tab1.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -2203,7 +2202,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.btPasteAndSend);
             this.tabPage2.Controls.Add(this.btClearOut);
             this.tabPage2.Controls.Add(this.tbCopyWindow);
@@ -3004,17 +3002,6 @@
             this.btLaunchICS.UseVisualStyleBackColor = true;
             this.btLaunchICS.Click += new System.EventHandler(this.btLaunchICS_Click);
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(128, 198);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 22);
-            this.button4.TabIndex = 59;
-            this.button4.TabStop = false;
-            this.button4.Text = "Client Paste All";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // ScratchPad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3349,7 +3336,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.Button btLaunchICS;
-        private System.Windows.Forms.Button button4;
     }
 }
 

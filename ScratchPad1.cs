@@ -217,6 +217,7 @@ namespace GroupTool
             tbCoAnnName.Text = "";
             tbLetterDate.Text = "";
 
+
         }
 
 
@@ -518,7 +519,8 @@ namespace GroupTool
             string temp, result;
 
             // Mars1 and Mars2 detect subtract
-            if (cbMars2.Text.Substring(0, 2) == "SU" || cbMars2.Text.Substring(0, 1) == "2")
+            
+            if (cbMars2.Text != "")
             {
                 //Hold the result in temp if subtract
                 temp = MyFunc.TextMath("+", tbAccnt1.Text, "-" + tbAccnt2.Text);
@@ -562,8 +564,6 @@ namespace GroupTool
         private void ScratchPad_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'groupTooldbDataSet.Clients' table. You can move, or remove it, as needed.
-            cbMars2.Text = "SUB";
-            cbMars3.Text = "SUB";
             RequestItems("Load", "");
             EmailItems("Load", "");
             btOutputToggle.PerformClick();
@@ -923,8 +923,8 @@ namespace GroupTool
             tbAccnt3.Text = string.Empty;
             tbAccnt9.Text = string.Empty;
             cbMars1.Text = string.Empty;
-            cbMars2.Text = "SUB";
-            cbMars3.Text = "SUB";
+            cbMars2.Text = string.Empty;
+            cbMars3.Text = string.Empty;
 
         }
 
@@ -2270,16 +2270,30 @@ namespace GroupTool
 
         private void btLaunchICS_Click(object sender, EventArgs e)
         {
-            Excel excel = new Excel(@"https://769372677-my.sharepoint.com/personal/tim_betteridge_canadalife_com/Documents/Manual%20Cheques/ICS%20Annuity%20Worksheet.xlsm?web=1", 1);
+            Excel excel = new Excel(@"N:\Brenda\Admin\Agent Tool\Excel Templates\ICS Annuity Worksheet.xlsm", 1);
             //MessageBox.Show(excel.ReadCell(3, 1));
 
+            excel.Run("ClearForm");
+            excel.Run("ClearTable");
+
+            excel.WriteToRange(tbName.Text, "shtName");
+            excel.WriteToRange(MyFunc.SplitFunc(tbPolicy.Text, '-', 0), "shtGroup");
+            excel.WriteToRange(MyFunc.SplitFunc(tbPolicy.Text, '-', 1), "shtCert");
+
+
+            excel.WriteToRange(tbAccnt1.Text, "Amnt1");
+            excel.WriteToRange(tbAccnt2.Text, "Amnt2");
+            excel.WriteToRange(tbAccnt3.Text, "Amnt3");
+
+            excel.WriteToRange(cbMars1.Text, "Mars1");
+            excel.WriteToRange(cbMars2.Text, "Mars2");
+            excel.WriteToRange(cbMars3.Text, "Mars3");
+
+            excel.WriteToRange(tbFormCode.Text, "FormCode");
             
-            excel.WriteToRange(tbPhone.Text, "Phone");
-            excel.WriteToRange(tbName.Text, "ClientName");
-            excel.WriteToRange(tbSpokeWith.Text, "SpokeWith");
         }
+
     }
-        
-}
+ }
 
 

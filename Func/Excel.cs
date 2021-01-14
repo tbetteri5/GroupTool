@@ -21,9 +21,16 @@ namespace GroupTool
             wb = excel.Workbooks.Open(path);
             ws = wb.Worksheets[sheet];
             excel.Visible = true;
+            
         }
 
-        
+        public void Run(string macro)
+        {
+
+            excel.Application.Run(macro);
+
+
+        }
 
         public void Close(string status="IgnoreAlerts")
         {

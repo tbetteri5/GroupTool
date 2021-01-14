@@ -284,7 +284,6 @@
             this.CoAnn.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.grBankZone.SuspendLayout();
-            this.tabPage9.SuspendLayout();
             this.SuspendLayout();
             // 
             // btPastePolicy
@@ -735,6 +734,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btLaunchICS);
             this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
@@ -767,7 +767,7 @@
             this.groupBox1.Controls.Add(this.cbMars1);
             this.groupBox1.Location = new System.Drawing.Point(0, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 181);
+            this.groupBox1.Size = new System.Drawing.Size(331, 219);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Accounting";
@@ -2982,7 +2982,6 @@
             // 
             // tabPage9
             // 
-            this.tabPage9.Controls.Add(this.btLaunchICS);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
@@ -2994,9 +2993,9 @@
             // btLaunchICS
             // 
             this.btLaunchICS.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLaunchICS.Location = new System.Drawing.Point(39, 30);
+            this.btLaunchICS.Location = new System.Drawing.Point(251, 179);
             this.btLaunchICS.Name = "btLaunchICS";
-            this.btLaunchICS.Size = new System.Drawing.Size(62, 20);
+            this.btLaunchICS.Size = new System.Drawing.Size(73, 23);
             this.btLaunchICS.TabIndex = 102;
             this.btLaunchICS.TabStop = false;
             this.btLaunchICS.Text = "ICS Tool";
@@ -3102,7 +3101,6 @@
             this.tabPage5.PerformLayout();
             this.grBankZone.ResumeLayout(false);
             this.grBankZone.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

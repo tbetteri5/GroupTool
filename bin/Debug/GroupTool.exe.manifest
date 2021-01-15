@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GroupTool.exe" size="202712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GroupTool.exe" size="203224">
       <assemblyIdentity name="GroupTool" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AtaAgLX0WzJxk1dakFie21Z2lk5rPGvLbb53th2FBfE=</dsig:DigestValue>
+        <dsig:DigestValue>tdVW+njz0pxRc95jbPHH4BplzuDFTXjOWNJ6bo2+Ie4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

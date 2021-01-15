@@ -205,5 +205,38 @@ namespace GroupTool
             CheckListSaveLT();
             this.Close();
         }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            string editstr = "";
+            string items = "";
+            //cklTodo.Items.CopyTo(items, 0);
+
+            //loop through and store unchecked items
+            for (int i = 0; i < cklTodo.Items.Count; i++)
+            {
+
+                if (!cklTodo.GetItemChecked(i))
+                {
+
+                    str = (string)cklTodo.Items[i];
+                    if (items == "") { items = "u" + str; } else { items = items + "," + "u" + str; }
+
+                }
+                else
+                {
+                    editstr = (string)cklTodo.Items[i];
+                }
+
+            }
+
+            //Send to sub to load the array
+            cklTodo.Items.Clear();
+            items = items.Substring(0, items.Length);
+            CheckListLoad(items, "TD");
+
+            tbAddCheck.Text = editstr;
+        }
     }
 }

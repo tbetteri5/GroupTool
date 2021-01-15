@@ -40,12 +40,13 @@
             this.btRemoveLT = new System.Windows.Forms.Button();
             this.btAddLT = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbAddCheck
             // 
             this.tbAddCheck.BackColor = System.Drawing.Color.Cornsilk;
-            this.tbAddCheck.Location = new System.Drawing.Point(8, 25);
+            this.tbAddCheck.Location = new System.Drawing.Point(12, 37);
             this.tbAddCheck.Name = "tbAddCheck";
             this.tbAddCheck.Size = new System.Drawing.Size(253, 20);
             this.tbAddCheck.TabIndex = 0;
@@ -56,7 +57,7 @@
             this.cklTodo.CheckOnClick = true;
             this.cklTodo.FormattingEnabled = true;
             this.cklTodo.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.cklTodo.Location = new System.Drawing.Point(8, 51);
+            this.cklTodo.Location = new System.Drawing.Point(12, 63);
             this.cklTodo.Name = "cklTodo";
             this.cklTodo.Size = new System.Drawing.Size(253, 124);
             this.cklTodo.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             // btAdd
             // 
-            this.btAdd.Location = new System.Drawing.Point(267, 51);
+            this.btAdd.Location = new System.Drawing.Point(271, 37);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(75, 26);
             this.btAdd.TabIndex = 2;
@@ -75,11 +76,11 @@
             // 
             // btDelete
             // 
-            this.btDelete.Location = new System.Drawing.Point(267, 83);
+            this.btDelete.Location = new System.Drawing.Point(271, 161);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(75, 26);
             this.btDelete.TabIndex = 3;
-            this.btDelete.Text = "Remove";
+            this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = true;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
@@ -87,7 +88,7 @@
             // 
             this.cklLongTerm.CheckOnClick = true;
             this.cklLongTerm.FormattingEnabled = true;
-            this.cklLongTerm.Location = new System.Drawing.Point(8, 224);
+            this.cklLongTerm.Location = new System.Drawing.Point(12, 236);
             this.cklLongTerm.Name = "cklLongTerm";
             this.cklLongTerm.Size = new System.Drawing.Size(249, 199);
             this.cklLongTerm.TabIndex = 6;
@@ -95,7 +96,7 @@
             // tbAddLT
             // 
             this.tbAddLT.BackColor = System.Drawing.Color.Cornsilk;
-            this.tbAddLT.Location = new System.Drawing.Point(8, 198);
+            this.tbAddLT.Location = new System.Drawing.Point(12, 210);
             this.tbAddLT.Name = "tbAddLT";
             this.tbAddLT.Size = new System.Drawing.Size(249, 20);
             this.tbAddLT.TabIndex = 5;
@@ -104,7 +105,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 9);
+            this.label1.Location = new System.Drawing.Point(9, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 7;
@@ -114,7 +115,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 180);
+            this.label2.Location = new System.Drawing.Point(9, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 16);
             this.label2.TabIndex = 8;
@@ -122,7 +123,7 @@
             // 
             // btClose
             // 
-            this.btClose.Location = new System.Drawing.Point(263, 400);
+            this.btClose.Location = new System.Drawing.Point(267, 412);
             this.btClose.Name = "btClose";
             this.btClose.Size = new System.Drawing.Size(75, 23);
             this.btClose.TabIndex = 9;
@@ -132,17 +133,17 @@
             // 
             // btRemoveLT
             // 
-            this.btRemoveLT.Location = new System.Drawing.Point(263, 256);
+            this.btRemoveLT.Location = new System.Drawing.Point(267, 268);
             this.btRemoveLT.Name = "btRemoveLT";
             this.btRemoveLT.Size = new System.Drawing.Size(75, 26);
             this.btRemoveLT.TabIndex = 11;
-            this.btRemoveLT.Text = "Remove";
+            this.btRemoveLT.Text = "Delete";
             this.btRemoveLT.UseVisualStyleBackColor = true;
             this.btRemoveLT.Click += new System.EventHandler(this.btRemoveLT_Click);
             // 
             // btAddLT
             // 
-            this.btAddLT.Location = new System.Drawing.Point(263, 224);
+            this.btAddLT.Location = new System.Drawing.Point(267, 236);
             this.btAddLT.Name = "btAddLT";
             this.btAddLT.Size = new System.Drawing.Size(75, 26);
             this.btAddLT.TabIndex = 10;
@@ -152,7 +153,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(267, 19);
+            this.button1.Location = new System.Drawing.Point(271, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 26);
             this.button1.TabIndex = 12;
@@ -160,11 +161,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btEdit
+            // 
+            this.btEdit.Location = new System.Drawing.Point(271, 69);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.Size = new System.Drawing.Size(75, 26);
+            this.btEdit.TabIndex = 13;
+            this.btEdit.Text = "Edit";
+            this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 431);
+            this.ClientSize = new System.Drawing.Size(352, 443);
+            this.Controls.Add(this.btEdit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btRemoveLT);
             this.Controls.Add(this.btAddLT);
@@ -201,5 +213,6 @@
         private System.Windows.Forms.Button btRemoveLT;
         private System.Windows.Forms.Button btAddLT;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btEdit;
     }
 }

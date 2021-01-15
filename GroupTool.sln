@@ -13,6 +13,8 @@ Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Group Release 1.0", "..\Gro
 EndProject
 Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "GroupProject", "..\GroupProject\GroupProject.aiproj", "{13F91A0E-C6B1-4948-8400-50640A3D927C}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "AI Setup Project14", "..\AI Setup Project14\AI Setup Project14.aiproj", "{9C8EB4E5-A468-4F39-A3EB-86B852059FF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -35,6 +37,9 @@ Global
 		{13F91A0E-C6B1-4948-8400-50640A3D927C}.All|Any CPU.ActiveCfg = DefaultBuild
 		{13F91A0E-C6B1-4948-8400-50640A3D927C}.Debug|Any CPU.ActiveCfg = DefaultBuild
 		{13F91A0E-C6B1-4948-8400-50640A3D927C}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{9C8EB4E5-A468-4F39-A3EB-86B852059FF0}.All|Any CPU.ActiveCfg = DefaultBuild
+		{9C8EB4E5-A468-4F39-A3EB-86B852059FF0}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{9C8EB4E5-A468-4F39-A3EB-86B852059FF0}.Release|Any CPU.ActiveCfg = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

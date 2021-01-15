@@ -217,7 +217,8 @@ namespace GroupTool
             tbCoAnnName.Text = "";
             tbLetterDate.Text = "";
 
-
+            tsMain.SelectTab(0);
+            tsFront.SelectTab(0);
         }
 
 
@@ -1104,7 +1105,7 @@ namespace GroupTool
         }
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", @"C:\Users\ll67305\OneDrive - Enterprise 365\++Client Files OD\Templates\PDF Templates");
+            System.Diagnostics.Process.Start("explorer.exe", @"N:\Brenda\Admin\Agent Tool\Misc\Direct Deposit Form - Template.pdf");
         }
 
         private void btOpenTodoList_Click(object sender, EventArgs e)
@@ -2021,7 +2022,7 @@ namespace GroupTool
             //Validate. Make sure spaces > 1
             if (MyFunc.CountChar(tmp, ' ') < 1) { return; }
 
-            tbName.Text = MyFunc.SplitFunc(tmp, ' ', 1) + " " + MyFunc.SplitFunc(MyFunc.SplitFunc(tmp, ';', 0), ' ', 2);
+            tbName.Text = MyFunc.SplitFunc(tmp, ' ', 1) + " " + MyFunc.SplitFunc(tmp.Trim(), ' ', 2);
             tbPolicy.Text = MyFunc.SplitFunc(tmp, ' ', 0);
 
             UpdateSPT();
@@ -2293,6 +2294,10 @@ namespace GroupTool
             
         }
 
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", @"N:\Brenda\Admin\Agent Tool\Misc\Direct Deposit Form - French.pdf");
+        }
     }
  }
 

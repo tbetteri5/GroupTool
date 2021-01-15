@@ -38,7 +38,7 @@
             this.btCopyPolicy = new System.Windows.Forms.Button();
             this.tbOutput = new System.Windows.Forms.TextBox();
             this.btCopyOutput = new System.Windows.Forms.Button();
-            this.Tab1 = new System.Windows.Forms.TabControl();
+            this.tsFront = new System.Windows.Forms.TabControl();
             this.tabHelp = new System.Windows.Forms.TabPage();
             this.btCreateTask = new System.Windows.Forms.Button();
             this.btClearChecks = new System.Windows.Forms.Button();
@@ -71,6 +71,7 @@
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.tabAccounting = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btLaunchICS = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -119,6 +120,7 @@
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabEditChecks = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btRemoveCheck = new System.Windows.Forms.Button();
@@ -256,9 +258,8 @@
             this.label36 = new System.Windows.Forms.Label();
             this.btTaxUpdateShortcut = new System.Windows.Forms.Button();
             this.tooltip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.btLaunchICS = new System.Windows.Forms.Button();
-            this.Tab1.SuspendLayout();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.tsFront.SuspendLayout();
             this.tabHelp.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -369,21 +370,21 @@
             this.btCopyOutput.UseVisualStyleBackColor = false;
             this.btCopyOutput.Click += new System.EventHandler(this.btOutput_Click);
             // 
-            // Tab1
+            // tsFront
             // 
-            this.Tab1.AccessibleName = "";
-            this.Tab1.Controls.Add(this.tabHelp);
-            this.Tab1.Controls.Add(this.tabAccounting);
-            this.Tab1.Controls.Add(this.tabScratchPad);
-            this.Tab1.Controls.Add(this.tabInfo);
-            this.Tab1.Controls.Add(this.tabEditChecks);
-            this.Tab1.Controls.Add(this.tabPage1);
-            this.Tab1.Location = new System.Drawing.Point(13, 208);
-            this.Tab1.Multiline = true;
-            this.Tab1.Name = "Tab1";
-            this.Tab1.SelectedIndex = 0;
-            this.Tab1.Size = new System.Drawing.Size(343, 252);
-            this.Tab1.TabIndex = 5;
+            this.tsFront.AccessibleName = "";
+            this.tsFront.Controls.Add(this.tabHelp);
+            this.tsFront.Controls.Add(this.tabAccounting);
+            this.tsFront.Controls.Add(this.tabScratchPad);
+            this.tsFront.Controls.Add(this.tabInfo);
+            this.tsFront.Controls.Add(this.tabEditChecks);
+            this.tsFront.Controls.Add(this.tabPage1);
+            this.tsFront.Location = new System.Drawing.Point(13, 208);
+            this.tsFront.Multiline = true;
+            this.tsFront.Name = "tsFront";
+            this.tsFront.SelectedIndex = 0;
+            this.tsFront.Size = new System.Drawing.Size(343, 252);
+            this.tsFront.TabIndex = 5;
             // 
             // tabHelp
             // 
@@ -772,6 +773,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Accounting";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btLaunchICS
+            // 
+            this.btLaunchICS.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLaunchICS.Location = new System.Drawing.Point(251, 179);
+            this.btLaunchICS.Name = "btLaunchICS";
+            this.btLaunchICS.Size = new System.Drawing.Size(73, 23);
+            this.btLaunchICS.TabIndex = 102;
+            this.btLaunchICS.TabStop = false;
+            this.btLaunchICS.Text = "ICS Tool";
+            this.btLaunchICS.UseVisualStyleBackColor = true;
+            this.btLaunchICS.Click += new System.EventHandler(this.btLaunchICS_Click);
             // 
             // label30
             // 
@@ -1342,6 +1355,7 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.linkLabel7);
             this.tabPage8.Controls.Add(this.linkLabel5);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
@@ -1357,11 +1371,21 @@
             this.linkLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel5.Location = new System.Drawing.Point(24, 23);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(103, 16);
+            this.linkLabel5.Size = new System.Drawing.Size(116, 16);
             this.linkLabel5.TabIndex = 55;
             this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "PDF Templates";
+            this.linkLabel5.Text = "Direct Deposit-EN";
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(315, 188);
+            this.tabPage9.TabIndex = 3;
+            this.tabPage9.Text = "Tools";
+            this.tabPage9.UseVisualStyleBackColor = true;
             // 
             // tabEditChecks
             // 
@@ -2980,27 +3004,17 @@
             this.tooltip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tooltip1.ForeColor = System.Drawing.Color.Red;
             // 
-            // tabPage9
+            // linkLabel7
             // 
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(315, 188);
-            this.tabPage9.TabIndex = 3;
-            this.tabPage9.Text = "Tools";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // btLaunchICS
-            // 
-            this.btLaunchICS.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLaunchICS.Location = new System.Drawing.Point(251, 179);
-            this.btLaunchICS.Name = "btLaunchICS";
-            this.btLaunchICS.Size = new System.Drawing.Size(73, 23);
-            this.btLaunchICS.TabIndex = 102;
-            this.btLaunchICS.TabStop = false;
-            this.btLaunchICS.Text = "ICS Tool";
-            this.btLaunchICS.UseVisualStyleBackColor = true;
-            this.btLaunchICS.Click += new System.EventHandler(this.btLaunchICS_Click);
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel7.Location = new System.Drawing.Point(26, 39);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(115, 16);
+            this.linkLabel7.TabIndex = 56;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "Direct Deposit-FR";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // ScratchPad
             // 
@@ -3044,7 +3058,7 @@
             this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.btClear);
             this.Controls.Add(this.btClose);
-            this.Controls.Add(this.Tab1);
+            this.Controls.Add(this.tsFront);
             this.Controls.Add(this.btCopyOutput);
             this.Controls.Add(this.tbOutput);
             this.Controls.Add(this.btCopyPolicy);
@@ -3059,7 +3073,7 @@
             this.Text = "ScratchPad";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ScratchPad_Load);
-            this.Tab1.ResumeLayout(false);
+            this.tsFront.ResumeLayout(false);
             this.tabHelp.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -3116,7 +3130,7 @@
         private System.Windows.Forms.Button btCopyPolicy;
         private System.Windows.Forms.TextBox tbOutput;
         private System.Windows.Forms.Button btCopyOutput;
-        private System.Windows.Forms.TabControl Tab1;
+        private System.Windows.Forms.TabControl tsFront;
         private System.Windows.Forms.TabPage tabScratchPad;
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Button btClear;
@@ -3336,6 +3350,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.Button btLaunchICS;
+        private System.Windows.Forms.LinkLabel linkLabel7;
     }
 }
 

@@ -11,6 +11,8 @@ Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "AI Setup Project13", "..\AI
 EndProject
 Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Group Release 1.0", "..\Group Release 1.0\Group Release 1.0.aiproj", "{848C8486-0232-4779-9F33-33BEDD117E21}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "GroupProject", "..\GroupProject\GroupProject.aiproj", "{13F91A0E-C6B1-4948-8400-50640A3D927C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -30,6 +32,9 @@ Global
 		{848C8486-0232-4779-9F33-33BEDD117E21}.All|Any CPU.ActiveCfg = DefaultBuild
 		{848C8486-0232-4779-9F33-33BEDD117E21}.Debug|Any CPU.ActiveCfg = DefaultBuild
 		{848C8486-0232-4779-9F33-33BEDD117E21}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{13F91A0E-C6B1-4948-8400-50640A3D927C}.All|Any CPU.ActiveCfg = DefaultBuild
+		{13F91A0E-C6B1-4948-8400-50640A3D927C}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{13F91A0E-C6B1-4948-8400-50640A3D927C}.Release|Any CPU.ActiveCfg = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
